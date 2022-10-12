@@ -1,0 +1,221 @@
+.loginbackgroundColor {
+    background-color: #191B1F;
+}
+.border-right-2{
+    padding: 0 10px;
+    border-right: 1px solid #666666;
+    margin-right: 10px;
+}
+.margin-left-10{
+    margin-left: 10px;
+}
+ .w-20-30{
+    width: 22px;
+    height: 33px;
+ }
+.ba-img {
+    background-image: url('../images/login-bc.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.content-full {
+    flex: 1;
+    padding-top: 60px;
+}
+
+
+.content-t {
+    height: 600px;
+    width: 80%;
+    margin: 0px auto;
+    
+    background-color: #1E2023;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+.content-t-register {
+    height: 630px;
+    width: 80%;
+    margin: 0px auto;
+    
+    background-color: #1E2023;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+.content-t-left {
+    flex: 1;
+    height: 100%;
+    display: flex;
+}
+
+.content-t-left img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content-t-right {
+
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+justify-content: center; */
+
+}
+
+.p-t-b {
+    padding: 50px 0 30px 0;
+}
+.p-t-b-rigist{
+    padding: 20px 0 50px 0;
+
+}
+.logs {
+    width: 64%;
+    margin: 0 auto;
+    height: 103px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.logs img {
+    width: 100%;
+    height: 100%;
+}
+#s1,.form-control{
+    outline: none;
+    border: none;
+    height: 100%;
+}
+.form-control{
+    width: 100%;
+    font-weight: bold;
+    text-indent: 3px;
+     
+}
+.form-control-select{
+    height: 100%; padding: 0;  
+    width: 120px;
+    text-align: center;
+}
+.content-t-right-list {
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 36px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+.content-t-right-list-register {
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+.logs-register{
+    width: 54%;
+    margin: 0 auto;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.logs-register img{
+    width: 100%;
+    height: 100%;
+}
+.fontFamilyColor {
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.col-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: center;
+}
+.col-center-login{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    margin-left: 10px;
+}
+.form-control::placeholder {
+    color: #666666 !important;
+    opacity:1 !important;  
+    font-weight: 300;
+
+}
+::-webkit-input-placeholder {
+    color: #666666 !important;
+    font-weight: 300;
+
+} 
+.btn_yzmbutton{
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: orange;
+    width: 120px;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.content-t-rigis {
+    /* height: 1000px; */
+}
+.content-t-right-center{
+
+}
+@media screen and (max-width:750px) {
+    .content-t-left{
+        display: none;
+    }
+    .content-t,.content-t-register{
+        width: 94%; 
+        margin: 0 auto;
+        margin-top: 30%;
+    }
+    .logs {
+        width: 51%; 
+        height: 62px;
+    }
+    .form-control-select{
+        width: 80px;
+    }
+}
