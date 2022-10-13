@@ -1,9 +1,7 @@
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 const stripe = Stripe("pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm");
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
-var productData = null;
-var arrList = ["Stripe", "PayPal"];
-var count = 0;
+var count = 0;//当前选择的支付方式，0=stripe，1=paypal
 $(".buyNowProduct").click(() => {
     if (tokens) {
         $(".product-pay").toggle()
