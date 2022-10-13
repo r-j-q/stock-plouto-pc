@@ -1,14 +1,18 @@
-var userInfo = localStorage.getItem("ploutoUserInfo");
-$(".loginStock").click(function () {
-  if (userInfo == null) {
-    window.location.href = "login.html";
-  }
-});
+var userInfo = JSON.parse( localStorage.getItem("ploutoUserInfo"));
 
 
+var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
+		<div class="content-text color_ fontSize42">
+			<div class="fontSize48 fontWeightAll scales">Choose Pluto to make your personal investing easier!</div>
+			<div>The Plouto Group is one of the world's leading investment</div>
+			<div>service,advisory and risk management solutions providers</div>
+		</div>
+		<div class="login color_ loginStock">
+			Login account
+			<img src="assets/images/right.png" alt="" srcset="">
+		</div>`
 
-
-
+$(".htmlEasier").append(htmlEasier)
 var htmlFooter = `<div class="footer-content">
   <div class="footer-content-list">
     <div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Plouto</div>
@@ -36,4 +40,42 @@ var htmlFooter = `<div class="footer-content">
   Copyright © 2022.Stock Plouto All rights reserved.
 </div>`
 
-$('.footer-ui').append(htmlFooter)
+$('.footer-ui').append(htmlFooter);
+
+$(".loginStock").click(function () {
+  if (userInfo == null) {
+    window.location.href = "login.html";
+  }
+});
+$(".indexHtml").click(function () {
+  if (userInfo == null) {
+    window.location.href = "index.html";
+  }
+});
+function loginH(v) {
+localStorage.removeItem("ploutoUserInfo");
+ window.location.href = "login.html?params="+v;
+}
+
+function getUrlParams(key) {
+  var url = window.location.search.substr(1);
+  if (url == '') {
+    return false;
+  }
+  var paramsArr = url.split('&');
+  for (var i = 0; i < paramsArr.length; i++) {
+    var combina = paramsArr[i].split("=");
+    if (combina[0] == key) {
+      return combina[1];
+    }
+  }
+  return false;
+}
+
+if (userInfo == null) { 
+  $(".loginStock").show();
+
+  } else { 
+  $(".loginStock").hide(); 
+  $(".name-user").text('Welcome '+userInfo.username)
+}

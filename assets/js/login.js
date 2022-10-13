@@ -1,4 +1,4 @@
-var userInfo = localStorage.getItem("ploutoUserInfo");
+var userInfo =JSON.parse(  localStorage.getItem("ploutoUserInfo"));
 $("#ResetPassword").click(function () {
   window.location.href = "changePassword.html";
 });
@@ -31,11 +31,13 @@ $("#loginBtn").click(function () {
       } else {
         var data = JSON.stringify(res.data);
         localStorage.setItem("ploutoUserInfo", data || null);
-        if (getUrlParams("params") == "pay" || getUrlParams("customerService") == "us") {
-          window.location = document.referrer
-        } else {
-          window.location.href = "index.html#pricing-area";
-        }
+        window.history.back()
+        // if (getUrlParams("params") == "product") {
+        //   window.location = document.referrer
+
+        // } else {
+        //   window.location.href = "index.html";
+        // }
 
       }
     },
@@ -43,9 +45,9 @@ $("#loginBtn").click(function () {
 });
 
 $("#ploutoRegister").click(function () {
-  if (userInfo == null) {
+  
     window.location.href = "register.html";
-  }
+ 
 });
 function getUrlParams(key) {
   var url = window.location.search.substr(1);
