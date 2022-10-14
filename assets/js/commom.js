@@ -28,6 +28,7 @@ var htmlFooter = `<div class="footer-content">
     <div class="fontSize16 color_8E paddingBottom8"> Overview </div>
     <div class="fontSize16 color_8E paddingBottom8"> Pricing</div>
     <div class="fontSize16 color_8E">Features</div>
+    <div class="fontSize16 color_8E agreement">Refund Agreement</div>
   </div>
   <div class="footer-content-list">
     <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
@@ -52,6 +53,11 @@ $(".indexHtml").click(function () {
     window.location.href = "index.html";
   }
 });
+$(".agreement").click(function () {
+    window.location.href = "agreement.html";
+ 
+});
+ 
 function loginH(v) {
 localStorage.removeItem("ploutoUserInfo");
  window.location.href = "login.html?params="+v;
