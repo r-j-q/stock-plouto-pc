@@ -1,9 +1,11 @@
 var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
-var htmlHome =`<a href="javascript:;"  class="color_">Home</a>`
+var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 $(".indexHtml").append(htmlHome)
+var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
+$(".htmlAbout").append(htmlAbout)
 
-var htmlBanner = 
-`<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
+var htmlBanner =
+  `<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
 <li><a href="intermediatemember.html" class="color_">Intermediate member</a></li>
 <li><a href="primarymember.html" class="color_">Primary member</a></li>
 <li><a href="silvermembers.html" class="color_">Silver members</a></li>
