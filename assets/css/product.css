@@ -38,22 +38,23 @@ button{
 }
 
 .product-container-right {
-    height: 448px;
+    /* height: 448px; */
     width: 70%;
     /* background-color: #ccc; */
     background: #282222;
     position: absolute;
     right: 0;
-    bottom: 40px;
+    bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
 
 }
 .product-container-right-center{
     width: 70%;
-    height: 440px;
+    /* height: 440px; */
     margin-left: 30%;
     /* background-color: aqua; */
      

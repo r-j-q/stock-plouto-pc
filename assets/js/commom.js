@@ -1,6 +1,13 @@
-var userInfo = JSON.parse( localStorage.getItem("ploutoUserInfo"));
+var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
+var htmlHome =`<a href="javascript:;"  class="color_">Home</a>`
+$(".indexHtml").append(htmlHome)
 
-
+var htmlBanner = 
+`<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
+<li><a href="intermediatemember.html" class="color_">Intermediate member</a></li>
+<li><a href="primarymember.html" class="color_">Primary member</a></li>
+<li><a href="silvermembers.html" class="color_">Silver members</a></li>
+<li><a href="starvip.html" class="color_">Star vip</a></li>`
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
 			<div class="fontSize48 fontWeightAll scales">Choose Pluto to make your personal investing easier!</div>
@@ -41,6 +48,7 @@ var htmlFooter = `<div class="footer-content">
   Copyright © 2022.Stock Plouto All rights reserved.
 </div>`
 
+$('.htmlBanners').append(htmlBanner);
 $('.footer-ui').append(htmlFooter);
 
 $(".loginStock").click(function () {
@@ -54,13 +62,13 @@ $(".indexHtml").click(function () {
   }
 });
 $(".agreement").click(function () {
-    window.location.href = "agreement.html";
- 
+  window.location.href = "agreement.html";
+
 });
- 
+
 function loginH(v) {
-localStorage.removeItem("ploutoUserInfo");
- window.location.href = "login.html?params="+v;
+  localStorage.removeItem("ploutoUserInfo");
+  window.location.href = "login.html?params=" + v;
 }
 
 function getUrlParams(key) {
@@ -78,10 +86,10 @@ function getUrlParams(key) {
   return false;
 }
 
-if (userInfo == null) { 
+if (userInfo == null) {
   $(".loginStock").show();
 
-  } else { 
-  $(".loginStock").hide(); 
-  $(".name-user").text('Welcome '+userInfo.username)
+} else {
+  $(".loginStock").hide();
+  $(".name-user").text('Welcome ' + userInfo.username)
 }
