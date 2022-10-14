@@ -3,7 +3,12 @@ var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 $(".indexHtml").append(htmlHome)
 var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
 $(".htmlAbout").append(htmlAbout)
+var htmlPartner = `<a href="index.html#partner" class="color_">Partner</a>`
+$(".htmlPartner").append(htmlPartner)
+var htmlCustomerStorie =`<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
+$(".htmlCustomerStories").append(htmlCustomerStorie)
 
+ 
 var htmlBanner =
   `<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
 <li><a href="intermediatemember.html" class="color_">Intermediate member</a></li>
