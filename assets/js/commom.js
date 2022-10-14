@@ -17,9 +17,9 @@ var htmlBanner =
 <li><a href="starvip.html" class="color_">Star vip</a></li>`
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
-			<div class="fontSize48 fontWeightAll scales">Choose Pluto to make your personal investing easier!</div>
-			<div>The Plouto Group is one of the world's leading investment</div>
-			<div>service,advisory and risk management solutions providers</div>
+			<div class="fontSize59 fontWeightAll scales"> make your personal investing easier</div>
+			<div class='h- h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
+			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
 		</div>
 		<div class="login color_ loginStock">
 			Login account

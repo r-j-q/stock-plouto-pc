@@ -2,7 +2,14 @@
     height: 600px;
     position: relative;
 }
-
+.h-{
+    margin-top: 200px;
+     
+}
+.h-l-f{
+    text-align: left;
+    font-size: 24px;
+}
 .content-top img {
     width: 100%;
     height: 600px;
@@ -15,14 +22,14 @@
     right: 0;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 
 }
 
 .login {
     position: absolute;
-    top: 460px;
-    left: 0;
-    right: 0;
+    top: 460px; 
+    right: 10%;
     width: 163px;
     margin: 0 auto;
     height: 58px;
@@ -163,5 +170,11 @@
 }
 .displaySpacebetween{
     justify-content: space-between;
+}
+.h-l-f{
+    font-size: 13px;
+}
+.h- {
+    margin-top: 64px;
 }
 }
