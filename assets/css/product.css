@@ -30,7 +30,7 @@ button{
     width: 448px;
     height: 448px;
     margin-top: 40px;
-    background-color: red;
+    /* background-color: red; */
     position: absolute;
     left: 40px;
     z-index: 9;
@@ -44,7 +44,7 @@ button{
     background: #282222;
     position: absolute;
     right: 0;
-    bottom: 30px;
+    /* bottom: 30px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

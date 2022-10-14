@@ -9,8 +9,10 @@ $.ajax({
     success: function (res) {
         codeLists = res.data.list;
         console.log("======>", res);
-        areaCode = res.data.list[0].value;
+        areaCode = "001";
         $("#codeInit").text(areaCode)
+
+        codeLists.unshift(...codeLists.splice(codeLists.findIndex(i => i.title==="U.S"), 1));
         $.each(res.data.list, function (index, data) {
             var op21 = `<option style="color:#FFF;background-color: black;" value="${data.value}">${data.title}</option>`;
             $("#s1").append(op21);
