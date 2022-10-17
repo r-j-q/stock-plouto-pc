@@ -39,6 +39,9 @@ body {
 .w-80{
     width: 80%;
     margin:  0 auto;
+} 
+.color_5c {
+    color: #B98D5C
 }
 .color_ {
     color: #ECB930
@@ -82,7 +85,10 @@ body {
     font-size: 12px;
 }
  
+.b-r-d-s{
+    border-radius: 7px;
 
+}
 .fontWeight400 {
     font-weight: 400;
 }
@@ -110,6 +116,9 @@ body {
 .paddingtopbottom20{
     padding: 20px 0;
 }
+.dis-flex{
+    display: flex;
+}
 .opc-{
     opacity: .7;
     cursor: pointer;
@@ -122,6 +131,15 @@ body {
 }
 .textAlignCenter{
     text-align: center;
+}
+.m-t-40{
+    margin-top: 40px;
+}
+.line-height-20{
+    line-height: 40px;
+}
+.cp{
+    cursor: pointer; 
 }
 @media screen and (max-width:750px) {
     .fontSize59{

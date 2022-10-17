@@ -2,14 +2,21 @@
     height: 600px;
     position: relative;
 }
-.h-{
-    margin-top: 200px;
-     
+
+.p-d-20 {
+    padding: 20px;
 }
-.h-l-f{
+
+.h- {
+    margin-top: 200px;
+
+}
+
+.h-l-f {
     text-align: left;
     font-size: 24px;
 }
+
 .content-top img {
     width: 100%;
     height: 600px;
@@ -28,7 +35,7 @@
 
 .login {
     position: absolute;
-    top: 460px; 
+    top: 460px;
     right: 10%;
     width: 163px;
     margin: 0 auto;
@@ -146,10 +153,31 @@
     /* background-color:#282222; */
 }
 
+.lunbo-huozuo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.l-b- {
+    width: 100%;
+    height: auto;
+
+}
+
+.l-b-d {
+    width: 130px;
+    height: 100px;
+    display: flex;
+}
+
 .how-works-left-top {
     /* height: 200px; */
     /* background-color: #ccc; */
 }
+
+
 
 .how-works-righ-img {
     height: 300px;
@@ -160,21 +188,79 @@
     height: 200px;
 }
 
+.h-531 { 
+    height: 531px;
+    border-radius: 7px;
+    width: 100%; 
+    cursor: pointer;
+    position: relative;
+}
+.back30{
+    background-color: #303030;
+
+}
+
+.cp:hover ,.h-531:hover {
+    border: 2px solid #ECB930;
+}
+
+.h-c0lor { 
+    margin: 0 10px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.right-jian-tou {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right-jian-tou-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right-jian-tou img {
+    width: 47px;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+.right-jian-tou- img{
+    width: 47px;
+
+}
+
 @media screen and (max-width:750px) {
-.how-works-left-right {
-    flex-direction: column;
-}
-.how-it-works {
-    width: 94%;
-    margin-bottom: 450px;
-}
-.displaySpacebetween{
-    justify-content: space-between;
-}
-.h-l-f{
-    font-size: 13px;
-}
-.h- {
-    margin-top: 64px;
-}
+    .how-works-left-right {
+        flex-direction: column;
+    }
+
+    .how-it-works {
+        width: 94%;
+        margin-bottom: 450px;
+    }
+
+    .displaySpacebetween {
+        justify-content: space-between;
+    }
+
+    .h-l-f {
+        font-size: 13px;
+    }
+
+    .h- {
+        margin-top: 64px;
+    }
+    .h-531 {
+        height: 385px;
+    }
+    .h-c0lor {
+        margin: 20px 10px;
+    }
 }

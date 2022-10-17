@@ -13,8 +13,10 @@ var htmlBanner =
   `<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
 <li><a href="intermediatemember.html" class="color_">Intermediate member</a></li>
 <li><a href="primarymember.html" class="color_">Primary member</a></li>
-<li><a href="silvermembers.html" class="color_">Silver members</a></li>
-<li><a href="starvip.html" class="color_">Star vip</a></li>`
+<li><a href="silvermembers.html" class="color_">Vip Club</a></li>
+<li><a href="starvip.html" class="color_">Star vip</a></li>
+<li><a href="stockvane.html" class="color_">Stock vane</a></li>
+`
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
 			<div class="fontSize59 fontWeightAll scales"> make your personal investing easier</div>
@@ -100,3 +102,30 @@ if (userInfo == null) {
   $(".loginStock").hide();
   $(".name-user").text('Welcome ' + userInfo.username)
 }
+
+
+$("#vip3").click(function () {
+  
+    window.location.href = "stockvane.html";
+ 
+});
+$("#vip11").click(function () {
+  
+  window.location.href = "silvermembers.html";
+
+});
+$("#vip5").click(function () {
+  
+  window.location.href = "primarymember.html";
+
+});
+$("#vip6").click(function () {
+  
+  window.location.href = "intermediatemember.html";
+
+});
+$("#vip7").click(function () {
+  
+  window.location.href = "advancedmember.html";
+
+});
