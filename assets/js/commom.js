@@ -1,3 +1,9 @@
+var easierMake="make";
+var easierMake1="your personal investing";
+var easierMake2="easier"; 
+$(".easierMake").text(easierMake)
+$(".easierMake1").text(easierMake1)
+$(".easierMake2").text(easierMake2)
 var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 $(".indexHtml").append(htmlHome)
@@ -10,23 +16,29 @@ $(".htmlCustomerStories").append(htmlCustomerStorie)
 
 
 var htmlBanner =
-  `<li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
+  `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
+  <li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
 <li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
 <li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
 <li><a href="silvermembers.html" class="color_">Vip Club</a></li>
 <li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
-<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
+ 
 `
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
-			<div class="fontSize59 fontWeightAll scales"> make your personal investing easier</div>
-			<div class='h- h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
+			<div class="fontSize59 fontWeightAll scales nowrapspace"> make your personal investing easier</div>
+      <div class="login-row-style-row h-">
+      <div class="login-row-style">
+			<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
 			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
-		</div>
-		<div class="login color_ loginStock">
+      </div>
+      <div class="login color_ loginStock fontSize16">
 			Login account
 			<img src="assets/images/right.png" alt="" srcset="">
-		</div>`
+		</div>
+		</div>
+		</div>
+		 `
 
 $(".htmlEasier").append(htmlEasier)
 var htmlFooter = `<div class="footer-content">
@@ -180,7 +192,7 @@ if (userInfo?.token) {
           op22 = `<div class="producInter">
             <div class="produc-list-">
               <div class="produc-list">
-                <div class="fontSize24 c-style color_f ${data.type==0 ? 'color_18751C':'color_F11539'}">${data.type == 0 ? 'c' : 'p'}</div>
+                <div class="fontSize24 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'c' : 'p'}</div>
                 <div class="fontSize24  name-style color_32ECBD">${data.stock_no}</div>
               </div>
             </div>
@@ -222,12 +234,12 @@ if (userInfo?.token) {
           //   </div>
           // </div>`
 
-          op23=  `<div class="producInter">
+          op23 = `<div class="producInter">
             <div class="produc-list-">
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
-                  <div class="fontSize24 c-style color_f ${data.type==0 ? 'color_18751C':'color_F11539'}">${data.type == 0 ? 'c' : 'p'} </div>
-                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0,10)}</span>
+                  <div class="fontSize24 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'c' : 'p'} </div>
+                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
                 </div>
                 <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
                   <div>
@@ -258,3 +270,13 @@ if (userInfo?.token) {
     },
   });
 }
+
+
+$(".login-out-style").click(()=>{
+  localStorage.removeItem("ploutoUserInfo");
+  setTimeout(()=>{  toast('login out success')},1000)
+  window.location.href = "index.html";
+ 
+  
+
+})
