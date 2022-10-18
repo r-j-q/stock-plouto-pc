@@ -169,5 +169,6 @@ button{
     }
     .product-container-left{
         left: 0;
+        width: 100%;
     }
 }

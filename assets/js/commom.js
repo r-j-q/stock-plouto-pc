@@ -5,10 +5,10 @@ var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
 $(".htmlAbout").append(htmlAbout)
 var htmlPartner = `<a href="index.html#partner" class="color_">Partner</a>`
 $(".htmlPartner").append(htmlPartner)
-var htmlCustomerStorie =`<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
+var htmlCustomerStorie = `<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
 $(".htmlCustomerStories").append(htmlCustomerStorie)
 
- 
+
 var htmlBanner =
   `<li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
 <li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
@@ -105,27 +105,27 @@ if (userInfo == null) {
 
 
 $("#vip3").click(function () {
-  
-    window.location.href = "stockvane.html?idx=3";
- 
+
+  window.location.href = "stockvane.html?idx=3";
+
 });
 $("#vip11").click(function () {
-  
+
   window.location.href = "silvermembers.html";
 
 });
 $("#vip5").click(function () {
-  
+
   window.location.href = "primarymember.html?idx=5";
 
 });
 $("#vip6").click(function () {
-  
+
   window.location.href = "intermediatemember.html?idx=6";
 
 });
 $("#vip7").click(function () {
-  
+
   window.location.href = "advancedmember.html?idx=7";
 
 });
@@ -147,21 +147,114 @@ $(document).ready(function () {
 });
 
 function email(email) {
-  return email.replace(/(.{0,3}).*@(.*)/, "$1***@$2") 
-}  
+  return email.replace(/(.{0,3}).*@(.*)/, "$1***@$2")
+}
 
 $.ajax({
   type: "get",
-  url: `${baseUrl}/noauth/getorderlist?goods_id=${getUrlParams('idx')||''}`,
+  url: `${baseUrl}/noauth/getorderlist?goods_id=${getUrlParams('idx') || ''}`,
   dataType: "json",
   success: function (res) {
-    // codeLists = res.data.list;
-    // console.log("======>", res);
-    // areaCode = res.data.list[0].value;
     $.each(res.data.list, function (index, data) {
-var emails =	email( data.user_email) 
- var op22 = `<li><span> </span>${emails  } has just subscribed to the ${data.goods_title}</li>`;
+      var emails = email(data.user_email)
+      var op22 = `<li><span> </span>${emails} has just subscribed to the ${data.goods_title}</li>`;
       $("#getorderlist").append(op22);
-    }); 
+    });
   },
 });
+
+if (userInfo?.token) {
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/smartmoney/index?is_end=0`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo.token}`,
+    },
+    success: function (res) {
+      let { list, status } = res.data;
+      var op22 = "";
+      console.log("股票信息", res)
+      if (list.length > 0) {
+        $.each(list, function (index, data) {
+          op22 = `<div class="producInter">
+            <div class="produc-list-">
+              <div class="produc-list">
+                <div class="fontSize24 c-style color_f ${data.type==0 ? 'color_18751C':'color_F11539'}">${data.type == 0 ? 'c' : 'p'}</div>
+                <div class="fontSize24  name-style color_32ECBD">${data.stock_no}</div>
+              </div>
+            </div>
+          </div>`
+          $(".produc-list-data").append(op22);
+
+        });
+      } else {
+        if (!status) {
+          op22 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+          $(".produc-list-data").append(op22);
+        }
+      }
+    },
+  });
+}
+// 月季年数据
+
+if (userInfo?.token) {
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/product/getlist?is_end=0&type_id=0`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo.token}`,
+    },
+    success: function (res) {
+      let { list, status } = res.data;
+      var op23 = "";
+      console.log("股票信息", res)
+      if (list.length > 0) {
+        $.each(list, function (index, data) {
+          // op22 = `<div class="producInter">
+          //   <div class="produc-list-">
+          //     <div class="produc-list">
+          //       <div class="fontSize24 c-style color_f ${data.type==0 ? 'color_18751C':'color_F11539'}">${data.type == 0 ? 'c' : 'p'}</div>
+          //       <div class="fontSize24  name-style color_32ECBD">${data.stock_no}</div>
+          //     </div>
+          //   </div>
+          // </div>`
+
+          op23=  `<div class="producInter">
+            <div class="produc-list-">
+              <div class="produc-list-100 b-b paddingBottom">
+                <div class="produc-list-c">
+                  <div class="fontSize24 c-style color_f ${data.type==0 ? 'color_18751C':'color_F11539'}">${data.type == 0 ? 'c' : 'p'} </div>
+                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0,10)}</span>
+                </div>
+                <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
+                  <div>
+                    <div class="color_f fontSize16">$${data.buy_price}</div>
+                    <div class="color_8E fontSize12">Buy</div>
+                  </div>
+                  <div>
+                    <div class="color_f fontSize16">$${data.sale_price}</div>
+                    <div  class="color_8E fontSize12">Sell</div>
+                  </div>
+                  <div>
+                    <div class="color_f fontSize16">${data.reach}%</div>
+                    <div class="color_8E fontSize12">Reach</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>`
+          $(".produc-list-data-y-j-n").append(op23);
+
+        });
+      } else {
+        if (!status) {
+          op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+          $(".produc-list-data-y-j-n").append(op23);
+        }
+      }
+    },
+  });
+}

@@ -258,3 +258,6 @@ $(document).on("click", "#pay-stripe", function () {
             .addEventListener("submit", handleSubmit);
     }
 });
+
+
+ 
