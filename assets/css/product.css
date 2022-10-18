@@ -145,10 +145,10 @@ button{
 @media screen and (max-width:750px) {
     .product-container {
         flex-direction: column;
-        height: 337px;
+        height: auto;
     }
     .product-container-left{
-        display: none;
+        /* display: none; */
     }
     .product-container-right {
         height: auto;
@@ -166,5 +166,8 @@ button{
         margin-left: 0%; 
          
         
+    }
+    .product-container-left{
+        left: 0;
     }
 }

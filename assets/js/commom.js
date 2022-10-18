@@ -10,12 +10,12 @@ $(".htmlCustomerStories").append(htmlCustomerStorie)
 
  
 var htmlBanner =
-  `<li><a href="advancedmember.html" class="color_">Advanced member</a></li>
-<li><a href="intermediatemember.html" class="color_">Intermediate member</a></li>
-<li><a href="primarymember.html" class="color_">Primary member</a></li>
+  `<li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
+<li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
+<li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
 <li><a href="silvermembers.html" class="color_">Vip Club</a></li>
-<li><a href="starvip.html" class="color_">Star vip</a></li>
-<li><a href="stockvane.html" class="color_">Stock vane</a></li>
+<li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
+<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
 `
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
@@ -106,7 +106,7 @@ if (userInfo == null) {
 
 $("#vip3").click(function () {
   
-    window.location.href = "stockvane.html";
+    window.location.href = "stockvane.html?idx=3";
  
 });
 $("#vip11").click(function () {
@@ -116,16 +116,52 @@ $("#vip11").click(function () {
 });
 $("#vip5").click(function () {
   
-  window.location.href = "primarymember.html";
+  window.location.href = "primarymember.html?idx=5";
 
 });
 $("#vip6").click(function () {
   
-  window.location.href = "intermediatemember.html";
+  window.location.href = "intermediatemember.html?idx=6";
 
 });
 $("#vip7").click(function () {
   
-  window.location.href = "advancedmember.html";
+  window.location.href = "advancedmember.html?idx=7";
 
+});
+
+
+
+// 轮播
+function AutoScroll(obj) {
+  $(obj).find("ul:first").animate({
+    marginTop: "-54px"
+  }, 1000, function () {
+    $(this).css({
+      marginTop: "0px"
+    }).find("li:first").appendTo(this);
+  });
+}
+$(document).ready(function () {
+  setInterval('AutoScroll("#s1")', 3000);
+});
+
+function email(email) {
+  return email.replace(/(.{0,3}).*@(.*)/, "$1***@$2") 
+}  
+
+$.ajax({
+  type: "get",
+  url: `${baseUrl}/noauth/getorderlist?goods_id=${getUrlParams('idx')||''}`,
+  dataType: "json",
+  success: function (res) {
+    // codeLists = res.data.list;
+    // console.log("======>", res);
+    // areaCode = res.data.list[0].value;
+    $.each(res.data.list, function (index, data) {
+var emails =	email( data.user_email) 
+ var op22 = `<li><span> </span>${emails  } has just subscribed to the ${data.goods_title}</li>`;
+      $("#getorderlist").append(op22);
+    }); 
+  },
 });
