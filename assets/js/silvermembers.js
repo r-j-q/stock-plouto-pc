@@ -1,4 +1,4 @@
-var producId =11;
+var producId = 11;
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
@@ -90,22 +90,29 @@ goodList(producId);
 //     var paytype = "paypal"; 
 //     createdOrderTo(goods_id, paytype);
 // }
+var isPayPal = true;
 
 $("#confirmPaymentType").click(() => {
-    var val = $('input:radio[name="policy-input"]:checked').val();
-    if (val == null) {
-        // 什么也没选中 
-        toast('Please agree to the service and privacy policy')
-        return false;
+    if (isPayPal) {
+        isPayPal = false;
+        var val = $('input:radio[name="policy-input"]:checked').val();
+        if (val == null) {
+            // 什么也没选中 
+            toast('Please agree to the service and privacy policy')
+            return false;
 
-    } else {
-        if (count == 1) {
-            var paytype = "paypal";
-            createdOrderTo(productData.ID, paytype);
+        } else {
+            if (count == 1) {
+                var paytype = "paypal";
+                createdOrderTo(productData.ID, paytype);
+            }
+
+
         }
-
-
     }
+    setTimeout(() => {
+        isPayPal = true
+    }, timeOut);
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
@@ -120,7 +127,7 @@ function createdOrderTo(goods_id, paytype) {
         success: function (res) {
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
-            }else{
+            } else {
                 loginH("product")
             }
         },
@@ -228,33 +235,38 @@ function setLoading(isLoading) {
     }
 }
 
-
+let isClick = true;
 
 $(document).on("click", "#pay-stripe", function () {
+    if (isClick) {
+        isClick = false;
+        var val = $('input:radio[name="policy-input"]:checked').val();
+        if (val == null) {
+            // 什么也没选中 
+            toast('Please agree to the service and privacy policy')
+            return false;
 
-    var val = $('input:radio[name="policy-input"]:checked').val();
-    if (val == null) {
-        // 什么也没选中 
-        toast('Please agree to the service and privacy policy')
-        return false;
+        } else {
+            document.getElementById("pay-stripe").style.width = "100%";
 
-    } else {
-        document.getElementById("pay-stripe").style.width = "100%";
+            $("#submit").addClass("m-top-20-")
+            $("#button-text").addClass("button-style");
+            $(".buy-now-btn").css({
+                "height": "auto",
+                "line-height": "auto"
+            });
+            $("#payment-form").css({
+                "padding": "10px"
+            })
 
-        $("#submit").addClass("m-top-20-")
-        $("#button-text").addClass("button-style");
-        $(".buy-now-btn").css({
-            "height":"auto",
-            "line-height":"auto"
-        });
-        $("#payment-form").css({
-            "padding": "10px"
-        })
-         
-        initialize(productData.ID)
-        checkStatus();
-        document
-            .querySelector("#payment-form")
-            .addEventListener("submit", handleSubmit);
+            initialize(productData.ID)
+            checkStatus();
+            document
+                .querySelector("#payment-form")
+                .addEventListener("submit", handleSubmit);
+        }
     }
+    setTimeout(() => {
+        isClick = true;
+    }, timeOut)
 });

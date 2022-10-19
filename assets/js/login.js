@@ -31,6 +31,8 @@ $("#loginBtn").click(function () {
       } else {
         var data = JSON.stringify(res.data);
         localStorage.setItem("ploutoUserInfo", data || null);
+        
+        window.location =document.referrer
         window.history.back()
         // if (getUrlParams("params") == "product") {
         //   window.location = document.referrer

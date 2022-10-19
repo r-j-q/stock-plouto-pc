@@ -90,8 +90,11 @@ goodList(producId);
 //     var paytype = "paypal"; 
 //     createdOrderTo(goods_id, paytype);
 // }
+var isPayPal = true;
 
 $("#confirmPaymentType").click(() => {
+    if (isPayPal) {
+        isPayPal = false;
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
         // 什么也没选中 
@@ -106,6 +109,10 @@ $("#confirmPaymentType").click(() => {
 
 
     }
+}
+    setTimeout(() => {
+        isPayPal = true
+    }, timeOut);
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
@@ -229,9 +236,11 @@ function setLoading(isLoading) {
 }
 
 
+let isClick = true;
 
 $(document).on("click", "#pay-stripe", function () {
-
+    if (isClick) { 
+        isClick = false;
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
         // 什么也没选中 
@@ -257,4 +266,8 @@ $(document).on("click", "#pay-stripe", function () {
             .querySelector("#payment-form")
             .addEventListener("submit", handleSubmit);
     }
+}
+    setTimeout(() => {
+        isClick = true;
+    }, timeOut)
 });

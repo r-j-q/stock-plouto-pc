@@ -142,7 +142,12 @@ $("#vip7").click(function () {
 
 });
 
+ 
+$(".orderingPrivacy").click(function () {
 
+  window.location.href = "privacyPolicy.html";
+
+});
 
 // 轮播
 function AutoScroll(obj) {

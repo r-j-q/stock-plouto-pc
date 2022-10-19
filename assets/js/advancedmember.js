@@ -1,4 +1,4 @@
-var producId =7;
+var producId = 7;
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
@@ -43,12 +43,12 @@ forPayList();
 
 function goodList(id) {
     if (tokens.token) {
-        // $(".buyNowProduct").hide();
+        $(".buyNowProduct").hide();
         $(".product-pay").show();
 
 
     } else {
-        // $(".buyNowProduct").show();
+        $(".buyNowProduct").show();
         $(".product-pay").hide();
     }
 
@@ -90,8 +90,10 @@ goodList(producId);
 //     var paytype = "paypal"; 
 //     createdOrderTo(goods_id, paytype);
 // }
-
+var isPayPal = true;
 $("#confirmPaymentType").click(() => {
+    if(isPayPal){ 
+        isPayPal=false;
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
         // 什么也没选中 
@@ -106,6 +108,10 @@ $("#confirmPaymentType").click(() => {
 
 
     }
+}
+setTimeout(() => {
+    isPayPal=true
+}, timeOut);
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
@@ -120,7 +126,7 @@ function createdOrderTo(goods_id, paytype) {
         success: function (res) {
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
-            }else{
+            } else {
                 loginH("product")
             }
         },
@@ -228,36 +234,45 @@ function setLoading(isLoading) {
     }
 }
 
+let isClick = true;
+$(document).on("click", "#pay-stripe", function () { 
+    if (isClick) { 
+        isClick = false;
 
+        var val = $('input:radio[name="policy-input"]:checked').val();
+        if (val == null) {
+            toast('Please agree to the service and privacy policy')
+            return false;
 
-$(document).on("click", "#pay-stripe", function () {
+        } else {
+            document.getElementById("pay-stripe").style.width = "100%";
 
-    var val = $('input:radio[name="policy-input"]:checked').val();
-    if (val == null) {
-        // 什么也没选中 
-        toast('Please agree to the service and privacy policy')
-        return false;
+            $("#submit").addClass("m-top-20-")
+            $("#button-text").addClass("button-style");
+            $(".buy-now-btn").css({
+                "height": "auto",
+                "line-height": "auto"
+            });
+            $("#payment-form").css({
+                "padding": "10px"
+            })
+            initialize(productData.ID)
+            checkStatus();
+            document
+                .querySelector("#payment-form")
+                .addEventListener("submit", handleSubmit);
 
-    } else {
-        document.getElementById("pay-stripe").style.width = "100%";
-
-        $("#submit").addClass("m-top-20-")
-        $("#button-text").addClass("button-style");
-        $(".buy-now-btn").css({
-            "height":"auto",
-            "line-height":"auto"
-        });
-        $("#payment-form").css({
-            "padding": "10px"
-        })
+        }
          
-        initialize(productData.ID)
-        checkStatus();
-        document
-            .querySelector("#payment-form")
-            .addEventListener("submit", handleSubmit);
+    } else {
+        // console.log("=isClick=222==========>", isClick)
+
     }
+   
 });
 
 
- 
+setTimeout(() => {
+    isClick = true;
+}, timeOut)
+
