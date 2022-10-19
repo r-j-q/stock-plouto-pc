@@ -55,7 +55,7 @@ var htmlFooter = `<div class="footer-content">
     <div class="fontSize16 color_8E paddingBottom8">Home </div>
     <div class="fontSize16 color_8E paddingBottom8"> Overview </div>
     <div class="fontSize16 color_8E paddingBottom8"> Pricing</div>
-    <div class="fontSize16 color_8E">Features</div>
+    <div class="fontSize16 color_8E paddingBottom8">Features</div>
     <div class="fontSize16 color_8E agreement">Refund Agreement</div>
   </div>
   <div class="footer-content-list">
@@ -288,7 +288,11 @@ if (userInfo?.token) {
       Authorization: `Bearer ${userInfo.token}`,
     },
     success: function (res) { 
-      $(".periodData").append(period + res.data.total);
+      let {total} = res.data
+      if(total>0){
+        $(".periodData").append(period + total);
+      }
+      
     },
   });
 }
