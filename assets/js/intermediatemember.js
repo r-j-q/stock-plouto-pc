@@ -43,12 +43,11 @@ forPayList();
 
 function goodList(id) {
     if (tokens.token) {
-        $(".buyNowProduct").hide();
+        $(".buyNowProduct").text(renewals);
         $(".product-pay").show();
 
 
-    } else {
-        $(".buyNowProduct").show();
+    } else { 
         $(".product-pay").hide();
     }
 

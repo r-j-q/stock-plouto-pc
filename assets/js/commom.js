@@ -276,7 +276,19 @@ $(".login-out-style").click(()=>{
   localStorage.removeItem("ploutoUserInfo");
   setTimeout(()=>{  toast('login out success')},1000)
   window.location.href = "index.html";
- 
-  
-
 })
+// period   
+
+if (userInfo?.token) {
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/getordernum?goods_id=${getUrlParams('idx')}`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo.token}`,
+    },
+    success: function (res) { 
+      $(".periodData").append(period + res.data.total);
+    },
+  });
+}

@@ -43,12 +43,12 @@ forPayList();
 
 function goodList(id) {
     if (tokens.token) {
-        $(".buyNowProduct").hide();
+        // $(".buyNowProduct").hide();
         $(".product-pay").show();
 
 
     } else {
-        $(".buyNowProduct").show();
+        // $(".buyNowProduct").show();
         $(".product-pay").hide();
     }
 

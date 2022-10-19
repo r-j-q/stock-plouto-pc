@@ -42,7 +42,7 @@ forPayList();
 
 function goodList(id) {
     if (tokens.token) {
-        $(".buyNowProduct").hide();
+        $(".buyNowProduct").text(renewals);
         $(".product-pay").show();
 
 
