@@ -93,7 +93,7 @@ $("#registerBtn").click(function () {
         dataType: "json",
         success: function (res) {
             if (res.code == 0) {
-                window.location.href = "login.html";
+                window.location.href = "login.html?register=register";
             } else {
                 toast(res.msg)
 
@@ -101,6 +101,10 @@ $("#registerBtn").click(function () {
         },
     });
 });
+$(".registerLogin").click(function () {
+    window.location.href = "login.html?register=register";
+});
+ 
 $(".btn_yzmbutton").click(function () {
     var obj = $(".btn_yzmbutton");
     getCodes(obj);

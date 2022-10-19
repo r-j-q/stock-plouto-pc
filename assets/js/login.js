@@ -31,15 +31,15 @@ $("#loginBtn").click(function () {
       } else {
         var data = JSON.stringify(res.data);
         localStorage.setItem("ploutoUserInfo", data || null);
-        history.go(-1);
         // location.reload()
         // window.history.back()
-        // if (getUrlParams("params") == "product") {
-        //   window.location = document.referrer
-
-        // } else {
-        //   window.location.href = "index.html";
-        // }
+        if (getUrlParams("register") == "register") {
+          window.location.href = "index.html";
+        history.go(-1);
+        } else {
+          history.go(-1);
+          
+        }
 
       }
     },
