@@ -35,7 +35,7 @@ $("#loginBtn").click(function () {
         // window.history.back()
         if (getUrlParams("register") == "register") {
           window.location.href = "index.html";
-        history.go(-1);
+   
         } else {
           history.go(-1);
           
