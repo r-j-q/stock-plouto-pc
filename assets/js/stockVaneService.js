@@ -271,3 +271,46 @@ $(document).on("click", "#pay-stripe", function () {
         isClick = true;
     }, timeOut)
 });
+
+ 
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/smartmoney/index?is_end=0`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${tokens.token}`,
+    },
+    success: function (res) {
+      var { list, status } = res.data;
+      var op22 = "";
+      console.log("股票信息", res)
+      if(res.code==2){
+        window.location.href = "login.html";
+        toast(res.data)
+
+        return
+      }
+      if ( list.length > 0) {
+        $.each(list, function (index, data) {
+          op22 = `<div class="producInter">
+            <div class="produc-list-">
+              <div class="produc-list">
+                <div class="fontSize16 m-l10 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'}</div>
+                <div class="fontSize24 m-r10  name-style color_32ECBD">${data.stock_no}</div>
+              </div>
+            </div>
+          </div>`
+          $(".produc-list-data").append(op22);
+
+        });
+      } else {
+       if (!status) {
+          op22 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+          $(".produc-list-data").append(op22);
+        }
+     
+    }
+    },
+  });
+
+ 

@@ -271,8 +271,68 @@ $(document).on("click", "#pay-stripe", function () {
    
 });
 
-
 setTimeout(() => {
     isClick = true;
 }, timeOut)
+ 
 
+// 月季年数据
+
+ 
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/product/getlist?is_end=0&type_id=0`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${tokens.token}`,
+    },
+    success: function (res) {
+      let { list, status } = res.data;
+      var op23 = "";
+      if(res.code==2){
+        window.location.href = "login.html";
+      toast(res.data)
+        return
+      }
+      if (list.length > 0 ) {
+        $.each(list, function (index, data) { 
+
+          op23 = `<div class="producInter">
+            <div class="produc-list-">
+              <div class="produc-list-100 b-b paddingBottom">
+                <div class="produc-list-c">
+                  <div class="fontSize16 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'} </div>
+                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
+                </div>
+                <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
+                  <div>
+                    <div class="color_f fontSize16">$${data.buy_price}</div>
+                    <div class="color_8E fontSize12">Buy</div>
+                  </div>
+                  <div>
+                    <div class="color_f fontSize16">$${data.sale_price}</div>
+                    <div  class="color_8E fontSize12">Sell</div>
+                  </div>
+                  <div>
+                    <div class="color_f fontSize16">${data.reach}%</div>
+                    <div class="color_8E fontSize12">Reach</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>`
+          $(".produc-list-data-y-j-n").append(op23);
+
+        });
+      } else {
+     
+          if (!status) {
+            op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+            $(".produc-list-data-y-j-n").append(op23);
+          }
+   
+        
+      }
+    },
+  });
+ 
