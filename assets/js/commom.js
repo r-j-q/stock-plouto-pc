@@ -13,7 +13,13 @@ var htmlPartner = `<a href="index.html#partner" class="color_">Partner</a>`
 $(".htmlPartner").append(htmlPartner)
 var htmlCustomerStorie = `<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
 $(".htmlCustomerStories").append(htmlCustomerStorie)
-
+var htmlService= `<a href="javascript:;" class="color_">Service</a>
+<ul>
+<li><a href="stockVaneService.html" class="color_">Stock vane</a></li>
+<li><a href="SignalsService.html" class="color_"> Signals</a></li> 
+</ul>
+`
+$(".htmlService").append(htmlService)
 
 var htmlBanner =
   `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
@@ -141,6 +147,11 @@ $("#vip7").click(function () {
   window.location.href = "advancedmember.html?idx=7";
 
 });
+$(".starvip10").click(function () {
+
+  window.location.href = "starvip.html?idx=10";
+
+});
 
  
 $(".orderingPrivacy").click(function () {
@@ -197,8 +208,8 @@ if (userInfo?.token) {
           op22 = `<div class="producInter">
             <div class="produc-list-">
               <div class="produc-list">
-                <div class="fontSize24 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'c' : 'p'}</div>
-                <div class="fontSize24  name-style color_32ECBD">${data.stock_no}</div>
+                <div class="fontSize16 m-l10 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'}</div>
+                <div class="fontSize24 m-r10  name-style color_32ECBD">${data.stock_no}</div>
               </div>
             </div>
           </div>`
@@ -243,7 +254,7 @@ if (userInfo?.token) {
             <div class="produc-list-">
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
-                  <div class="fontSize24 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'c' : 'p'} </div>
+                  <div class="fontSize16 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'} </div>
                   <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
                 </div>
                 <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
