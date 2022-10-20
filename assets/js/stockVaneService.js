@@ -291,6 +291,7 @@ $(document).on("click", "#pay-stripe", function () {
         return
       }
       if ( list.length > 0) {
+        var newLs=`<img class="nodatavip" src="assets/images/nouservip.png"/>`;
         $.each(list, function (index, data) {
           op22 = `<div class="producInter">
             <div class="produc-list-">
@@ -300,9 +301,13 @@ $(document).on("click", "#pay-stripe", function () {
               </div>
             </div>
           </div>`
-          $(".produc-list-data").append(op22);
-
         });
+        if (!status) {
+            newLs=`<img class="nodatavip" src="assets/images/nouservip.png"/>`
+        }else{
+            newLs="";
+        }
+        $(".produc-list-data").append(op22+newLs);
       } else {
        if (!status) {
           op22 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`

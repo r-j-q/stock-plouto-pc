@@ -20,6 +20,12 @@ var htmlService= `<a href="javascript:;" class="color_">Service</a>
 </ul>
 `
 $(".htmlService").append(htmlService)
+var htmlUser= `<a href="javascript:;" class="color_ name-user"></a>
+<ul>
+<li><a href="userTime.html" class="color_">Me</a></li> 
+</ul>
+`
+$(".htmlUser").append(htmlUser)
 
 var htmlBanner =
   `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>

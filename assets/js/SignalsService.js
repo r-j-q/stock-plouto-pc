@@ -92,26 +92,26 @@ goodList(producId);
 // }
 var isPayPal = true;
 $("#confirmPaymentType").click(() => {
-    if(isPayPal){ 
-        isPayPal=false;
-    var val = $('input:radio[name="policy-input"]:checked').val();
-    if (val == null) {
-        // 什么也没选中 
-        toast('Please agree to the service and privacy policy')
-        return false;
+    if (isPayPal) {
+        isPayPal = false;
+        var val = $('input:radio[name="policy-input"]:checked').val();
+        if (val == null) {
+            // 什么也没选中 
+            toast('Please agree to the service and privacy policy')
+            return false;
 
-    } else {
-        if (count == 1) {
-            var paytype = "paypal";
-            createdOrderTo(productData.ID, paytype);
+        } else {
+            if (count == 1) {
+                var paytype = "paypal";
+                createdOrderTo(productData.ID, paytype);
+            }
+
+
         }
-
-
     }
-}
-setTimeout(() => {
-    isPayPal=true
-}, timeOut);
+    setTimeout(() => {
+        isPayPal = true
+    }, timeOut);
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
@@ -235,8 +235,8 @@ function setLoading(isLoading) {
 }
 
 let isClick = true;
-$(document).on("click", "#pay-stripe", function () { 
-    if (isClick) { 
+$(document).on("click", "#pay-stripe", function () {
+    if (isClick) {
         isClick = false;
 
         var val = $('input:radio[name="policy-input"]:checked').val();
@@ -263,41 +263,42 @@ $(document).on("click", "#pay-stripe", function () {
                 .addEventListener("submit", handleSubmit);
 
         }
-         
+
     } else {
         // console.log("=isClick=222==========>", isClick)
 
     }
-   
+
 });
 
 setTimeout(() => {
     isClick = true;
 }, timeOut)
- 
+
 
 // 月季年数据
 // 1短  2长
- 
-  $.ajax({
+
+$.ajax({
     type: "get",
     url: `${baseUrl}/user/product/getlist?is_end=0&type_id=1`,
     dataType: "json",
     headers: {
-      Authorization: `Bearer ${tokens.token}`,
+        Authorization: `Bearer ${tokens.token}`,
     },
     success: function (res) {
-      let { list, status } = res.data;
-      var op23 = "";
-      if(res.code==2){
-        window.location.href = "login.html";
-      toast(res.data)
-        return
-      }
-      if (list.length > 0 ) {
-        $.each(list, function (index, data) { 
+        let { list, status } = res.data;
+        var op23 = "";
+        if (res.code == 2) {
+            window.location.href = "login.html";
+            toast(res.data)
+            return
+        }
+        if (list.length > 0) {
+            var newLs = "";
+            $.each(list, function (index, data) {
 
-          op23 = `<div class="producInter">
+                op23 = `<div class="producInter">
             <div class="produc-list-">
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
@@ -321,39 +322,44 @@ setTimeout(() => {
               </div>
             </div>
             </div>`
-          $(".produc-list-data-y-j-n").append(op23);
+            });
+            if (!status) {
+                newLs = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+            } else {
+                newLs = "";
+            }
+            $(".produc-list-data-y-j-n").append(op23 + newLs);
+        } else {
 
-        });
-      } else {
-     
-          if (!status) {
-            op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
-            $(".produc-list-data-y-j-n").append(op23);
-          }
-   
-        
-      }
+            if (!status) {
+                op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+                $(".produc-list-data-y-j-n").append(op23);
+            }
+
+
+        }
     },
-  });
-  $.ajax({
+});
+$.ajax({
     type: "get",
     url: `${baseUrl}/user/product/getlist?is_end=0&type_id=2`,
     dataType: "json",
     headers: {
-      Authorization: `Bearer ${tokens.token}`,
+        Authorization: `Bearer ${tokens.token}`,
     },
     success: function (res) {
-      let { list, status } = res.data;
-      var op23 = "";
-      if(res.code==2){
-        window.location.href = "login.html";
-      toast(res.data)
-        return
-      }
-      if (list.length > 0 ) {
-        $.each(list, function (index, data) { 
+        let { list, status } = res.data;
+        var op23 = "";
+        if (res.code == 2) {
+            window.location.href = "login.html";
+            toast(res.data)
+            return
+        }
+        if (list.length > 0) {
+            var newL = "";
+            $.each(list, function (index, data) {
 
-          op23 = `<div class="producInter">
+                op23 = `<div class="producInter">
             <div class="produc-list-">
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
@@ -377,18 +383,24 @@ setTimeout(() => {
               </div>
             </div>
             </div>`
-          $(".produc-list-data-y-j-n-chang").append(op23);
 
-        });
-      } else {
-     
-          if (!status) {
-            op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
-            $(".produc-list-data-y-j-n-chang").append(op23);
-          }
-   
-        
-      }
+
+
+            });
+            if (!status) {
+                newL = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+            } else {
+                newL = "";
+            }
+            $(".produc-list-data-y-j-n-chang").append(op23 + newL);
+        } else {
+
+            if (!status) {
+                op23 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+                $(".produc-list-data-y-j-n-chang").append(op23);
+            }
+
+
+        }
     },
-  });
- 
+});
