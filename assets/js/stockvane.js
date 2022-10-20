@@ -26,11 +26,12 @@ function forPayList() {
 function handleClick(e) {
     count = e;
     if (count == 0) {
+        $('#pay-stripe').hide();
+        $('#confirmPaymentType').show() 
+    } else {
         $('#pay-stripe').show();
         $('#confirmPaymentType').hide()
-    } else {
-        $('#pay-stripe').hide();
-        $('#confirmPaymentType').show()
+       
     }
 
 
@@ -53,14 +54,14 @@ function goodList(id) {
     }
 
     if (count == 0) {
-        $('#pay-stripe').show();
-        $('#confirmPaymentType').hide()
-
-
-    } else {
+       
         $('#confirmPaymentType').show()
         $('#pay-stripe').hide();
 
+    } else {
+       
+        $('#pay-stripe').show();
+        $('#confirmPaymentType').hide()
     }
 
     $.ajax({
@@ -102,7 +103,7 @@ $("#confirmPaymentType").click(() => {
             return false;
 
         } else {
-            if (count == 1) {
+            if (count == 0) {
                 var paytype = "paypal";
                 createdOrderTo(productData.ID, paytype);
             }
