@@ -156,6 +156,7 @@
 		var system = {};
 		system.pingtai = /(Win32|Win16|WinCE|Mac68K|MacIntel|MacIntel|MacPPC|Linux mips64)/i.test(navigator.platform);
 		if (system.pingtai) {
+			$("#headerList").hide()
 			//电脑
 			$("#headerLogo").click(() => {
 				$("#headerList").fadeToggle();
@@ -163,7 +164,7 @@
 
 		} else {
 			console.log("=======>")
-			$("#headerList").slideToggle()
+			$("#headerList").hide()
 			//手机
 			$("#headerLogo").click(() => {
 				$("#headerList").fadeToggle();

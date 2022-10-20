@@ -289,16 +289,22 @@ $.ajax({
         Authorization: `Bearer ${tokens.token}`,
     },
     success: function (res) {
-        let { list, status } = res.data;
+        let {   status } = res.data;
         var op23 = "";
         if (res.code == 2) {
             window.location.href = "login.html";
             toast(res.data)
             return
         }
-        if (list.length > 0) {
+        console.log("======>",res.data.list)
+        if (res.data.list.length > 0) {
             var newLs = "";
-            $.each(list, function (index, data) {
+            if (!status) {
+                newLs = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+            } else {
+                newLs = "";
+            }
+            $.each(res.data.list, function (index, data) {
 
                 op23 = `<div class="producInter">
             <div class="produc-list-">
@@ -324,13 +330,10 @@ $.ajax({
               </div>
             </div>
             </div>`
-            });
-            if (!status) {
-                newLs = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
-            } else {
-                newLs = "";
-            }
             $(".produc-list-data-y-j-n").append(op23 + newLs);
+            });
+          
+           
         } else {
 
             if (!status) {
@@ -357,8 +360,14 @@ $.ajax({
             toast(res.data)
             return
         }
-        if (list.length > 0) {
+        if (res.data.list.length > 0) {
+
             var newL = "";
+            if (!status) {
+                newL = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
+            } else {
+                newL = "";
+            }
             $.each(list, function (index, data) {
 
                 op23 = `<div class="producInter">
@@ -386,15 +395,11 @@ $.ajax({
             </div>
             </div>`
 
-
+            $(".produc-list-data-y-j-n-chang").append(op23 + newL);
 
             });
-            if (!status) {
-                newL = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
-            } else {
-                newL = "";
-            }
-            $(".produc-list-data-y-j-n-chang").append(op23 + newL);
+          
+            
         } else {
 
             if (!status) {

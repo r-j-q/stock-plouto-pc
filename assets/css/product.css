@@ -145,7 +145,7 @@ button{
 @media screen and (max-width:750px) {
     .product-container {
         flex-direction: column;
-        height: auto;
+        min-height: 488px;
     }
     .product-container-left{
         /* display: none; */
@@ -158,6 +158,7 @@ button{
     }
     .how-it-works{
           margin-bottom: 0px;
+          min-height: 600px;
     }
     .product-container-right-center{
         width: 94%;
@@ -170,5 +171,7 @@ button{
     .product-container-left{
         left: 0;
         width: 100%;
+        display: none;
     }
+   
 }

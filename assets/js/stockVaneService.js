@@ -294,6 +294,11 @@ $(document).on("click", "#pay-stripe", function () {
       }
       if ( list.length > 0) {
         var newLs=`<img class="nodatavip" src="assets/images/nouservip.png"/>`;
+        if (!status) {
+            newLs=`<img class="nodatavip" src="assets/images/nouservip.png"/>`
+        }else{
+            newLs="";
+        }
         $.each(list, function (index, data) {
           op22 = `<div class="producInter">
             <div class="produc-list-">
@@ -303,13 +308,10 @@ $(document).on("click", "#pay-stripe", function () {
               </div>
             </div>
           </div>`
+          $(".produc-list-data").append(op22+newLs);
         });
-        if (!status) {
-            newLs=`<img class="nodatavip" src="assets/images/nouservip.png"/>`
-        }else{
-            newLs="";
-        }
-        $(".produc-list-data").append(op22+newLs);
+       
+       
       } else {
        if (!status) {
           op22 = `<img class="nodatavip" src="assets/images/nouservip.png"/>`
