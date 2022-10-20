@@ -29,11 +29,12 @@ $(".htmlUser").append(htmlUser)
 
 var htmlBanner =
   `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
-  <li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
+  <li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
 <li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
-<li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
-<li><a href="silvermembers.html" class="color_">Vip Club</a></li>
+<li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
 <li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
+<li><a href="silvermembers.html" class="color_">Vip Club</a></li>
+ 
  
 `
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
