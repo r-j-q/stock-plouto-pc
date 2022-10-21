@@ -34,10 +34,11 @@ var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1
                             <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="#AboutUs"> About Us</a></li>
 
-
-                            <li class="dropdown htmlUser">
-                                <a href="javascript:;" class="loginStock">Login In</a>
-                                
+                            <li class="dropdown">
+                            <a href="javascript:;" class="loginStock">Login In</a>
+                            
+                              </li>
+                            <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
                                     <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
@@ -121,10 +122,11 @@ var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;"
                             <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="#AboutUs"> About Us</a></li>
 
-
-                            <li class="dropdown htmlUser">
-                                <a href="javascript:;" class="loginStock">Login In</a>
-                                
+                            <li class="dropdown">
+                            <a href="javascript:;" class="loginStock">Login In</a>
+                            
+                              </li>
+                            <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
                                     <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
