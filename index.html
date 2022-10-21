@@ -28,7 +28,7 @@
 </head>
 
 <body>
-	<div class="login-out-style color_ fontSize16">LOGIN OUT</div>
+	<!-- <div class="login-out-style color_ fontSize16">LOGIN OUT</div> -->
 	<div class="banner-bac header-style-position">
 		<div class="header-top displaySpacebetween">
 			<div class="color_  header-top-left ">
@@ -48,8 +48,7 @@
 					<li><a href="#htmlCustomerStories" class="color_"> Customer Stories</a></li>
 					<li><a href="#AboutUs" class="color_">About Us</a></li>
 					<li class="loginStock"><a href="javascript:;" class="color_">Login In</a></li>
-					<li class="htmlUser">  
-					</li>
+					<li class="htmlUser">   </li>
 
 				</ul>
 			</div>
@@ -442,9 +441,8 @@
 				$("#headerLogo").click(() => {
 					$("#headerList").fadeToggle();
 				})
-			} else {
-				console.log("=======>")
-				$("#headerList").slideToggle()
+			} else { 
+				$("#headerList").hide()
 				//手机
 				$("#headerLogo").click(() => {
 					$("#headerList").fadeToggle();

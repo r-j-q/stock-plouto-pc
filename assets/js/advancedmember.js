@@ -76,7 +76,7 @@ function goodList(id) {
             productData = res.data;
             if (id == producId) {
                 var op1 = `<span class="fontSize42">$${productData.cur_price / 100}</span>`;
-                $("#pay01").append(op1);
+                $("#pay01").append(op1+'/Year');
 
 
             }

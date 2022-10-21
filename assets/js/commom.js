@@ -23,6 +23,7 @@ $(".htmlService").append(htmlService)
 var htmlUser= `<a href="javascript:;" class="color_ name-user"></a>
 <ul>
 <li><a href="userTime.html" class="color_">Me</a></li> 
+<li class="login-out-style"><a href="javascript:;" class="color_ ">LOGIN OUT</a></li> 
 </ul>
 `
 $(".htmlUser").append(htmlUser)
