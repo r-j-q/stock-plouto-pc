@@ -1,3 +1,182 @@
+// header content
+var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1E1E;">
+<header class="main-header clearfix">
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix">
+            <div class="main-menu-wrapper-inner clearfix">
+                <div class="main-menu-wrapper__left clearfix hdeer">
+                    <div class="main-menu-wrapper__logo">
+                        <a href=""><img src="assets/images/logo.png" style="width: 160px" alt=""></a>
+                    </div>
+                    <div class="main-menu-wrapper__main-menu">
+                        <a href="#" class="mobile-nav__toggler">x</a>
+                        <ul class="main-menu__list">
+                            <li><a href="index.html"> Home</a></li>
+
+                            <li class="dropdown">
+                                <a href="#">Product Center</a>
+                                <ul>
+                                    <li><a href="stockvane.html?idx=3">Stock vane</a></li>
+                                    <li><a href="primarymember.html?idx=5">Primary member</a></li>
+                                    <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
+                                    <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
+                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
+                                    <li><a href="silvermembers.html">Vip Club</a></li> 
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Service</a>
+                                <ul>
+                                    <li><a href="stockVaneService.html">Stock vane</a></li>
+                                    <li><a href="SignalsService.html"> Signals</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
+                            <li><a href="#AboutUs"> About Us</a></li>
+
+
+                            <li class="dropdown htmlUser">
+                                <a href="javascript:;" class="loginStock">Login In</a>
+                                
+                                <ul> 
+                                    <li><a href="userTime.html">Me</a></li>
+                                    <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<section class="main-slider">
+    <div class="thm-swiper__slider">
+        <div class="swiper-wrapper">
+           
+            <div class="container">
+            <div class="content-top htmlEasier"></div>
+            </div>
+        </div>
+    </div>
+ 
+    
+</div>
+</section>
+</div>
+
+
+<div class="mobile-nav__wrapper">
+<div class="mobile-nav__overlay mobile-nav__toggler"></div>
+<div class="mobile-nav__content">
+    <span class="mobile-nav__close mobile-nav__toggler">x</span>
+
+    <div class="logo-box">
+        <a href="" aria-label="logo image"><img src="assets/images/logo.png" width="155" alt=""></a>
+    </div>
+    <div class="mobile-nav__container"></div>
+</div>
+</div>`
+$(".headerBannersindex").append(headerBannersindex)
+
+ 
+var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;">
+<header class="main-header clearfix">
+    <nav class="main-menu clearfix">
+        <div class="main-menu-wrapper clearfix">
+            <div class="main-menu-wrapper-inner clearfix">
+                <div class="main-menu-wrapper__left clearfix hdeer">
+                    <div class="main-menu-wrapper__logo">
+                        <a href=""><img src="assets/images/logo.png" style="width: 160px" alt=""></a>
+                    </div>
+                    <div class="main-menu-wrapper__main-menu">
+                       
+   <img class="mobile-nav__close mobile-nav__toggler wwhh" src="assets/images/header-right-mobail.png"/>
+
+                        <ul class="main-menu__list">
+                            <li><a href="index.html"> Home</a></li>
+
+                            <li class="dropdown">
+                                <a href="#">Product Center</a>
+                                <ul>
+                                    <li><a href="stockvane.html?idx=3">Stock vane</a></li>
+                                    <li><a href="primarymember.html?idx=5">Primary member</a></li>
+                                    <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
+                                    <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
+                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
+                                    <li><a href="silvermembers.html">Vip Club</a></li> 
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Service</a>
+                                <ul>
+                                    <li><a href="stockVaneService.html">Stock vane</a></li>
+                                    <li><a href="SignalsService.html"> Signals</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
+                            <li><a href="#AboutUs"> About Us</a></li>
+
+
+                            <li class="dropdown htmlUser">
+                                <a href="javascript:;" class="loginStock">Login In</a>
+                                
+                                <ul> 
+                                    <li><a href="userTime.html">Me</a></li>
+                                    <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<section class="main-slider">
+    <div class="thm-swiper__slider">
+        <div class="swiper-wrapper">
+           
+            <div class="container">
+            <div class="content-top htmlEasier"></div>
+            </div>
+        </div>
+    </div>
+ 
+    
+</div>
+</section>
+</div>
+
+
+<div class="mobile-nav__wrapper">
+<div class="mobile-nav__overlay mobile-nav__toggler "></div>
+<div class="mobile-nav__content">
+ 
+   <span class="mobile-nav__close mobile-nav__toggler">x</span>
+    
+    <div class="logo-box">
+        <a href="" aria-label="logo image"><img src="assets/images/logo.png" width="155" alt=""></a>
+    </div>
+    <div class="mobile-nav__container"></div>
+</div>
+</div>`
+ 
+$(".headerBannersHtml").append(headerBanners)
+
+// header content end
+
+
+
+
 var easierMake="make";
 var easierMake1="your personal investing";
 var easierMake2="easier"; 
