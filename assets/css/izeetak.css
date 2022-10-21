@@ -338,6 +338,8 @@ canvas {
     z-index: 999;
     display: block;
     background: var(--thm-base);
+    width: 94%;
+    margin: 0 auto;
 }
 
 .main-header__top {
@@ -456,8 +458,9 @@ canvas {
 }
 
 .main-menu {
+    width: 100%;
     position: relative;
-    padding: 0 80px;
+     
     z-index: 91;
 }
 
@@ -6686,5 +6689,8 @@ canvas {
     .mobile-nav__content {
         width: 300px;
         background-color: var(--thm-base-rgb);
+    }
+    .main-menu-wrapper-inner{
+        width: 90%;
     }
 }
