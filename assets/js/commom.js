@@ -54,7 +54,7 @@ var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1
 </header>
 
 
-<section class="main-slider">
+<section class="main-slider main-slider-block">
     <div class="thm-swiper__slider">
         <div class="swiper-wrapper">
            
@@ -146,7 +146,7 @@ var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;"
         <div class="swiper-wrapper">
            
             <div class="container">
-            <div class="content-top htmlEasier"></div>
+            <div class="content-top"></div>
             </div>
         </div>
     </div>

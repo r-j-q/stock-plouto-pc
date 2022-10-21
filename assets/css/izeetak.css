@@ -331,7 +331,11 @@ canvas {
 # Navigations One
 --------------------------------------------------------------*/
 .main-header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     display: block;
     background: var(--thm-base);
 }
@@ -1370,10 +1374,14 @@ canvas {
 --------------------------------------------------------------*/
 .main-slider {
     position: relative;
+    display: none;
+    overflow: hidden;
+}
+.main-slider-block {
+    position: relative;
     display: block;
     overflow: hidden;
 }
-
 .main-slider .swiper-slide {
     position: relative;
     background-color: var(--thm-black);
