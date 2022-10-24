@@ -1,7 +1,7 @@
 var userInfo =JSON.parse(  localStorage.getItem("ploutoUserInfo"));
 $("#ResetPassword").click(function () {
   window.location.href = "changePassword.html";
-});
+}); 
 $("#loginBtn").click(function () {
 
   if ($("#username").val() == "") {
@@ -18,7 +18,7 @@ $("#loginBtn").click(function () {
     username: $("#username").val(),
     password: $("#password").val(),
   };
-
+ 
   $.ajax({
     type: "post",
     url: `${baseUrl}/auth/login`,
@@ -38,12 +38,18 @@ $("#loginBtn").click(function () {
       console.log("--特殊跳转------->")
         } else {
       console.log("----正常跳转----->")
-      // window.location.href = "index.html"; 
-      // window.location.href = fileName; 
+  
+      // self.location = document.referrer; 
+      if(localStorage.getItem("fileNameTo")){
+        window.location.href = localStorage.getItem("fileNameTo"); 
+      }else{
+        window.location.href = "index.html"; 
+
+      }
+         
 // fileName = (location.href.split("/").slice(-1))[0];  
 
-
-           window.history.back()
+ 
           //  setTimeout(()=>{
             // window.location.href = document.referrer;
           //  },100)

@@ -114,7 +114,7 @@ function createdOrderTo(goods_id, paytype) {
 
     $.ajax({
         type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=0`,
+        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=1`,
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,
@@ -138,7 +138,7 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) {
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0`, {
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=1`, {
         method: "get",
         headers: {
             "Content-Type": "application/json",

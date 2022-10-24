@@ -32,8 +32,8 @@ var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
-                            <li><a href="#AboutUs"> About Us</a></li>
+                            <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
+                            <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
                             <a href="javascript:;" class="loginStock">Login In</a>
@@ -120,8 +120,8 @@ var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;"
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#htmlCustomerStories"> Customer Stories</a></li>
-                            <li><a href="#AboutUs"> About Us</a></li>
+                            <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
+                            <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
                             <a href="javascript:;" class="loginStock">Login In</a>
