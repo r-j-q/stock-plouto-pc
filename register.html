@@ -77,7 +77,7 @@
 							</select>
 							<span id="codeInit" class="color_f fontWeight400 fontSize16 border-right-2">009</span>
 						</div>
-						<input type="text" id="phone" placeholder="Telephone"
+						<input type="text" id="phone" placeholder="Telephone" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " 
 							class="form-control color_f  loginbackgroundColor fontSize16" />
 					</div>
 					<div class="content-t-right-list-register loginbackgroundColor">

@@ -9,7 +9,8 @@ var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1
                         <a href=""><img src="assets/images/logo.png" style="width: 160px" alt=""></a>
                     </div>
                     <div class="main-menu-wrapper__main-menu">
-                        <a href="#" class="mobile-nav__toggler">x</a>
+                    <img class="  mobile-nav__toggler wwhh" src="assets/images/header-right-mobail.png"/>
+                    
                         <ul class="main-menu__list">
                             <li><a href="index.html"> Home</a></li>
 

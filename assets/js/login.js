@@ -38,7 +38,7 @@ $("#loginBtn").click(function () {
    
         } else {
           history.go(-1);
-          
+          // window.history.back()
         }
 
       }
