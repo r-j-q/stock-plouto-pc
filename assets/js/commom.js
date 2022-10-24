@@ -269,8 +269,8 @@ $('.htmlBanners').append(htmlBanner);
 $('.footer-ui').append(htmlFooter);
 
 $(".loginStock").click(function () {
-  if (userInfo == null) {
-    window.location.href = "login.html";
+  if (userInfo == null) {  
+    window.location.href = `login.html`;
   }
 });
 $(".indexHtml").click(function () {
@@ -408,3 +408,5 @@ if (userInfo?.token) {
     },
   });
 }
+
+ 

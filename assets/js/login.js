@@ -34,10 +34,20 @@ $("#loginBtn").click(function () {
         // location.reload()
         // window.history.back()
         if (getUrlParams("register") == "register") {
-          window.location.href = "index.html";
-   
+          window.location.href = "index.html"; 
+      console.log("--特殊跳转------->")
         } else {
-          history.go(-1);
+      console.log("----正常跳转----->")
+      // window.location.href = "index.html"; 
+      // window.location.href = fileName; 
+// fileName = (location.href.split("/").slice(-1))[0];  
+
+
+           window.history.back()
+          //  setTimeout(()=>{
+            // window.location.href = document.referrer;
+          //  },100)
+          
           // window.history.back()
         }
 

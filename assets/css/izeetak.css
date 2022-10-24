@@ -475,8 +475,7 @@ canvas {
 }
 
 .main-menu-wrapper__left {
-    position: relative;
-    display: block;
+    position: relative; 
     float: left;
 }
 
