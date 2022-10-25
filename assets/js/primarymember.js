@@ -1,5 +1,5 @@
 var producId =5;
-var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm"
+// var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm"
 
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
@@ -14,7 +14,6 @@ $(".buyNowProduct").click(() => {
         loginH('product')
 
     }
-
 })
 
 
@@ -148,7 +147,7 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) {
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=1`, {
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0`, {
         method: "get",
         headers: {
             "Content-Type": "application/json",
