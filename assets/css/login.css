@@ -43,9 +43,9 @@
 
 }
 .content-t-register {
-    height: 630px;
+    /* height: 630px; */
     width: 80%;
-    margin: 0px auto;
+    margin: 40px auto;
     
     background-color: #1E2023;
     border-radius: 10px;

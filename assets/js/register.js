@@ -38,6 +38,7 @@ $("#registerBtn").click(function () {
         email: $("#email").val(),
         phone: $("#phone").val(),
         code: $("#code").val(),
+        invite_code: $("#invite_code").val(),
         areacode: areaCode,
     };
     if ($("#username").val() == "") {
