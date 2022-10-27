@@ -1,5 +1,5 @@
 
-localStorage.removeItem("ploutoUserInfo");
+localStorage.removeItem("plutoUserInfo");
 
 var areaCode = "";
 var codeLists = [];

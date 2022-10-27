@@ -1,4 +1,4 @@
-var userInfo =JSON.parse(  localStorage.getItem("ploutoUserInfo"));
+var userInfo =JSON.parse(  localStorage.getItem("plutoUserInfo"));
 var _tempPosition = "center";
 var areaCode = "";
 var codeLists = [];

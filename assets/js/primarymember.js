@@ -1,7 +1,7 @@
 var producId =5;
 // var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm"
 
-var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal

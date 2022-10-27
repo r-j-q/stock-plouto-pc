@@ -186,7 +186,7 @@ var easierMake2="easier";
 $(".easierMake").text(easierMake)
 $(".easierMake1").text(easierMake1)
 $(".easierMake2").text(easierMake2)
-var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
+var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
 var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 $(".indexHtml").append(htmlHome)
 var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
@@ -225,7 +225,7 @@ var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 			<div class="fontSize59 fontWeightAll scales nowrapspace"> make your personal investing easier</div>
       <div class="login-row-style-row h-">
       <div class="login-row-style">
-			<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
+			<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
 			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
       </div>
       <div class="login color_ loginStock fontSize16">
@@ -239,10 +239,10 @@ var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 $(".htmlEasier").append(htmlEasier)
 var htmlFooter = `<div class="footer-content">
   <div class="footer-content-list">
-    <div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Plouto</div>
-    <div class="fontSize16 color_8E paddingBottom8">Stock Plouto is the leading provider of real-time
+    <div class="footer-ttile color_ fontWeight400 paddingBottom">Stock pluto</div>
+    <div class="fontSize16 color_8E paddingBottom8">Stock pluto is the leading provider of real-time
       market news, market
-      analysis, trading ideas, trade recommendations and signals for stocks. Stock Plouto provides
+      analysis, trading ideas, trade recommendations and signals for stocks. Stock pluto provides
       strategies on stock investing and trading, as well as in-depth analysis, trading tips and expert
       advice.</div>
   </div>
@@ -256,13 +256,13 @@ var htmlFooter = `<div class="footer-content">
   </div>
   <div class="footer-content-list">
     <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
-    <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.plouto@gmail.com </div>
+    <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
     <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5570 8229 </div>
     <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
   </div>
 </div>
 <div class="footer-copy color_ fontWeight400">
-  Copyright © 2022.Stock Plouto All rights reserved.
+  Copyright © 2022.Stock pluto All rights reserved.
 </div>`
 
 $('.htmlBanners').append(htmlBanner);
@@ -284,7 +284,7 @@ $(".agreement").click(function () {
 });
 
 function loginH(v) {
-  localStorage.removeItem("ploutoUserInfo");
+  localStorage.removeItem("plutoUserInfo");
   window.location.href = "login.html?params=" + v;
 }
 
@@ -385,7 +385,7 @@ $.ajax({
 
 
 $(".login-out-style").click(()=>{
-  localStorage.removeItem("ploutoUserInfo");
+  localStorage.removeItem("plutoUserInfo");
   setTimeout(()=>{  toast('login out success')},1000)
   window.location.href = "index.html";
 })

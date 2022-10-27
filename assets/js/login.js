@@ -1,4 +1,4 @@
-var userInfo =JSON.parse(  localStorage.getItem("ploutoUserInfo"));
+var userInfo =JSON.parse(  localStorage.getItem("plutoUserInfo"));
 $("#ResetPassword").click(function () {
   window.location.href = "changePassword.html";
 }); 
@@ -30,7 +30,7 @@ $("#loginBtn").click(function () {
 
       } else {
         var data = JSON.stringify(res.data);
-        localStorage.setItem("ploutoUserInfo", data || null);
+        localStorage.setItem("plutoUserInfo", data || null);
         // location.reload()
         // window.history.back()
         if (getUrlParams("register") == "register") {
@@ -62,7 +62,7 @@ $("#loginBtn").click(function () {
   });
 });
 
-$("#ploutoRegister").click(function () {
+$("#plutoRegister").click(function () {
   
     window.location.href = "register.html";
  

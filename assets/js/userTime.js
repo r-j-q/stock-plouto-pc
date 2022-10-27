@@ -1,5 +1,5 @@
 var producId = 3;
-var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
 
@@ -43,7 +43,7 @@ $.ajax({
             $(".disUserProut").append(htmlTime(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.replaceAll('-', '/')))
             $(".disUserProut").append(htmlTime(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.replaceAll('-', '/')))
             $(".disUserProut").append(htmlTime(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.replaceAll('-', '/')))
-            $(".disUserProut").append(htmlTime(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
+            $(".disUserProut").append(htmlTime(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
             // console.log("vip_endvip_end",vip_end.replaceAll('-', '/'))
 
             //日期倒计时,现在距离下面的日期
