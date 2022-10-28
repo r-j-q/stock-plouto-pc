@@ -164,6 +164,8 @@ async function initialize(goods_id) {
 
     const paymentElement = elements.create("payment");
     paymentElement.mount("#payment-element");
+    document.querySelector("#payment-form")
+    .addEventListener("submit", handleSubmit);
 }
 
 async function handleSubmit(e) {
@@ -264,9 +266,7 @@ $(document).on("click", "#pay-stripe", function () {
 
             initialize(productData.ID)
             checkStatus();
-            document
-                .querySelector("#payment-form")
-                .addEventListener("submit", handleSubmit);
+            
         }
     }
     setTimeout(() => {
