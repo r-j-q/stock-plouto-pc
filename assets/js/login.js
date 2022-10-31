@@ -81,3 +81,4 @@ function getUrlParams(key) {
   }
   return false;
 }
+localStorage.removeItem("plutoUserInfo");

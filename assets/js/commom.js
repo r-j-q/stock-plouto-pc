@@ -36,13 +36,17 @@ var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
-                            <a href="javascript:;" class="loginStock">Login In</a>
-                            
+                            <a href="javascript:;" class=" name-user">Login In</a>
+                            <ul> 
+                            <li><a href="userTime.html">Me</a></li>
+                            <li class="login-out-style"><a   href="login.html">Login Out</a></li>
+                        </ul>
                               </li>
+                              
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
+                                    <li class="login-out-style"><a   href="login.html">Login Out</a></li>
                                 </ul>
                             </li>
 
@@ -124,13 +128,17 @@ var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;"
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
-                            <a href="javascript:;" class="loginStock">Login In</a>
-                            
+                                <a href="javascript:;" class="name-user">Login In</a>
+                                <ul> 
+                                <li><a href="userTime.html">Me</a></li>
+                                <li class="login-out-style loginOutStock"><a href="login.html">Login Out</a> </li>
+                                </ul>
                               </li>
+                              
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a href="javascript:;">Login Out</a></li>
+                                    <li class="login-out-style"><a  href="login.html">Login Out</a></li>
                                 </ul>
                             </li>
 
@@ -187,39 +195,40 @@ $(".easierMake").text(easierMake)
 $(".easierMake1").text(easierMake1)
 $(".easierMake2").text(easierMake2)
 var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
-var htmlHome = `<a href="index.html"  class="color_">Home</a>`
-$(".indexHtml").append(htmlHome)
-var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
-$(".htmlAbout").append(htmlAbout)
-var htmlPartner = `<a href="index.html#partner" class="color_">Partner</a>`
-$(".htmlPartner").append(htmlPartner)
-var htmlCustomerStorie = `<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
-$(".htmlCustomerStories").append(htmlCustomerStorie)
-var htmlService= `<a href="javascript:;" class="color_">Service</a>
-<ul>
-<li><a href="stockVaneService.html" class="color_">Stock vane</a></li>
-<li><a href="SignalsService.html" class="color_"> Signals</a></li> 
-</ul>
-`
-$(".htmlService").append(htmlService)
-var htmlUser= `<a href="javascript:;" class="color_ name-user"></a>
-<ul>
-<li><a href="userTime.html" class="color_">Me</a></li> 
-<li class="login-out-style"><a href="javascript:;" class="color_ ">LOGIN OUT</a></li> 
-</ul>
-`
-$(".htmlUser").append(htmlUser)
 
-var htmlBanner =
-  `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
-  <li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
-<li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
-<li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
-<li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
-<li><a href="silvermembers.html" class="color_">Vip Club</a></li>
+// var htmlHome = `<a href="index.html"  class="color_">Home</a>`
+// $(".indexHtml").append(htmlHome)
+// var htmlAbout = `<a href="index.html#AboutUs" class="color_">About Us</a>`;
+// $(".htmlAbout").append(htmlAbout)
+// var htmlPartner = `<a href="index.html#partner" class="color_">Partner</a>`
+// $(".htmlPartner").append(htmlPartner)
+// var htmlCustomerStorie = `<a href="index.html#htmlCustomerStories" class="color_"> Customer Stories</a>`
+// $(".htmlCustomerStories").append(htmlCustomerStorie)
+// var htmlService= `<a href="javascript:;" class="color_">Service</a>
+// <ul>
+// <li><a href="stockVaneService.html" class="color_">Stock vane</a></li>
+// <li><a href="SignalsService.html" class="color_"> Signals</a></li> 
+// </ul>
+// `
+// $(".htmlService").append(htmlService)
+// var htmlUser= `<a href="javascript:;" class="color_ name-user"></a>
+// <ul>
+// <li><a href="userTime.html" class="color_">Me</a></li> 
+// <li class="login-out-style"><a href="javascript:;" class="color_ ">LOGIN OUT</a></li> 
+// </ul>
+// `
+// $(".htmlUser").append(htmlUser)
+
+// var htmlBanner =
+//   `<li><a href="stockvane.html?idx=3" class="color_">Stock vane</a></li>
+//   <li><a href="primarymember.html?idx=5" class="color_">Primary member</a></li>
+// <li><a href="intermediatemember.html?idx=6" class="color_">Intermediate member</a></li>
+// <li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
+// <li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
+// <li><a href="silvermembers.html" class="color_">Vip Club</a></li>
  
  
-`
+ 
 var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
 		<div class="content-text color_ fontSize42">
 			<div class="fontSize59 fontWeightAll scales nowrapspace"> make your personal investing easier</div>
@@ -265,7 +274,7 @@ var htmlFooter = `<div class="footer-content">
   Copyright © 2022.Stock pluto All rights reserved.
 </div>`
 
-$('.htmlBanners').append(htmlBanner);
+// $('.htmlBanners').append(htmlBanner);
 $('.footer-ui').append(htmlFooter);
 
 $(".loginStock").click(function () {
@@ -282,7 +291,11 @@ $(".agreement").click(function () {
   window.location.href = "agreement.html";
 
 });
-
+$(".loginOutStock").click(function () {
+  localStorage.removeItem("plutoUserInfo"); 
+    window.location.href = `login.html`;
+  
+});
 function loginH(v) {
   localStorage.removeItem("plutoUserInfo");
   window.location.href = "login.html?params=" + v;
@@ -307,6 +320,7 @@ if (userInfo == null) {
   $(".loginStock").show();
 
 } else {
+  console.log("loginStock  =========")
   $(".loginStock").hide();
   $(".name-user").text('Welcome ' + userInfo.username)
 }
@@ -385,9 +399,10 @@ $.ajax({
 
 
 $(".login-out-style").click(()=>{
+  console.log("===99999999999=====>")
   localStorage.removeItem("plutoUserInfo");
-  setTimeout(()=>{  toast('login out success')},1000)
-  window.location.href = "index.html";
+  setTimeout(()=>{ toast('login out success')},1000)
+  window.location.href = "login.html";
 })
 // period   
 

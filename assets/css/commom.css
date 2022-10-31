@@ -315,6 +315,9 @@ body {
     bottom: 10px;
 }
 @media screen and (max-width:750px) {
+    .displaySpaceAround { 
+        flex-direction: column;
+    }
 
     .fontSize59 {
         font-size: 30px;
