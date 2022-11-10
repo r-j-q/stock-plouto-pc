@@ -189,7 +189,9 @@ body {
 .color_8E {
     color: #8E8E8E;
 }
-
+.fontSize14 {
+    font-size: 14px;
+}
 .fontSize42 {
     font-size: 42px;
 }
@@ -264,7 +266,9 @@ body {
 .paddingtopbottom20 {
     padding: 20px 0;
 }
-
+.marginTop20{
+    margin-top: 20px;
+}
 .dis-flex {
     display: flex;
 }
@@ -299,9 +303,9 @@ body {
 .m-t-20 {
     margin-top: 20px;
 }
-.line-height-20 {
+/* .line-height-20 {
     line-height: 40px;
-}
+} */
 
 .cp {
     cursor: pointer;
@@ -340,6 +344,11 @@ body {
     .nowrapspace {
         white-space: inherit
     }
+    .mobailecolumn{
+        display: flex;
+        flex-direction: column;
+    }
+    
 }
 
 
@@ -521,8 +530,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    border-bottom: .01px solid #B98D5C;
-    padding: 10px 0;
+    border-bottom: .01px solid #B98D5C; 
 
 }
 .borderAll{
@@ -616,6 +624,9 @@ body {
 .p20{
     padding: 20px;
     border-radius: 8px;
+}
+.p10_{
+    padding: 10px;
 }
 .easierMake1{
     margin: 20px 0;

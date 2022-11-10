@@ -12,10 +12,11 @@ button{
 
 }
 .button-style{ 
-    background: #333;
+    background: #ECB930;
     width: 160px;
     padding: 10px;
     margin-top: 20px;
+    margin: 0 auto;
 }
 .product-container {
     width: 100%;

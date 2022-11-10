@@ -684,12 +684,12 @@ body {
 	background: none;
 }
 
-@media screen and (max-width: 668px) {
+/* @media screen and (max-width: 668px) {
 	.swiper-slide a {
 		padding: 5px;
 		border-radius: 2px;
 	}
-}
+} */
 
 /* .swiper-slide img {
 	width: 100%;
@@ -701,7 +701,7 @@ body {
 
 @media screen and (max-width: 668px) {
 	.swiper-slide img {
-		border-radius: 2px;
+		border-radius: 40rem;
 	}
 }
 

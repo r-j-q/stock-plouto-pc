@@ -73,8 +73,8 @@
     flex: 1;
     height: 100%;
 
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     /* align-items: center;
 justify-content: center; */
 
@@ -135,6 +135,18 @@ justify-content: center; */
     margin: 0 auto;
     height: 50px;
     margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+.content-t-right-list-register-add {
+    width: 90%;
+    margin: 0 auto;
+    height: 42px;
+    margin-bottom: 13px;
     cursor: pointer;
     border-radius: 5px;
     display: flex;

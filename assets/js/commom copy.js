@@ -1,5 +1,3 @@
-var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
-// console.log("-------->>>>>",userInfo)
 // (function(win, doc) {
 //   'use strict';
 //   var options = {
@@ -41,7 +39,7 @@ var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
 
 
 // header content
-var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1E1E1E;">
+var headerBannersindex=` <div class="page-wrapper" style="background-color: #1E1E1E;">
 <header class="main-header clearfix">
     <nav class="main-menu clearfix">
         <div class="main-menu-wrapper clearfix">
@@ -106,7 +104,7 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
     <div class="thm-swiper__slider">
         <div class="swiper-wrapper">
            
-            <div class="container" style="width:100%">
+            <div class="container">
             <div class="content-top htmlEasier"></div>
             </div>
         </div>
@@ -131,8 +129,8 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
 </div>`
 $(".headerBannersindex").append(headerBannersindex)
 
-
-var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E;">
+ 
+var headerBanners=` <div class="page-wrapper" style="background-color: #1E1E1E;">
 <header class="main-header clearfix">
     <nav class="main-menu clearfix">
         <div class="main-menu-wrapper clearfix">
@@ -222,7 +220,7 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
     <div class="mobile-nav__container"></div>
 </div>
 </div>`
-
+ 
 $(".headerBannersHtml").append(headerBanners)
 
 // header content end
@@ -230,13 +228,13 @@ $(".headerBannersHtml").append(headerBanners)
 
 
 
-var easierMake = "Make";
-var easierMake1 = "your personal investing";
-var easierMake2 = "easier";
+var easierMake="Make";
+var easierMake1="your personal investing";
+var easierMake2="easier"; 
 $(".easierMake").text(easierMake)
 $(".easierMake1").text(easierMake1)
 $(".easierMake2").text(easierMake2)
- 
+var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
 
 // var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 // $(".indexHtml").append(htmlHome)
@@ -268,134 +266,26 @@ $(".easierMake2").text(easierMake2)
 // <li><a href="advancedmember.html?idx=7" class="color_">Advanced member</a></li>
 // <li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
 // <li><a href="silvermembers.html" class="color_">Vip Club</a></li>
-
-
-
-var htmlEasier = `
-<div class="pt" >
-      <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
-       <div class="ps">
-       <div class="fontSize2422 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Pluto Group is one of the world's leading investment</div>
-			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service, advisory and risk management solutions providers</div>
+ 
+ 
+ 
+var htmlEasier = `<img src="assets/images/banner_1.png" alt="" srcset="">
+		<div class="content-text color_ fontSize42">
+			<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
+      <div class="login-row-style-row h-">
+      <div class="login-row-style">
+			<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
+			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
       </div>
-      </div>
-		 `
-    //  <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
-		// <div class="content-text color_ fontSize42">
-		// 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-    //   <div class="login-row-style-row h-">
-    //   <div class="login-row-style">
-		// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
-		// 	<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
-    //   <div class="loginStock"></div>
-    //   </div>
-     
-		// </div>
-		// </div>
-var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="contentImgheight800">
-		<div class="displayRow100">
-    <div class="bac500l displayRow500l">
-			<div class="fontSize32 fontWeightAll scales nowrapspace textCenter"> Make your personal investing easier</div>
-      <div class='m_t_100 p_10_ color_ fontSizeZHI fontWeight400'>The Pluto Group is one of the world's leading investment service, advisory and risk management solution provider</div>
-		 
-		<div class="loginStock"></div>
-      </div>
-    <div class="bac500r displayRow500r paddingAll">
-    <div class="p-d-20 b3030">
-    <div class="content-t-right">
-    <div class="w_h_auto">
-      <div class="logs-register1  fontSize32 color_">  
-        Register
-      </div> 
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-        <img class="w-20-301" src="assets/images/name-style.png" alt="" srcset="">
-        <input type="text" id="username"   autocomplete="new-password" placeholder="Name"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
-
-
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-
-        <img class="w-20-301" src="assets/images/email.png" alt="" srcset="">
-        <input type="text" id="email" placeholder="Email" autocomplete="new-password"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
-
-
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-        <img class="w-20-301" src="assets/images/loginone.png" alt="" srcset="">
-        <div class="col-center-login">
-          <select name="" id="s1"  autocomplete="new-password" class="form-control-select color_f loginbackgroundColor">
-          </select>
-          <span id="codeInit" class="color_f fontWeight400 fontSize16 border-right-2">009</span>
-        </div>
-        <input    id="phone"  autocomplete="new-password"  placeholder="Telephone" style="width:100%"
-          
-          onafterpaste="this.value=this.value.replace(/[^\d]/g,'') "
-          class="form-control1 color_f  loginbackgroundColor fontSize16" />
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-
-        <img class="w-20-301" src="assets/images/loginones.png" alt="" srcset="">
-        <input type="text" id="code"  autocomplete="new-password" placeholder="Code"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" style="width: 100%;"/>
-        <button class="btn_yzmbutton">
-          Get Code
-        </button>
-
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-
-        <img class="w-20-301" src="assets/images/loginoneee.png" alt="" srcset="">
-        <input id="password" placeholder="Password"  autocomplete="new-password" type="password"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
-
-
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-
-        <img class="w-20-301" src="assets/images/loginoneee.png" alt="" srcset="">
-        <input type="password" id="rePassword"  autocomplete="new-password" placeholder="Confirm Possword"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
-      </div>
-      <div class="content-t-right-list-register-add loginbackgroundColor">
-        <img class="w-20-301" src="assets/images/invite.png" alt="" srcset="">
-        <input type="text" id="invite_code"  autocomplete="new-password" placeholder="Invite Code"
-          class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
-      </div>
-      <div class="content-t-right-list-register-add commbackground fontFamilyColor col-center"
-        id="registerBtn">Register</div>
-      <div class="color_ textAlignCenter opc- registerLogin">LOGIN IN</div>
-
-
-    </div>
-  </div>
+      <div class="login color_ loginStock fontSize16">
+			Login account
+			<img src="assets/images/right.png" alt="" srcset="">
 		</div>
-		</div>
-
-       
-    
 		</div>
 		</div>
 		 `
-     if (userInfo == null) {
-      $(".htmlEasier").append(htmlEasierRegister)
-      $(function () {
-        $('#phone').on('input propertychange', function (e) {
-          var text = $(this).val().replace(/[^\d]/g, "");
-          $(this).val(text)
-        })
-      })
-    }else{
-      $(".htmlEasier").append(htmlEasier)
 
-    }
- 
-
- 
-
-
+$(".htmlEasier").append(htmlEasier)
 var htmlFooter = `<div class="footer-content">
   <div class="footer-content-list">
     <div class="footer-ttile color_ fontWeight400 paddingBottom">Stock pluto</div>
@@ -428,7 +318,7 @@ var htmlFooter = `<div class="footer-content">
 $('.footer-ui').append(htmlFooter);
 
 $(".loginStock").click(function () {
-  if (userInfo == null) {
+  if (userInfo == null) {  
     window.location.href = `login.html`;
   }
 });
@@ -442,9 +332,9 @@ $(".agreement").click(function () {
 
 });
 $(".loginOutStock").click(function () {
-  localStorage.removeItem("plutoUserInfo");
-  window.location.href = `login.html`;
-
+  localStorage.removeItem("plutoUserInfo"); 
+    window.location.href = `login.html`;
+  
 });
 function loginH(v) {
   localStorage.removeItem("plutoUserInfo");
@@ -474,15 +364,15 @@ if (userInfo == null) {
   $(".loginStock").hide();
   $(".name-user").text('Welcome ' + userInfo.username)
 }
-$(".name-user").click(function () {
+$(".name-user").click(function(){
   if (userInfo == null) {
     loginH()
-  } else {
-    $(".name-user").text('Welcome ' + userInfo.username)
+  }else{
+  $(".name-user").text('Welcome ' + userInfo.username)
 
   }
 })
-
+ 
 $("#vip3").click(function () {
 
   window.location.href = "stockvane.html?idx=3";
@@ -514,7 +404,7 @@ $(".starvip10").click(function () {
 
 });
 
-
+ 
 $(".orderingPrivacy").click(function () {
 
   window.location.href = "privacyPolicy.html";
@@ -552,13 +442,13 @@ $.ajax({
   },
 });
 
+ 
 
 
-
-$(".login-out-style").click(() => {
+$(".login-out-style").click(()=>{
   console.log("===99999999999=====>")
   localStorage.removeItem("plutoUserInfo");
-  setTimeout(() => { toast('login out success') }, 1000)
+  setTimeout(()=>{ toast('login out success')},1000)
   window.location.href = "login.html";
 })
 // period   
@@ -571,28 +461,25 @@ if (userInfo?.token) {
     headers: {
       Authorization: `Bearer ${userInfo.token}`,
     },
-    success: function (res) {
-      let { total } = res.data
-      if (total > 0) {
+    success: function (res) { 
+      let {total} = res.data
+      if(total>0){
         $(".periodData").append(period + total);
       }
-
+      
     },
   });
 }
 
-
+ 
 // 统计代码
-!function (f, b, e, v, n, t, s) {
-  if (f.fbq) return; n = f.fbq = function () {
-    n.callMethod ?
-    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-  };
-  if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-  n.queue = []; t = b.createElement(e); t.async = !0;
-  t.src = v; s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s)
-}(window, document, 'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '964717900866399');
-fbq('track', 'PageView');
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '964717900866399');
+	fbq('track', 'PageView');

@@ -243,7 +243,7 @@ function setLoading(isLoading) {
 
 let isClick = true;
 
-
+$("#payment-form").hide()
 $(document).on("click", "#pay-stripe", function () {
     if (isClick) {
         isClick = false;
@@ -254,7 +254,10 @@ $(document).on("click", "#pay-stripe", function () {
             return false;
 
         } else {
-            document.getElementById("pay-stripe").style.width = "100%";
+            // document.getElementById("pay-stripe").style.width = "100%";
+             
+            $("#pay-stripe").hide();
+           $("#payment-form").show()
 
             $("#submit").addClass("m-top-20-")
             $("#button-text").addClass("button-style");

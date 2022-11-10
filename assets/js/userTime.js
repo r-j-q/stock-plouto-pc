@@ -39,12 +39,17 @@ $.ajax({
             $(".email-data").text("Email: " + res.data.email || "")
             $(".phone-data").text("Phone: " + res.data.phone || "")
 
-                
-            $(".disUserProut").append(htmlTime(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.replaceAll('-', '/')))
-            $(".disUserProut").append(htmlTime(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.replaceAll('-', '/')))
-            $(".disUserProut").append(htmlTime(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.replaceAll('-', '/')))
-            $(".disUserProut").append(htmlTime(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
-            // console.log("vip_endvip_end",vip_end.replaceAll('-', '/'))
+               
+
+            $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1 ))
+            $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2 ))
+            $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3 ))
+            $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end))
+            // $(".disUserProut").append(htmlTime(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.replaceAll('-', '/')))
+            // $(".disUserProut").append(htmlTime(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.replaceAll('-', '/')))
+            // $(".disUserProut").append(htmlTime(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.replaceAll('-', '/')))
+            // $(".disUserProut").append(htmlTime(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
+           
 
             //日期倒计时,现在距离下面的日期
             var data_show = $('.data-box');
@@ -75,6 +80,30 @@ $.ajax({
         }
     },
 });
+
+
+function htmlTimeTest(n, name, v) {
+    
+    // console.log("vvvvvvvvvvvv",n)
+
+ 
+var t = `<div class="userProut back30">
+<div class="color_ fontSize24 fontWeightAll">${name}</div>
+<img class="shijianTime m-top-time-20" src="assets/images/shizhong.png" alt="" srcset="">
+<div class="color_8E m-top-time-20 fontSize16">Expiration date:</div>
+<div class="color_ m-top-time-20 fontSize12"> 
+<div class="data-box" >
+${v}  Days left
+</div>
+
+</div>
+</div>`
+
+return t;
+}
+
+
+
 function htmlTime(n, name, v) {
     
         // console.log("vvvvvvvvvvvv",n)
