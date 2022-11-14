@@ -1145,6 +1145,12 @@ canvas {
     font-size: 18px;
     color: var(--thm-text-dark);
     cursor: pointer;
+    /* border: 1px solid var(--thm-gray);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px; */
 }
 
 .mobile-nav__content .main-menu__list,
@@ -1166,12 +1172,14 @@ canvas {
 .mobile-nav__content .main-menu__list li a {
     display: flex;
     justify-content: space-between;
-    line-height: 30px;
+     
     color: #ffffff;
     font-size: 14px;
     font-family: var(--thm-font);
     font-weight: 500;
-    height: 46px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 1.2rem;
     align-items: center;
     transition: 500ms;
 }

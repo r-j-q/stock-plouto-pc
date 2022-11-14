@@ -502,32 +502,32 @@
 			}
 			// 合作
 			//轮播图
-			var mySwiper = new Swiper('.mn-swiper', {
-				autoplay: true,
-				touchRatio: 1,
-				speed: 25000,  //匀速时间
-				loop: true,
-				freeMode: true,  //设置为true则变为free模式
-				slidesPerView: 4,
-				slidesPerGroup: 1,
-			})
-			//--  如果需要前进后退按钮 --
-			$('.arrow-left').click(function () {
-				mySwiper.swipePrev();
-			});
-			$('.arrow-right').click(function () {
-				mySwiper.swipeNext();
-			});
-			//鼠标移入悬停
-			$('.swiper-container').on('mouseenter', function () {
-				mySwiper.stopAutoplay();
-			})
-			//鼠标移出滚动
-			$('.swiper-container').on('mouseleave', function () {
-				mySwiper.startAutoplay();
-			})
+			// var mySwiper = new Swiper('.mn-swiper', {
+			// 	autoplay: true,
+			// 	touchRatio: 1,
+			// 	speed: 25000,  //匀速时间
+			// 	loop: true,
+			// 	freeMode: true,  //设置为true则变为free模式
+			// 	slidesPerView: 4,
+			// 	slidesPerGroup: 1,
+			// })
+			// //--  如果需要前进后退按钮 --
+			// $('.arrow-left').click(function () {
+			// 	mySwiper.swipePrev();
+			// });
+			// $('.arrow-right').click(function () {
+			// 	mySwiper.swipeNext();
+			// });
+			// //鼠标移入悬停
+			// $('.swiper-container').on('mouseenter', function () {
+			// 	mySwiper.stopAutoplay();
+			// })
+			// //鼠标移出滚动
+			// $('.swiper-container').on('mouseleave', function () {
+			// 	mySwiper.startAutoplay();
+			// })
 
-			// 3D
+			// // 3D
 			window.onload = function () {
 				var swiper = new Swiper('.swiper-container', {
 					autoplay: false,

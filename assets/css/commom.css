@@ -631,3 +631,9 @@ body {
 .easierMake1{
     margin: 20px 0;
 }
+
+.formStyle{
+    background: #ECB930;
+    padding: 10px;
+    border-radius: 6px;
+}

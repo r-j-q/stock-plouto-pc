@@ -416,7 +416,7 @@ var htmlFooter = `<div class="footer-content">
   <div class="footer-content-list">
     <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
     <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
-    <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5570 8229 </div>
+    <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5518 5199 </div>
     <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
   </div>
 </div>
