@@ -11,7 +11,8 @@ padding: 20px 0;
     justify-content: space-around;
 }
 .footer-content-list{
-    width: 30%;
+    flex: 1;
+    /* width: 30%; */
     /* background-color: blanchedalmond; */
     /* height: 240px; */
 }

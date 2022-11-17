@@ -78,17 +78,17 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
-                            <a href="javascript:;" class="name-user">Login In</a>
+                            <a href="javascript:;" class="name-user">Sign In</a>
                             <ul> 
                             <li><a href="userTime.html">Me</a></li>
-                            <li class="login-out-style"><a   href="login.html">Login Out</a></li>
+                            <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
                         </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a   href="login.html">Login Out</a></li>
+                                    <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
                                 </ul>
                             </li>
 
@@ -170,17 +170,17 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
-                                <a href="javascript:;" class="name-user">Login In</a>
+                                <a href="javascript:;" class="name-user">Sign In</a>
                                 <ul> 
                                 <li><a href="userTime.html">Me</a></li>
-                                <li class="login-out-style loginOutStock"><a href="login.html">Login Out</a> </li>
+                                <li class="login-out-style loginOutStock"><a href="login.html">Sign Out</a> </li>
                                 </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a  href="login.html">Login Out</a></li>
+                                    <li class="login-out-style"><a  href="login.html">Sign Out</a></li>
                                 </ul>
                             </li>
 
@@ -277,7 +277,7 @@ var htmlEasier = `
        <div class="ps">
        <div class="fontSize2422 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
        <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Pluto Group is one of the world's leading investment</div>
-			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service, advisory and risk management solutions providers</div>
+			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service, advisory and risk management solutions providers.</div>
       </div>
       </div>
 		 `
@@ -318,7 +318,7 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
       <div class="content-t-right-list-register-add loginbackgroundColor">
 
         <img class="w-20-301" src="assets/images/email.png" alt="" srcset="">
-        <input type="text" id="email" placeholder="Email" autocomplete="new-password"
+        <input type="text" id="email" placeholder="Enter Emial" autocomplete="new-password"
           class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
 
 
@@ -341,14 +341,14 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
         <input type="text" id="code"  autocomplete="new-password" placeholder="Code"
           class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" style="width: 100%;"/>
         <button class="btn_yzmbutton">
-          Get Code
+        verification code
         </button>
 
       </div>
       <div class="content-t-right-list-register-add loginbackgroundColor">
 
         <img class="w-20-301" src="assets/images/loginoneee.png" alt="" srcset="">
-        <input id="password" placeholder="Password"  autocomplete="new-password" type="password"
+        <input id="password" placeholder="Create Password"  autocomplete="new-password" type="password"
           class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
 
 
@@ -361,12 +361,12 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
       </div>
       <div class="content-t-right-list-register-add loginbackgroundColor">
         <img class="w-20-301" src="assets/images/invite.png" alt="" srcset="">
-        <input type="text" id="invite_code"  autocomplete="new-password" placeholder="Invite Code"
+        <input type="text" id="invite_code"  autocomplete="new-password" placeholder="Invitation Code"
           class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
       </div>
       <div class="content-t-right-list-register-add commbackground fontFamilyColor col-center"
         id="registerBtn">Register</div>
-      <div class="color_ textAlignCenter opc- registerLogin">LOGIN IN</div>
+      <div class="color_ textAlignCenter opc- registerLogin">Sign IN</div>
 
 
     </div>
@@ -396,29 +396,33 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
  
 
 
-var htmlFooter = `<div class="footer-content">
+var htmlFooter = `
+<div class="footer-content-list">
+<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Pluto</div>
+<div class="fontSize16 color_8E paddingBottom8">
+The Pluto Group is one of the world’s leading investment service， advisory and risk management solutions providers. </br>
+The Group is headquartered in Lucky Plaza, Tsuen Wan, Hong Kong, China and serves clients through its offices in the United States, Europe and Asia.</br>
+The company has a top independent investment research team. Through the U.S. stock big data, artificial intelligence quantitative analysis, it has more than 3,000 kinds of intelligent algorithms. Facing growing U.S. stock investors, the company has the ability to provide risk management, investment system management and financial advisory services. We truly make investing easier for individuals and serve over 2,000 individual investors in U.S. stocks each year. We are also well received by individual investors worldwide.
+</div>
+</div>
+<div class="footer-content  ">
+  
+  <div class="footer-content w-8 displaySpaceAround">
   <div class="footer-content-list">
-    <div class="footer-ttile color_ fontWeight400 paddingBottom">Stock pluto</div>
-    <div class="fontSize16 color_8E paddingBottom8">Stock pluto is the leading provider of real-time
-      market news, market
-      analysis, trading ideas, trade recommendations and signals for stocks. Stock pluto provides
-      strategies on stock investing and trading, as well as in-depth analysis, trading tips and expert
-      advice.</div>
-  </div>
-  <div class="footer-content-list">
-    <div class="footer-ttile color_ fontWeight400 paddingBottom">About Us</div>
-    <div class="fontSize16 color_8E paddingBottom8"><a class='color_8E' href="index.html"> Home</a> </div>
-    <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#htmlCustomerStories"> Customer Stories</a></div>
-    <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#AboutUs"> About Us</a></div>
-     
-    <div class="fontSize16 color_8E agreement">Refund Agreement</div>
-  </div>
-  <div class="footer-content-list">
-    <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
-    <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
-    <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5518 5199 </div>
-    <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
-  </div>
+  <div class="footer-ttile color_ fontWeight400 paddingBottom">About Us</div>
+  <div class="fontSize16 color_8E paddingBottom8"><a class='color_8E' href="index.html"> Home</a> </div>
+  <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#htmlCustomerStories"> Customer Stories</a></div>
+  <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#AboutUs"> About Us</a></div>
+   
+  <div class="fontSize16 color_8E agreement">Refund Agreement</div>
+</div>
+<div class="footer-content-list">
+  <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
+  <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
+  <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5518 5199 </div>
+  <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
+</div>
+</div>
 </div>
 <div class="footer-copy color_ fontWeight400">
   Copyright © 2022.Stock pluto All rights reserved.
@@ -558,7 +562,7 @@ $.ajax({
 $(".login-out-style").click(() => {
   console.log("===99999999999=====>")
   localStorage.removeItem("plutoUserInfo");
-  setTimeout(() => { toast('login out success') }, 1000)
+  setTimeout(() => { toast('Sign out success') }, 1000)
   window.location.href = "login.html";
 })
 // period   

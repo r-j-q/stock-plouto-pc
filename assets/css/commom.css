@@ -637,3 +637,25 @@ body {
     padding: 10px;
     border-radius: 6px;
 }
+.goods_code{
+    height: 40px;
+    line-height: 40px;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+    text-indent: .5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer; 
+    margin-left: 10px;
+}
+.goods_code::placeholder  {
+    color: #8E8E8E !important; 
+    font-size: 1rem;
+} 
+.pleft{
+    padding-left: 30px;
+}
+.xhx{
+    text-decoration: line-through;
+}
