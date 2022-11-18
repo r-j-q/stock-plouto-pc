@@ -3,6 +3,8 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
+var goodsCode="";
+
 $(".buyNowProduct").click(() => {
     if (tokens) {
         $(".product-pay").toggle()
@@ -111,10 +113,11 @@ $("#confirmPaymentType").click(() => {
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
+    goodsCode= $(".goods_code").val();
 
     $.ajax({
         type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=1`,
+        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=1&goods_code=`+goodsCode,
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,
@@ -122,8 +125,10 @@ function createdOrderTo(goods_id, paytype) {
         success: function (res) {
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
-            }else{
+            } else  if(res.code == 2){
                 loginH("product")
+             }else{
+                toast(res.data)
             }
         },
     });
@@ -138,7 +143,9 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) {
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0`, {
+    goodsCode= $(".goods_code").val();
+
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0&goods_code=`+goodsCode, {
         method: "get",
         headers: {
             "Content-Type": "application/json",

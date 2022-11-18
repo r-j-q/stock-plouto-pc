@@ -131,8 +131,10 @@ function createdOrderTo(goods_id, paytype) {
         success: function (res) {
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
-            }else{
+            } else  if(res.code == 2){
                 loginH("product")
+             }else{
+                toast(res.data)
             }
         },
     });
