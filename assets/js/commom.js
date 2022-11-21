@@ -236,7 +236,7 @@ var easierMake2 = "easier";
 $(".easierMake").text(easierMake)
 $(".easierMake1").text(easierMake1)
 $(".easierMake2").text(easierMake2)
- 
+
 
 // var htmlHome = `<a href="index.html"  class="color_">Home</a>`
 // $(".indexHtml").append(htmlHome)
@@ -281,18 +281,18 @@ var htmlEasier = `
       </div>
       </div>
 		 `
-    //  <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
-		// <div class="content-text color_ fontSize42">
-		// 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-    //   <div class="login-row-style-row h-">
-    //   <div class="login-row-style">
-		// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
-		// 	<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
-    //   <div class="loginStock"></div>
-    //   </div>
-     
-		// </div>
-		// </div>
+//  <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
+// <div class="content-text color_ fontSize42">
+// 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
+//   <div class="login-row-style-row h-">
+//   <div class="login-row-style">
+// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
+// 	<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
+//   <div class="loginStock"></div>
+//   </div>
+
+// </div>
+// </div>
 var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="contentImgheight800">
 		<div class="displayRow100">
     <div class="bac500l displayRow500l">
@@ -318,7 +318,7 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
       <div class="content-t-right-list-register-add loginbackgroundColor">
 
         <img class="w-20-301" src="assets/images/email.png" alt="" srcset="">
-        <input type="text" id="email" placeholder="Enter Emial" autocomplete="new-password"
+        <input type="text" id="email" placeholder="Enter Email" autocomplete="new-password"
           class="form-control1 color_f  fontSize16 margin-left-10 loginbackgroundColor" />
 
 
@@ -379,21 +379,21 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
 		</div>
 		</div>
 		 `
-     if (userInfo == null) {
-      $(".htmlEasier").append(htmlEasierRegister)
-      $(function () {
-        $('#phone').on('input propertychange', function (e) {
-          var text = $(this).val().replace(/[^\d]/g, "");
-          $(this).val(text)
-        })
-      })
-    }else{
-      $(".htmlEasier").append(htmlEasier)
+if (userInfo == null) {
+  $(".htmlEasier").append(htmlEasierRegister)
+  $(function () {
+    $('#phone').on('input propertychange', function (e) {
+      var text = $(this).val().replace(/[^\d]/g, "");
+      $(this).val(text)
+    })
+  })
+} else {
+  $(".htmlEasier").append(htmlEasier)
 
-    }
- 
+}
 
- 
+
+
 
 
 var htmlFooter = `
@@ -584,13 +584,36 @@ if (userInfo?.token) {
     },
   });
 }
+function getOrderPrice(goods_code) {
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/order/getprice?goods_id=${getUrlParams('idx')}&goods_code=${goods_code}`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo.token}`,
+    },
+    success: function (res) {
+      if (res.code == 0) {
+        var productDatas = res.data;
+        // nowprice oldprice save_num
+        var opAll = `<span class="" ><span style="text-decoration: line-through"> $${productDatas.oldprice / 100}</span><span class="color_"> $${productDatas.nowprice / 100}</span></span>`;
+        $(".priceData").append(opAll + '/Month');
+      } else {
+        toast(res.data);
+        $(".priceData").text("")
+      }
+
+
+    },
+  });
+}
 
 
 // 统计代码
 !function (f, b, e, v, n, t, s) {
   if (f.fbq) return; n = f.fbq = function () {
     n.callMethod ?
-    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
   };
   if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
   n.queue = []; t = b.createElement(e); t.async = !0;

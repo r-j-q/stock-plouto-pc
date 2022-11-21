@@ -3,9 +3,9 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
-var goodsCode="";
-localStorage.setItem("fileNameTo",(location.href.split("/").slice(-1))[0])
- 
+var goodsCode = "";
+localStorage.setItem("fileNameTo", (location.href.split("/").slice(-1))[0])
+
 $(".buyNowProduct").click(() => {
     if (tokens) {
         $(".product-pay").toggle()
@@ -32,7 +32,7 @@ function handleClick(e) {
         $('#pay-stripe').hide();
         $('#confirmPaymentType').show()
     } else {
-       
+
         $('#pay-stripe').show();
         $('#confirmPaymentType').hide()
     }
@@ -56,12 +56,12 @@ function goodList(id) {
     }
 
     if (count == 0) {
-        
+
         $('#confirmPaymentType').show()
         $('#pay-stripe').hide();
 
     } else {
-      
+
         $('#pay-stripe').show();
         $('#confirmPaymentType').hide()
 
@@ -78,7 +78,7 @@ function goodList(id) {
             productData = res.data;
             if (id == producId) {
                 var op1 = `<span class="fontSize42">$${productData.cur_price / 100}</span>`;
-                $("#pay01").append(op1+'/Month');
+                $("#pay01").append(op1 + '/Month');
 
 
             }
@@ -117,9 +117,12 @@ $("#confirmPaymentType").click(() => {
         isPayPal = true
     }, timeOut);
 })
+
+
+
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
-    goodsCode= $(".goods_code").val();
+    goodsCode = $(".goods_code").val();
 
     $.ajax({
         type: "get",
@@ -131,9 +134,9 @@ function createdOrderTo(goods_id, paytype) {
         success: function (res) {
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
-            } else  if(res.code == 2){
+            } else if (res.code == 2) {
                 loginH("product")
-             }else{
+            } else {
                 toast(res.data)
             }
         },
@@ -149,9 +152,9 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) {
-    goodsCode= $(".goods_code").val();
+    goodsCode = $(".goods_code").val();
 
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0&goods_code=`+goodsCode, {
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0&goods_code=` + goodsCode, {
         method: "get",
         headers: {
             "Content-Type": "application/json",
@@ -170,8 +173,8 @@ async function initialize(goods_id) {
     const paymentElement = elements.create("payment");
     paymentElement.mount("#payment-element");
     document
-    .querySelector("#payment-form")
-    .addEventListener("submit", handleSubmit);
+        .querySelector("#payment-form")
+        .addEventListener("submit", handleSubmit);
 }
 
 async function handleSubmit(e) {
@@ -260,7 +263,7 @@ $(document).on("click", "#pay-stripe", function () {
 
         } else {
             $("#pay-stripe").hide();
-           $("#payment-form").show()
+            $("#payment-form").show()
             $("#submit").addClass("m-top-20-")
             $("#button-text").addClass("button-style");
             $(".buy-now-btn").css({
@@ -273,10 +276,20 @@ $(document).on("click", "#pay-stripe", function () {
 
             initialize(productData.ID)
             checkStatus();
-           
+
         }
     }
     setTimeout(() => {
         isClick = true;
     }, timeOut)
 });
+
+
+
+$(".goods_code").on('input', function (e) {
+    goodsCode = $(".goods_code").val();
+    if (goodsCode.length == intermediatemembergoodsCode) {
+        getOrderPrice(goodsCode)
+    }
+
+}); 

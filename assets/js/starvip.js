@@ -269,3 +269,12 @@ $(document).on("click", "#pay-stripe", function () {
         
     }
 });
+
+
+$(".goods_code").on('input', function (e) {
+    goodsCode = $(".goods_code").val();
+    if (goodsCode.length == starvipgoodsCode) {
+        getOrderPrice(goodsCode)
+    }
+
+});

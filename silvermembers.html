@@ -27,7 +27,7 @@
 
 	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
 	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
-	<script src="assets/js/config.js?v=1.0.0"></script>
+	<script src="assets/js/config.js?v=1.0.1"></script>
 	<script src="assets/js/message.js?v=1.0.0"></script>
 	<script src="https://js.stripe.com/v3/"></script>
 
@@ -96,7 +96,10 @@
 			<div class="product-pay-stripe-paypal"></div>
 			<div class="policy- color_8E fontSize16 displayCenter_">
 				<div>USE CODE:</div>
-			   <input class="policy-input-goods goods_code color_" type="text" name="policy-input-" placeholder="USE CODE" > 
+			   <input  onKeyUp="value=value.replace(/[\W]/g,'')" class="policy-input-goods goods_code color_" type="text" name="policy-input-" placeholder="USE CODE" > 
+		   </div>
+		   <div class="policy-  displayCenter_">
+			<div class="color_ priceData"> </div>
 		   </div>
 			<div class="policy- color_8E fontSize16"><input class="policy-input" type="radio" name="policy-input"><span
 					class="orderingPrivacy">By ordering you are agreeing to our terms of service and privacy
@@ -128,12 +131,12 @@
 
 	<!-- 底部 -->
 	<div class="footer-ui"></div>
-	<script src="assets/js/lunbo.js?v=1.0.0"></script>
+	<script src="assets/js/lunbo.js?v=1.0.0"></script> 
 
-	<script src="assets/js/silvermembers.js?v=1.0.0"></script>
-	<script src="assets/js/commom.js?v=1.0.1"></script>
+	<script src="assets/js/silvermembers.js?v=1.0.1"></script>
+	<script src="assets/js/commom.js?v=1.0.2"></script>
 	<script src="assets/js/timePicker.js?v=1.0.0"></script>
-	<script src="assets/js/izeetak.js"></script>
+	<!-- <script src="assets/js/izeetak.js"></script> -->
 	<script type="text/javascript">
 
 

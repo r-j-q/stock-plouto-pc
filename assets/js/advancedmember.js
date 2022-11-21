@@ -292,3 +292,11 @@ setTimeout(() => {
     isClick = true;
 }, timeOut)
 
+
+$(".goods_code").on('input', function (e) {
+    goodsCode = $(".goods_code").val();
+    if (goodsCode.length == advancedmembergoodsCode) {
+        getOrderPrice(goodsCode)
+    }
+
+});

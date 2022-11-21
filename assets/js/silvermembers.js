@@ -279,3 +279,11 @@ $(document).on("click", "#pay-stripe", function () {
         isClick = true;
     }, timeOut)
 });
+
+$(".goods_code").on('input', function (e) {
+    goodsCode = $(".goods_code").val();
+    if (goodsCode.length == silvermembersgoodsCode) {
+        getOrderPrice(goodsCode)
+    }
+
+});
