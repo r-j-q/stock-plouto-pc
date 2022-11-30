@@ -40,35 +40,36 @@ $.ajax({
             $(".phone-data").text("Phone: " + res.data.phone || "")
            // 不是000就购买过
             if (enTime1 != 0) {
-                if (judgeTime(enTime1.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1,""))
+                console.log("=====>",judgeTime(enTime1.substring(0, 10)))
+                if (!judgeTime(enTime1.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1,"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10),"Expired"))
                      
                 }
             }
             if (enTime2 != 0) {
-                if (judgeTime(enTime2.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2,""))
+                if (!judgeTime(enTime2.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2,"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10),"Expired"))
 
                 }
             }
             if (enTime3 != 0) {
-                if (judgeTime(enTime3.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3,""))
+                if (!judgeTime(enTime3.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3,"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10),"Expired"))
 
                 }
             }
 
             if (vip_end != 0) {
-                if (judgeTime(vip_end.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end,""))
+                if (!judgeTime(vip_end.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.substring(0, 10),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end,"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.substring(0, 10),"Expired"))
 
                 }
             }
@@ -115,6 +116,7 @@ $.ajax({
  
 // 比较时间过期
 function judgeTime(time) {
+    console.log("----1---",time)
     var strtime = time.replace("/-/g", "/");//时间转换
     //时间
     var date1 = new Date(strtime);

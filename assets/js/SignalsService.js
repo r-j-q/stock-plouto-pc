@@ -314,7 +314,7 @@ $.ajax({
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
                   <div class="fontSize16 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'} </div>
-                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
+                  <span class="color_32ECBD m-l-r-20">${data.stock_no}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
                 </div>
                 <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
                   <div>
@@ -378,7 +378,7 @@ $.ajax({
               <div class="produc-list-100 b-b paddingBottom">
                 <div class="produc-list-c">
                   <div class="fontSize16 c-style color_f ${data.type == 0 ? 'color_18751C' : 'color_F11539'}">${data.type == 0 ? 'bullish' : 'bearish'} </div>
-                  <span class="color_32ECBD m-l-r-20">${data.stock_name}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
+                  <span class="color_32ECBD m-l-r-20">${data.stock_no}</span><span class="color_8E">${data.CreatedAt.substring(0, 10)}</span>
                 </div>
                 <div class="fontSize24  name-style color_32ECBD displaySpaceAround">
                   <div>
