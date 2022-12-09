@@ -20,7 +20,7 @@ $(".buyNowProduct").click(() => {
 function forPayList() {
     $(".product-pay-stripe-paypal").html("")
     $.each(arrList, function (index, data) {
-        var oip = `<div class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
+        var oip = `<div  style="${index==0?'display:none':''}"  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })

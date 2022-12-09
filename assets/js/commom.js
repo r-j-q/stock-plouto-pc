@@ -610,16 +610,21 @@ function getOrderPrice(goods_code) {
 
 
 // 统计代码
-!function (f, b, e, v, n, t, s) {
-  if (f.fbq) return; n = f.fbq = function () {
-    n.callMethod ?
-      n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-  };
-  if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-  n.queue = []; t = b.createElement(e); t.async = !0;
-  t.src = v; s = b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t, s)
-}(window, document, 'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '964717900866399');
-fbq('track', 'PageView');
+
+
+!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"Jj9lqYbuaJWdfWUh",ck:"Jj9lqYbuaJWdfWUh"});
+
+
+// !function (f, b, e, v, n, t, s) {
+//   if (f.fbq) return; n = f.fbq = function () {
+//     n.callMethod ?
+//       n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+//   };
+//   if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+//   n.queue = []; t = b.createElement(e); t.async = !0;
+//   t.src = v; s = b.getElementsByTagName(e)[0];
+//   s.parentNode.insertBefore(t, s)
+// }(window, document, 'script',
+//   'https://connect.facebook.net/en_US/fbevents.js');
+// fbq('init', '964717900866399');
+// fbq('track', 'PageView');

@@ -21,9 +21,12 @@ $.ajax({
 });
 
 $("#s1").change(function () {
-    var areaCodes = $("#s1  option:selected").text();
+    var areaCodes = $("#s1  option:selected").val();
+    console.log("--============----->",areaCodes)
     $.each(codeLists, function (index, data) {
-        if (data.title == areaCodes) {
+        console.log("--datadatadata----->",data)
+         
+        if (data.value == areaCodes) {
             areaCode = data.value;
         }
     });

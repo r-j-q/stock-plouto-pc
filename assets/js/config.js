@@ -1,5 +1,7 @@
 var baseUrl = "https://api.stock-plouto.com";
 // var baseUrl =   "http://192.168.1.11:8080"
+// var arrList = ["PayPal", "Stripe"];
+// TODO 去掉PayPal支付就是隐藏掉js里面的  style="${index==0?'display:none':''}"
 var arrList = ["PayPal", "Stripe"];
 var productData = null;//当前商品信息
 var renewals ="Renewals";//续费

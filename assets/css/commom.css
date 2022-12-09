@@ -659,3 +659,6 @@ body {
 .xhx{
     text-decoration: line-through;
 }
+.displayNoneIs{
+    display: none!important;
+}
