@@ -3,6 +3,7 @@ var baseUrl = "https://api.stock-plouto.com";
 // var arrList = ["PayPal", "Stripe"];
 // TODO 去掉PayPal支付就是隐藏掉js里面的  style="${index==0?'display:none':''}"
 var arrList = ["PayPal", "Stripe"];
+// var count = 1;//当前选择的支付方式，0=stripe，1=paypal
 var productData = null;//当前商品信息
 var renewals ="Renewals";//续费
 var period= 'Remaining quota of this period ';

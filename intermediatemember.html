@@ -18,18 +18,18 @@
 	<link rel="stylesheet" href="assets/css/swiperminstyle.css?v=1.0.0">
 	<link rel="stylesheet" href="assets/css/hezuo.css?v=1.0.0">
 	<link rel="stylesheet" href="assets/css/product.css?v=1.0.0">
-<!-- header -->
-<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
-<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
-<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
-<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
-<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+	<!-- header -->
+	<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
 	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
 	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
 	<script src="assets/js/config.js?v=1.0.0"></script>
 	<script src="assets/js/message.js?v=1.0.0"></script>
 	<script src="https://js.stripe.com/v3/"></script>
- 
+
 
 	<noscript><img height="1" width="1" style="display:none"
 			src="https://www.facebook.com/tr?id=964717900866399&ev=PageView&noscript=1" /></noscript>
@@ -39,13 +39,14 @@
 <body>
 	<div class="headerBannersHtml"></div>
 
-	 
+
 	<!-- <div class="content-top htmlEasier"></div> -->
 
 
 	<!-- product center -->
 	<div class="how-it-works">
-		<div class="fontSize12 title-product"> <span class="color_8E">LOCATION: HOME ></span> <span class="color_">INTERMEDIATE  MEMBER </span></div>
+		<div class="fontSize12 title-product"> <span class="color_8E">LOCATION: HOME ></span> <span
+				class="color_">INTERMEDIATE MEMBER </span></div>
 		<div class="product-container">
 			<div class="product-container-left">
 				<img class="how-works-righ-img_" src="assets/images/startvip467.png" alt="" srcset="">
@@ -56,14 +57,15 @@
 								<ul class="contentNotice_loop" id="getorderlist"></ul>
 							</div>
 						</li>
-			
+
 					</ul>
 				</div>
 			</div>
 			<div class="product-container-right">
 				<div class="product-container-right-center">
-					<div class="color_ fontSize42">  INTERMEDIATE  MEMBER</div>
-					<div class="color_8E fontSize24">Mentors with more than five years of investment experience lead the team </div>
+					<div class="color_ fontSize42"> INTERMEDIATE MEMBER</div>
+					<div class="color_8E fontSize24">Mentors with more than five years of investment experience lead the
+						team </div>
 
 					<div class="w-100-left">
 						<div class="w-100-l"></div>
@@ -79,17 +81,19 @@
 					</div>
 					<div class="color_8E fontSize16 m-top-20 displayCenter_">
 						<div class="w-50-l"></div>
-						 <div class="color_ fontSize16 fontWeightAll">one quality&nbsp;</div>  <div>option signal and </div> <div class="color_ fontSize16">&nbsp;four&nbsp;</div> 
-						  
+						<div class="color_ fontSize16 fontWeightAll">one quality&nbsp;</div>
+						<div>option signal and </div>
+						<div class="color_ fontSize16">&nbsp;four&nbsp;</div>
+
 					</div>
-					<div class="color_8E fontSize16 m-top-20"> sessions of intermediate  investment courses.</div>
+					<div class="color_8E fontSize16 m-top-20"> sessions of intermediate investment courses.</div>
 					<div class="color_  m-top-20" id="pay01"></div>
-					 
+
 					<div class="displayCenter_ m-top-20">
 						<div class=" m-top-20 commbackground color_f buy-now-btn fontWeightAll buyNowProduct">BUY THIS
 							NOW
 						</div>
-						 
+
 					</div>
 				</div>
 
@@ -101,36 +105,36 @@
 		<div class="pay__">
 			<div class="color_ fontSize24 product-pay-title">Payment Platform</div>
 			<div class="product-pay-stripe-paypal"></div>
-			<div class="policy- color_8E fontSize16 displayCenter_">
+			<!-- <div class="policy- color_8E fontSize16 displayCenter_">
 				<div>USE CODE:</div>
 			   <input onKeyUp="value=value.replace(/[\W]/g,'')"  class="policy-input-goods goods_code color_" type="text" name="policy-input-" placeholder="USE CODE" > 
 		   </div>
 		   <div class="policy-  displayCenter_">
 			<div class="color_ priceData"> </div>
-		   </div>
-			<div class="policy- color_8E fontSize16"><input class="policy-input" type="radio"
-					name="policy-input"><span class="orderingPrivacy">By ordering you are agreeing to our terms of service and privacy
+		   </div> -->
+			<div class="policy- color_8E fontSize16"><input class="policy-input" type="radio" name="policy-input"><span
+					class="orderingPrivacy">By ordering you are agreeing to our terms of service and privacy
 					policy</span></div>
-					<div class=" m-top-20 padding-left-20 color_8E fontSize16 periodData"></div>
+			<div class=" m-top-20 padding-left-20 color_8E fontSize16 periodData"></div>
 			<div class=" m-top-20 commbackground color_f buy-now-btn fontWeightAll" id="confirmPaymentType">BUY NOW
 			</div>
-
-
-			<div class="paypel-style-popup m-top-20 commbackground color_f buy-now-btn fontWeightAll" id="pay-stripe">
+			 
+			<div onclick="functionCreateStripe(6)" class="paypel-style-popup m-top-20 commbackground color_f buy-now-btn fontWeightAll"  >
 				BUY NOW
 			</div>
- 
-
-				<form id="payment-form" class="formStyle">
-					<div id="payment-element"></div>
-					 <center>
-						<button id="submit"  class="commbackground color_f">
-							<div class="spinner hidden" id="spinner"></div>
-							<span id="button-text">Pay Now</span>
-						  </button>
-					 </center>
-					<div id="payment-message" class="hidden"></div>
-				  </form>
+			<!-- <div class="paypel-style-popup m-top-20 commbackground color_f buy-now-btn fontWeightAll" id="pay-stripe">
+				BUY NOW
+			</div>
+			<form id="payment-form" class="formStyle">
+				<div id="payment-element"></div>
+				<center>
+					<button id="submit" class="commbackground color_f">
+						<div class="spinner hidden" id="spinner"></div>
+						<span id="button-text">Pay Now</span>
+					</button>
+				</center>
+				<div id="payment-message" class="hidden"></div>
+			</form> -->
 		</div>
 
 	</div>
@@ -143,11 +147,11 @@
 	<script src="assets/js/config.js?v=1.0.1"></script>
 
 	<script src="assets/js/intermediatemember.js?v=1.0.1"></script>
-	<script src="assets/js/commom.js?v=1.0.2"></script>
+	<script src="assets/js/commom.js?v=1.0.3"></script>
 	<script src="assets/js/timePicker.js?v=1.0.0"></script>
-		<script src="assets/js/izeetak.js"></script>
+	<!-- <script src="assets/js/izeetak.js"></script> -->
 	<script type="text/javascript">
-	 
+
 		// 区分电脑 和 手机
 		var system = {};
 		system.pingtai = /(Win32|Win16|WinCE|Mac68K|MacIntel|MacIntel|MacPPC|Linux mips64)/i.test(navigator.platform);
@@ -216,7 +220,7 @@
 			});
 		}
 
-		 
+
 	</script>
 </body>
 

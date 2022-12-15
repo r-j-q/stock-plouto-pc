@@ -577,8 +577,15 @@ if (userInfo?.token) {
     },
     success: function (res) {
       let { total } = res.data
+      let codes = res.code
       if (total > 0) {
         $(".periodData").append(period + total);
+      }
+      if (codes == 2) {
+        localStorage.removeItem("plutoUserInfo");
+        window.location.href = `login.html`;
+        toast('Re login')
+
       }
 
     },
@@ -607,12 +614,55 @@ function getOrderPrice(goods_code) {
     },
   });
 }
+var isPayPal = true;
+var timeOut = 2000;
+function functionCreateStripe(goods_id) {
+
+  var goodsCode = $(".goods_code").val() || "";
+
+  if (isPayPal) {
+    isPayPal = false;
+    var val = $('input:radio[name="policy-input"]:checked').val();
+    if (val == null) {
+      // 什么也没选中 
+      toast('Please agree to the service and privacy policy')
+      return false;
+
+    } else {
+      $.ajax({
+        type: "get",
+        url: `${baseUrl}/user/order/createstripe?paytype=stripe&goods_id=${goods_id}&payway=0&goods_code=${goodsCode}`,
+        dataType: "json",
+        headers: {
+          Authorization: `Bearer ${tokens.token}`,
+        },
+        success: function (res) {
+          if (res.code == 0) {
+            const { pay_url } = res.data;
+            window.location.href = pay_url;
+          } else if (res.code == 2) {
+            loginH("product")
+          } else {
+            toast(res.data)
+          }
+        }
+      })
 
 
+    }
+  }
+  setTimeout(() => {
+    isPayPal = true
+  }, timeOut);
+
+
+
+
+}
 // 统计代码
 
 
-!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"Jj9lqYbuaJWdfWUh",ck:"Jj9lqYbuaJWdfWUh"});
+!function (p) { "use strict"; !function (t) { var s = window, e = document, i = p, c = "".concat("https:" === e.location.protocol ? "https://" : "http://", "sdk.51.la/js-sdk-pro.min.js"), n = e.createElement("script"), r = e.getElementsByTagName("script")[0]; n.type = "text/javascript", n.setAttribute("charset", "UTF-8"), n.async = !0, n.src = c, n.id = "LA_COLLECT", i.d = n; var o = function () { s.LA.ids.push(i) }; s.LA ? s.LA.ids && o() : (s.LA = p, s.LA.ids = [], o()), r.parentNode.insertBefore(n, r) }() }({ id: "Jj9lqYbuaJWdfWUh", ck: "Jj9lqYbuaJWdfWUh" });
 
 
 // !function (f, b, e, v, n, t, s) {

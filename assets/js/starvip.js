@@ -2,7 +2,8 @@ var producId =10;
 var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
-var count = 0;//当前选择的支付方式，0=stripe，1=paypal
+var count = 1;//当前选择的支付方式，0=stripe，1=paypal
+
 var goodsCode="";
 
 $(".buyNowProduct").click(() => {
