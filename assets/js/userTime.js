@@ -7,12 +7,12 @@ var dateNowtime = "",
     enTime1 = "0",
     enTime2 = "0",
     vip_end = "0",
-    enTime3 = "0";
-
+    enTime3 = "0",
+    prize='';
 
 $.ajax({
     type: "get",
-    url: `${baseUrl}//user/user/index`,
+    url: `${baseUrl}/user/user/index`,
     dataType: "json",
     headers: {
         Authorization: `Bearer ${tokens.token}`,
@@ -28,6 +28,25 @@ $.ajax({
         }
         // 2030/02/22 23:45:24
         if (res.code == 0) {
+             if(res.data.prize==1){
+                $(".phone-data-game").text("Award Information: STAR VIP 50% off")
+             } else if(res.data.prize==2){
+                $(".phone-data-game").text("Award Information: Silver Member Buy 1 get 1")
+             }  else if(res.data.prize==3){
+                $(".phone-data-game").text("Award Information: 20% off")
+                $(".phone-data-game-").text('Except Stock Vane')
+                
+             }  
+             else if(res.data.prize==4){
+                $(".phone-data-game").text("Award Information: 7.9 Experience Advanced member for a week ") 
+                
+             }   else if(res.data.prize==5){
+                $(".phone-data-game").text("Award Information: One stock signal  Free") 
+                
+             } 
+               
+              
+                 
             dateNowtime = res.data.nowtime;
             // console.log("res.data.sm_vip_end.substr(0,3)", res.data.vip_club_end.substr(0, 3))
             enTime1 = res.data.sm_vip_end.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.sm_vip_end);

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Christmas Fortune Wheel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .turnImg_top {
+      width: 100%;
+      height: 100%;
+    }
+
+    .turnImg_top img {
+      width: 100%;
+      height: 100%;
+    }
+
+    ::-webkit-scrollbar {
+      display: none
+    }
+
+    .body_ {
+      width: 100%;
+
+      background-image: url('./assets/images/game/pc.jpg');
+      background-size: cover;
+
+      background-repeat: no-repeat;
+    }
+
+
+
+    .turnImg {
+      width: 60%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 22;
+      bottom: -2rem;
+    }
+
+    .begin {
+      position: absolute;
+      width: 13%;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 44;
+    }
+
+    .begin img {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    .turnImg_gif {
+      width: 65%;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width:751px) {
+      .rounds {
+        position: absolute;
+        top: 6rem;
+        left: 54%;
+      }
+    }
+
+    @media screen and (max-width:750px) {
+      .body_ {
+        background-image: url('./assets/images/game/g1.png');
+        background-size: cover;
+      }
+
+      .rounds {
+        position: relative;
+        margin-top: 74%;
+      }
+
+      .turnImg {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 22;
+        bottom: -2rem;
+      }
+
+      .turnImg_gif {
+        width: 60%;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        left: 0;
+        right: 0;
+      }
+
+    }
+  </style>
+</head>
+
+<body class="body_">
+  <div class="rounds">
+    <img class="turnImg" src="./assets/images/game/round.png" alt="" />
+    <img class="turnImg_gif round" src="./assets/images/game/pay.gif" alt="" />
+    <div class="begin">
+      <img src="./assets/images/game/zhen.png" alt="" />
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/jquery.rotate.min.js"></script>
+<script src="assets/js/config.js?v=1.0.0"></script>
+<script src="assets/js/commom.js?v=1.0.9"></script>
+<script src="assets/js/message.js?v=1.0.0"></script>
+<script>
+  var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+  var res_data;
+  $(function () {
+    localStorage.setItem("fileNameTo", (location.href.split("/").slice(-1))[0])
+
+    var flog = true;
+    $(".round").rotate({
+      bind: {
+        click: function () {
+          if (tokens.token) { } else {
+            console.log("--1---->", tokens.token)
+            alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
+              loginH()
+
+            })
+            return
+          }
+          if (flog) {
+            flog = false
+            getChristmas()
+            // var math = Math.floor(Math.random() * 10);
+            // var math = Math.floor(Math.random() * 10);
+            // console.log("--math--", math)
+
+            // var sectorId = math //选中的奖品地址是需要后台传给你
+            var sectorId = 2 //选中的奖品地址是需要后台传给你
+            var part = 8  //奖品的总个数
+            var defaultRotate = 1800   //一圈360度，旋转5圈
+            var setRotate = (360 / part) * sectorId - (360 / part) / 2 //计算定位到指定商品在商品的中间
+            var allRotate = defaultRotate + setRotate +45//总旋转度数
+            $('.turnImg').rotate({
+              duration: 10000,
+              angle: 0,
+              animateTo: allRotate,
+              callback: function () {
+                flog = true
+
+                if (res_data == 1) {
+                  toast('STAR VIP  50% off')
+                } else if (res_data == 2) {
+                  toast('Silver Member Buy 1 get 1 ')
+                } else if (res_data == 3) {
+                  toast('20% off')
+                }
+                console.log($('.turnImg')[0].style.transform)
+                console.log($('.turnImg')[0].style.transform)
+              }
+            })
+          }
+        }
+      }
+    })
+  })
+
+  function getChristmas() {
+    $.ajax({
+      type: "get",
+      url: `${baseUrl}/user/christmas`,
+      data: {},
+      headers: {
+        Authorization: `Bearer ${tokens.token}`,
+      },
+      dataType: "json",
+      success: function (res) {
+        console.log("===抽奖===>", res)
+        if (res.code == 0) {
+          res_data = res.data;
+        } else if (res.code == 2) {
+          loginH()
+        } else if (res.code == 1) {
+          // 抽过
+          toast('')
+
+        }
+      },
+    });
+  }
+
+
+</script>
+
+</html>
