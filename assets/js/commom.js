@@ -74,6 +74,8 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
+                            <li><a href="news.html">News</a></li>
+
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
@@ -166,6 +168,8 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
+                            <li><a href="news.html">News</a></li>
+
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="index.html#AboutUs"> About Us</a></li>
 
@@ -659,6 +663,32 @@ function functionCreateStripe(goods_id) {
 
 
 }
+
+
+
+// coins 
+
+$('input:radio[name=policy-input]').change(function() { 
+  $(".coin3_style").show()
+  if (this.value == 'coin3') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin3.png");
+  }
+  else if (this.value == 'coin5') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin5.png");
+  }
+  else if (this.value == 'coin6') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin6.png");
+  }
+  else if (this.value == 'coin7') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin7.png");
+  }
+  else if (this.value == 'coin10') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin10.png");
+  }
+  else if (this.value == 'coin11') {
+    $(".coin3_style img").attr("src","assets/images/pay/coin11.png");
+  }
+});
 // 统计代码
 
 
@@ -678,3 +708,5 @@ function functionCreateStripe(goods_id) {
 //   'https://connect.facebook.net/en_US/fbevents.js');
 // fbq('init', '964717900866399');
 // fbq('track', 'PageView');
+
+

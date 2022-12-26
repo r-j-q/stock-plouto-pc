@@ -301,3 +301,5 @@ $(".goods_code").on('input', function (e) {
     }
 
 });
+
+ 

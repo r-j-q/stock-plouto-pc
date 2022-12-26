@@ -1101,6 +1101,7 @@ canvas {
     opacity: 1;
     transform: translateX(0%);
     visibility: visible;
+    color: #fff;
 }
 
 .mobile-nav__overlay {

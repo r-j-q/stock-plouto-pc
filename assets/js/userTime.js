@@ -38,7 +38,7 @@ $.ajax({
                 
              }  
              else if(res.data.prize==4){
-                $(".phone-data-game").text("Award Information: 7.9 Experience Advanced member for a week ") 
+                $(".phone-data-game").text("Award Information: $7.9 Experience Advanced member for a week ") 
                 
              }   else if(res.data.prize==5){
                 $(".phone-data-game").text("Award Information: One stock signal  Free") 

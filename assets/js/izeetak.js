@@ -755,7 +755,7 @@
     if ($(".preloader").length) {
       $(".preloader").fadeOut();
     }
-    thmSwiperInit();
+    // thmSwiperInit();
     thmTinyInit();
     thmTestimonialsThumbCarousel();
     projectMasonaryLayout();

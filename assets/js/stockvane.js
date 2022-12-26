@@ -2,7 +2,7 @@ var producId = 3;
 var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }]; 
-var count = 1;//当前选择的支付方式，0=stripe，1=paypal
+var count = 0;//当前选择的支付方式，0=stripe，1=paypal
 
 localStorage.setItem("fileNameTo",(location.href.split("/").slice(-1))[0])
  
@@ -20,7 +20,7 @@ $(".buyNowProduct").click(() => {
 function forPayList() {
     $(".product-pay-stripe-paypal").html("")
     $.each(arrList, function (index, data) {
-        var oip = `<div  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" style="${index==0?'display:none':''}" onclick="handleClick(${index})" >${data}</div>`;
+        var oip = `<div  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}"   onclick="handleClick(${index})" >${data}</div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })
@@ -101,6 +101,7 @@ $("#confirmPaymentType").click(() => {
     if (isPayPal) {
         isPayPal = false;
         var val = $('input:radio[name="policy-input"]:checked').val();
+        
         if (val == null) {
             // 什么也没选中 
             toast('Please agree to the service and privacy policy')
@@ -283,3 +284,8 @@ $(document).on("click", "#pay-stripe", function () {
         isClick = true;
     }, timeOut)
 });
+
+
+ 
+
+ 
