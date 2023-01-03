@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+		name="viewport" />
+	<title>Stock pluto</title>
+	<link href="assets/images/logos.png" rel="shortcut icon">
+	<link rel="stylesheet" href="assets/css/commom.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/zhedie.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/menu.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/userTime.css?v=1.0.1">
+	<!-- header -->
+	<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/fenye.css?v=1.0.0">
+
+	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
+	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
+	<script src="assets/js/config.js?v=1.0.0"></script>
+	<script src="assets/js/message.js?v=1.0.0"></script>
+	<script src="assets/js/leftTime.min.js?v=1.0.0"></script>
+
+	<style>
+		.ellipsis1 {
+			overflow: hidden;
+			/*内容会被修剪，并且其余内容是不可见的*/
+			text-overflow: ellipsis;
+			/*显示省略符号来代表被修剪的文本。*/
+			white-space: nowrap;
+		}
+
+		.new_content {
+			color: #fff;
+			margin-top: 140px;
+		}
+
+		.new_content_list {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 20px;
+			cursor: pointer;
+
+		}
+
+		.new_content_img {
+			width: 120px;
+			height: 120px;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+
+		.new_content_img img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.new_content_title {
+			color: #ccc;
+			font-size: 18px;
+
+		}
+
+		.new_content_text {
+			font-size: 14px;
+			color: #ccc;
+			height: 4rem;
+
+		}
+         .new_content_text p{
+			display: -webkit-box;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		 }
+		.new_content_r {
+			margin-left: 20px;
+			width: 70%;
+		}
+
+		.new_content_time {
+			font-size: 14px;
+			color: #ccc;
+		}
+		@media screen and (max-width:750px) {
+			.new_content_img {
+			width: 100%;
+			height: auto;
+			}
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+	<div class="headerBannersHtml"></div>
+
+	<div class="new_content w-80 ls">
+		 
+	</div>
+
+	
+	<div style="text-align: center;margin:20px auto;">
+		<div id="pager" class="pager clearfix">
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footer-ui"></div>
+	<script src="assets/js/lunbo.js?v=1.0.0"></script>
+
+	<script src="assets/js/news.js?v=1.0.2"></script>
+	<script src="assets/js/commom.js?v=1.0.0"></script>
+	<script src="assets/js/timePicker.js?v=1.0.0"></script>
+	<script src="assets/js/jquery.z-pager.js"></script>
+	<script type="text/javascript">
+
+
+		// 区分电脑 和 手机
+		var system = {};
+		system.pingtai = /(Win32|Win16|WinCE|Mac68K|MacIntel|MacIntel|MacPPC|Linux mips64)/i.test(navigator.platform);
+		if (system.pingtai) {
+			//电脑
+			$("#headerLogo").click(() => {
+				$("#headerList").fadeToggle();
+			})
+
+		} else {
+			console.log("=======>")
+			$("#headerList").slideToggle()
+			//手机
+			$("#headerLogo").click(() => {
+				$("#headerList").fadeToggle();
+			})
+
+		}
+		// 合作
+		//轮播图
+ 
+
+	</script>
+ 
+</body>
+
+</html>

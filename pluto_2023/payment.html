@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+	<title>Stock pluto</title>
+	<link href="assets/images/logos.png" rel="shortcut icon">
+	<link rel="stylesheet" href="assets/css/commom.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/menu.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/swiperminstyle.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/login.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/payment.css?v=1.0.0">
+
+	<!-- header -->
+	<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+
+
+
+	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
+	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
+	<script src="assets/js/config.js?v=1.0.0"></script>
+	<script src="assets/js/message.js?v=1.0.0"></script>
+	<script src="assets/js/timePicker.js?v=1.0.0"></script>
+	<script src="assets/data/country.js"></script>
+	 
+</head>
+
+<body>
+	<!-- navigator -->
+	<!-- <div class="headerBannersHtml"></div> -->
+
+
+	<div>
+		<div class="content-t-register content-t-rigis">
+
+			<div class="content-t-right">
+				<div class="p-t-b-rigist-500">
+					<div class="monly_total"><span style="color:#333"></span></div>
+
+
+
+					<div class="content-t-right-list-register loginbackgroundColor_1">
+						<!-- 信用卡卡号 -->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Number</div>
+							<input type="text" id="cardNo" placeholder="Card Number" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+
+
+					</div>
+					<div class="content-t-right-list-register loginbackgroundColor_1 content-t-t">
+
+						<!-- 信用卡有效期月份 -->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Month of Expire Date</div>
+							<input maxlength="2" id="cardExpireMonth" autocomplete="new-password" placeholder="MM"
+								type="text" class="form-control_1  fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+						<!-- <div class="left__"></div> -->
+						<!-- 信用卡有效期年份 -->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Year of Expire Date</div>
+							<input maxlength="4" type="text" id="cardExpireYear" placeholder="YYYY"
+								autocomplete="new-password"
+								class="form-control_1  fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+
+
+					</div>
+
+					<div class="content-t-right-list-register loginbackgroundColor_1">
+						<!--信用卡安全码  -->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Security code</div>
+							<input type="text" maxlength="3" id="cardSecurityCode" placeholder="CVV"
+								autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+					</div>
+
+					 
+
+					<!-- <div class="content-t-right-list-register loginbackgroundColor_1 content-t-t"> -->
+					<div class="w_100 title_pay">
+						<div class="Holder_Name"> Card Holder Address</div>
+					</div>
+					<div class="content-t-right-list-register loginbackgroundColor_1 content-t-t">
+						<!-- 姓名 -->
+
+
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder First Name
+							</div>
+
+							<input type="text" id="billFirstName" placeholder="First Name" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder Last Name
+							</div>
+
+							<input type="text" id="billLastName" placeholder="Last Name" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 " />
+
+						</div>
+
+					</div>
+
+					<!-- 城市 -->
+					<div class="content-t-right-list-register loginbackgroundColor_1">
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder City</div>
+							<input type="text" id="billCity" placeholder="City" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+					</div>
+					<!-- 详细地址 -->
+					<div class="content-t-right-list-register loginbackgroundColor_1">
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder Address
+							</div>
+							<input type="text" id="billAddress" placeholder="Street Address" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+					</div>
+					<div class="content-t-right-list-register loginbackgroundColor_1 content-t-t">
+						<!-- 国家  省份/州-->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder Country
+							</div>
+							<select name="" id="billCountry" class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 ">
+							</select>
+							<!-- <input type="text" id="billCountry" placeholder="Country" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 " /> -->
+						</div>
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder State</div>
+							<select name=""  class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 billState_select">
+							</select>
+							<input type="text"  placeholder="State" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 billState_input" />
+						</div>
+					</div>
+					<!-- 电话 -->
+					<div class="content-t-right-list-register loginbackgroundColor_1">
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder Zip</div>
+							<input type="text" id="billZip" placeholder="Zip" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1 " />
+						</div>
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span> Bill Telephone</div>
+							<input type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+								onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " id="billPhone"
+								placeholder="Phone Number" autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+					</div>
+					<div class="content-t-right-list-register loginbackgroundColor_1 content-t-t">
+						<!-- 邮编  邮箱-->
+
+
+						<!-- <div class="left__"></div> -->
+						<div class="w_100">
+							<div class="Holder_Name"><span class="Holder_Name_color">*</span>Card Holder Email</div>
+							<input type="text" id="billEmail"  placeholder="Email"
+								autocomplete="new-password"
+								class="form-control_1   fontSize16 margin-left-10 loginbackgroundColor_1" />
+						</div>
+					</div>
+					
+					<!-- </div> -->
+				</div>
+				<div class="content-t-right-list-register commbackground fontFamilyColor col-center" id="paymentNow">Pay
+					Now</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<!-- 底部 -->
+	<!-- <div class="footer-ui"></div> -->
+
+
+	<script src="assets/js/commom.js?v=1.0.1"></script>
+	<script src="assets/js/payment.js?v=1.0.3"></script>
+	<script type="text/javascript">
+		console.log("请求地址", baseUrl)
+		// 区分电脑 和 手机
+		var system = {};
+		system.pingtai = /(Win32|Win16|WinCE|Mac68K|MacIntel|MacIntel|MacPPC|Linux mips64)/i.test(navigator.platform);
+		if (system.pingtai) {
+			//电脑
+			// $("#headerList").slideToggle()
+			//手机
+			$("#headerLogo").click(() => {
+				$("#headerList").fadeToggle();
+			})
+		} else {
+			console.log("=======>")
+			$("#headerList").slideToggle()
+			//手机
+			$("#headerLogo").click(() => {
+				$("#headerList").fadeToggle();
+			})
+
+		}
+
+
+
+
+
+
+
+
+	</script>
+</body>
+
+</html>

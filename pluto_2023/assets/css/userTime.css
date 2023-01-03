@@ -1,0 +1,49 @@
+.disUserProut{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.userProut{
+    width: 25%;
+    height: 200px;
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+} 
+.userProut:last-child{
+    margin-right: 0px;
+
+}
+.m-top-time-160{
+    margin-top: 160px;
+}
+.m-top-time-20{
+    margin-top: 20px;
+}
+.shijianTime{
+    width: 33px; 
+}
+.weiGouMai{
+    box-shadow: 0 0 3px #ECB930;
+    width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.weiGouMai:hover{
+    border: .01px solid #ECB930;
+
+}
+@media screen and (max-width:750px) {
+.disUserProut{
+    flex-direction: column;
+
+}
+.userProut{
+    width: 90%;
+    margin-top: 10px;
+}
+}

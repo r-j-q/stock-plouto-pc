@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+	<title>Stock pluto</title>
+	<link href="assets/images/logos.png" rel="shortcut icon">
+	<link rel="stylesheet" href="assets/css/commom.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/menu.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/swiperminstyle.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/login.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/payment.css?v=1.0.0">
+
+	<!-- header -->
+	<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+
+
+
+	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
+	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
+	<script src="assets/js/config.js?v=1.0.0"></script>
+	<script src="assets/js/message.js?v=1.0.0"></script>
+	<script src="assets/js/timePicker.js?v=1.0.0"></script>
+	<style>
+		.static_ img {
+			display: block;
+			width: 200px;
+			height: 200px;
+			margin: 0 auto;
+		}
+
+		.fail_ {
+			font-size: 20px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.go_back {
+			width: 40%;
+			padding: 10px 20px;
+			border: .1px solid #ECB930;
+			margin: 0 auto;
+			margin-top: 40px;
+			text-align: center;
+			border-radius: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- navigator -->
+	<!-- <div class="headerBannersHtml"></div> -->
+
+
+	<div>
+		<div class="content-t-register content-t-rigis">
+
+			<div class="content-t-right">
+				<div class="p-t-b-rigist static_">
+
+				</div>
+				<div class="fail_ color_"></div>
+				<div class="go_back color_">back homepage</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- 底部 -->
+	<!-- <div class="footer-ui"></div> -->
+
+
+	<script src="assets/js/commom.js?v=1.0.1"></script>
+	<script type="text/javascript">
+		let status = getUrlParams('status');
+		let orderResult =decodeURIComponent( getUrlParams('orderResult'));
+		 if(orderResult != '10000'){
+			"Test Success"
+		 }
+		if (status == 0 || status == 1) {
+			$(".static_").append("<img/>")
+			if (status == 0) {
+				$(".fail_").text( `${orderResult != 10000 ?orderResult :"Transaction Failure"}`)
+			} else {
+				$(".fail_").text("In transaction processing")
+			} 
+			$(".static_ img").attr('src', `assets/images/Processingtime${status}.png`);
+		}
+
+		$(".go_back").click(() => {
+			window.location.href = 'index.html'
+		})
+
+		console.log("=======>", status);
+		//  status   0失败-1交易处理中
+
+
+
+
+	</script>
+</body>
+
+</html>

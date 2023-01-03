@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>Christmas Fortune Wheel</title>
+  <!-- <link rel="stylesheet" href="assets/css/commom.css?v=1.0.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/gmae.css">
+  <style>
+    html,
+    body {
+      width: 100%;
+      display: flow-root;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .turnImg_top {
+      width: 100%;
+      height: 100%;
+    }
+
+    .turnImg_top img {
+      width: 100%;
+      height: 100%;
+    }
+
+    ::-webkit-scrollbar {
+      display: none
+    }
+
+    .body_ {
+      width: 100%;
+
+      background-image: url('./assets/images/yourLouck/pc.png');
+      background-size: cover;
+
+      background-repeat: no-repeat;
+    }
+
+
+
+    .turnImg {
+      width: 60%;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 22;
+      bottom: -2rem;
+    }
+
+    .begin {
+      position: absolute;
+      width: 13%;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      z-index: 44;
+    }
+
+    .begin img {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+    }
+
+    .turnImg_gif {
+      width: 65%;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+    }
+
+    .tops {
+      width: 100%;
+      height: 54px;
+      background: rgb(236, 185, 48, .6);
+      border-radius: 2px;
+      position: relative;
+      top: 0px;
+      padding: 0px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .contentNotice_loop li {
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    @media screen and (min-width:751px) {
+      .rounds {
+        position: absolute;
+        top: 11rem;
+        left: 54%;
+      }
+    }
+
+    @media screen and (max-width:750px) {
+      .body_ {
+        background-image: url('./assets/images/yourLouck/g1.png');
+        background-size: cover;
+        padding-bottom: 10rem;
+      }
+
+      .tops {
+        margin-top: 0px;
+      }
+
+      .rounds {
+        position: absolute;
+    bottom: 2%;
+      }
+
+      .turnImg {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 22;
+        bottom: -2rem;
+      }
+
+      .turnImg_gif {
+        width: 60%;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        cursor: pointer;
+      }
+
+    }
+
+    .copysend {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    .copys {
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #ECB930;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+    .ok_use{ 
+      height: 40px;
+     
+      text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ECB930
+    }
+  </style>
+</head>
+
+<body class="body_">
+
+  <div class="tops">
+    <ul>
+      <li>
+        <div class="scrollDiv" id="s1">
+          <ul class="contentNotice_loop" id="getor_yd"></ul>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+  <div class="copysend">
+    <div class="copys">Share</div>
+  </div>
+  <!-- <div  class="body_p">  -->
+  <div class="rounds">
+    <img class="turnImg" src="./assets/images/yourLouck/round.png" alt="" />
+    <img class="turnImg_gif round" src="./assets/images/yourLouck/pay.gif" alt="" />
+    <div class="begin">
+      <img src="./assets/images/yourLouck/zhen.png" alt="" />
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="codeBox" id="code_box">
+    <div id="hide">
+      <img id="code_i" src="" />
+      <div class="ok_use">ok</div>
+    </div>
+  </div>
+</body>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/jquery.rotate.min.js"></script>
+<script src="assets/js/config.js?v=1.0.0"></script>
+<script src="assets/js/commom.js?v=1.0.9"></script>
+<script src="assets/js/message.js?v=1.0.0"></script>
+
+<script>
+
+
+  var res_data;
+  $(function () {
+
+
+
+
+    localStorage.setItem("fileNameTo", (location.href.split("/").slice(-1))[0]);
+    var objs = {
+      list6: "STAR VIP  25% off",
+      list7: "Silver Member 15% off",
+      list8: "Award Information: 20% off",
+      list9: "$7.9 Experience Advanced member for a week",
+      list10: "One stock signal  Free",
+    }
+    $.ajax({
+      type: "get",
+      url: `${baseUrl}/noauth/christmas/prize?activity_id=1`,
+      dataType: "json",
+      success: function (res) {
+
+        if (res.data.list.length > 0) {
+          $('.tops').show()
+        }
+        $.each(res.data.list, function (index, data) {
+          {
+            var lis = ''
+            if (data.prize == 6) {
+              lis = "STAR VIP  25% off"
+            } else if (data.prize == 7) {
+              lis = " Silver Member 15% off "
+
+            } else if (data.prize == 8) {
+              lis = "Award Information: 20% off"
+
+            }
+            else if (data.prize == 9) {
+              lis = '$7.9 Experience Advanced member for a week'
+
+            } else if (data.prize == 10) {
+              lis = ' One stock signal  Free'
+
+            }
+
+
+            var op22 = `<li><span> </span>Congratulations to${data.username}on getting a  ${lis}</li>`;
+            $("#getor_yd").append(op22);
+          }
+
+        });
+      },
+    });
+
+    var flog = true;
+    $(".round").rotate({
+      bind: {
+        click: function () {
+          var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+          if (tokens.token) { } else {
+            console.log("--1---->", tokens.token)
+            alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
+              loginH()
+
+            })
+            return
+          }
+          if (flog) {
+            flog = false
+            // getChristmas()
+            // var math = Math.floor(Math.random() * 10); 
+
+            $.ajax({
+              type: "get",
+              url: `${baseUrl}/user/christmas?activity_id=1`,
+              data: {},
+              headers: {
+                Authorization: `Bearer ${tokens.token}`,
+              },
+              dataType: "json",
+              success: function (res) {
+                console.log("===抽奖===>", res)
+                if (res.code ==0) {
+                  res_data = res.data;
+                  // 6 STAR VIP  25% off       【15%】            
+                  // 7 Silver Member 15% off    【5%】    
+                  // 8 20% off      【20%】                               
+                  // 9 7.9 Experience Advanced member for a week  【50%】    
+                  // 10 One stock signal  Free    【10%
+
+
+
+                  var sectorId = res_data; //选中的奖品地址是需要后台传给你  
+
+
+
+
+
+                  // var sectorId = 4 ; //选中的奖品地址是需要后台传给你  
+                  var part =8  //奖品的总个数
+                  var defaultRotate = 1800   //一圈360度，旋转5圈
+                  var setRotate = (360 / part) * sectorId - (360 / part) / 2 //计算定位到指定商品在商品的中间
+                  var ss = 70  //1-75  2-145  3-245
+                 
+                    if (sectorId == 6) {
+                    ss = 290
+                  } else if (sectorId == 7) {
+                    ss = 300
+                  }else if (sectorId == 8) {
+                    ss = 80
+                  }  else if (sectorId == 9) {
+                    ss = 60
+                  } else if (sectorId == 10) {
+                    ss = 300
+                  } 
+
+
+                  var allRotate = defaultRotate + setRotate + ss//总旋转度数
+                  $('.turnImg').rotate({
+                    duration: 10000,
+                    angle: 0,
+                    animateTo: allRotate,
+                    callback: function () {
+                      flog = true
+                      let deg = $('.turnImg')[0].style.transform;
+                      console.log("旋转度数", deg)
+                      $("#code_i").attr("src", ""); 
+                        if (sectorId == 6) {
+                        $("#code_i").attr("src","./assets/images/yourLouck/k6.gif");
+                        document.getElementById('code_box').style.display = "block";
+                       
+                      }
+                      if (sectorId == 7) {
+                        $("#code_i").attr("src","./assets/images/yourLouck/k7.gif");
+
+                        document.getElementById('code_box').style.display = "block";
+                      
+
+                      } 
+                      if (sectorId == 8) {
+                        $("#code_i").attr("src","./assets/images/yourLouck/k8.gif");
+
+                        document.getElementById('code_box').style.display = "block";
+                      
+
+                      } 
+                      if (sectorId == 9) {
+                        $("#code_i").attr("src","./assets/images/yourLouck/k9.gif");
+
+                        document.getElementById('code_box').style.display = "block";
+                      
+
+                      } 
+                      if (sectorId == 10) {
+                        $("#code_i").attr("src","./assets/images/yourLouck/k10.gif");
+
+                        document.getElementById('code_box').style.display = "block";
+                     
+
+                      } 
+                    }
+                  })
+                } else if (res.code == 2) {
+                  loginH()
+                } else if (res.code == 1) {
+                  // window.location.href = "userTime.html?id=1"
+
+                  toast('Congratulations')
+                }
+              },
+            });
+
+
+          }
+        }
+      }
+    })
+
+  })
+  $('.ok_use').click(()=>{
+    window.location.href = "userTime.html"
+  })
+  $(".copys").click(() => {
+    var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+    let User_invite_id = localStorage.getItem('User_invite_id');
+
+
+    if (getUrlParams('User_invite_id')) {
+      localStorage.setItem("User_invite_id", getUrlParams('User_invite_id'));
+    }
+    else{
+      User_invite_id=  tokens.ID
+    }
+
+    
+    if (tokens.token) { } else {
+      alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
+        loginH()
+
+      })
+      return
+    }
+    let copy_url = `https://www.stock-plouto.com/yourLouck.html?User_invite_id=${User_invite_id}`
+    let input = document.createElement('input')
+    input.style.cssText = 'opacity: 0';
+    input.type = 'text';
+    input.value = copy_url; // 修改文本框的内容
+    document.body.appendChild(input)
+    input.select(); // 选中文本
+    document.execCommand("copy"); // 执行浏览器复制命令
+    input.remove() // 移除input框
+    toast('Success Copy')
+  })
+
+
+</script>
+
+</html>
