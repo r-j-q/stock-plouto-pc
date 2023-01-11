@@ -786,7 +786,7 @@ function createdOrderToXyongka(v) {
 
  
 
-// $('.fixedTo').hide()
+
    function productAgreementService() { 
     var xieYiText  = `<div class="text-info">
     <iframe src="./tl_policy/policy3.html?idx=${getUrlParams('idx')}"   height="500px"/>
@@ -801,60 +801,7 @@ function createdOrderToXyongka(v) {
       onConfirm: function() {
         console.log('点击确认！');
         // 去签名
-        // handleClick()
-         
-      //  $('.fixedTo').show()
-
-        $('body').append(`<div class="fixedTo">
-        <div class="fixedToContent">
-    
-          <div id="signature" style="height: 100%;">
-            
-          </div>
-          <div class="dibu">
-        
-            <div id="clear" class="reset">reset </div> 
-            <div id="save" class="confirm">confirm </div>
-          </div>
-        </div>
-      </div>`)
-// 加载画布 start
-      mui.plusReady(function () {
-        plus.screen.lockOrientation('landscape-secondary');
-      });
-      $(document).ready(function () {
-        $("#signature").jSignature({
-          width: '100%',
-          height: '100%',
-          sizeRatio: 1,
-          color: "#000",
-          "background-color": "#fff",
-          "decor-color": "rgba(0,0,0,0)", //这里将颜色设置为透明
-          lineWidth: 1
-        })
-      });
-      document.getElementById("clear").addEventListener('tap', function () {
-        $("#signature").jSignature("reset");
-        $("#pic")[0].innerHTML = '';
-      });
-      document.getElementById("save").addEventListener('tap', function () {
-         
-        var datapair = $("#signature").jSignature("getData", "image");
-
-
-        var array = datapair.splice(",");
-        console.log("64===>",'data:image/png;base64,'+array[1])
-        var paytype = "paypal";
-         
-         
-        createdOrderToXieYi(paytype,array[1])
-        $(".fixedTo").hide()
-        $(".coin3_style").show()
-           
-      });
-
-// 加载画布 end 
-
+        handleClick()
       },
     
       onClose: function() {
@@ -862,7 +809,37 @@ function createdOrderToXyongka(v) {
       }
     });
   };
+ 
+  var qianmin  = `<div class="text-info">
+        <iframe src="./qm/index.html?idx=${getUrlParams('idx')}" id="n1" width="100%"  height="300px"/>
+      </div>`
+function handleClick(){
+  $.sendConfirm({
+    title: 'Product Agreement Service',
+    desc: qianmin,
+    hideClose: true,
+    withCenter: true,
+    bgHide: false,
+    escHide: false, 
+    button: false,
+    // autoClose: true,
+    // timeout: 3000,
+    button: {
+      confirm: '',
+      cancel: '',
+    },
+    // onConfirm: function() {
+    //   console.log('点击确认！');
+    //   // 去签名
+    //   // handleClick()
+    // },
   
+    // onClose: function() {
+    //   console.log('点击关闭！');
+    // }
+  });
+}
+
  
 
 // paypal支付逻辑
@@ -870,7 +847,18 @@ function createdOrderToXieYi( paytype,v) {
  var  goodsCode = $(".goods_code").val()||"";
  var showStartVip =getUrlParams('idx');
  
-  
+//  if(showStartVip == 10 || showStartVip==11|| showStartVip==7){
+           
+//   $(".dialog-background").hide()
+//   $(".dialog-section").hide()
+//   $(".coin3_style").show()
+
+   
+// return
+
+
+
+// }
   $.ajax({
       type: "get",
       url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
@@ -882,7 +870,17 @@ function createdOrderToXieYi( paytype,v) {
           if (res.code == 0) {
              
               if(showStartVip == 10 || showStartVip==11|| showStartVip==7){
-       
+                // closeF()
+                // $(window.frames["n1"]).find(".dialog-background").css({'display':'none'});
+                // $(window.frames["n1"]).find(".dialog-section").css({'display':'none'});
+                
+                // console.log("0000",b)
+                // $(".dialog-background").toggle()
+                //    $(".dialog-section").toggle()
+                //     $(".coin3_style").show()
+                
+    
+                // return
               
           
 
@@ -912,5 +910,23 @@ $('input:radio[name=policy-input]').change(function () {
   // $(".coin3_style").show()
   }
   
-    
+   
+//   if (this.value == 'coin3') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin3.png");
+//   }
+//   else if (this.value == 'coin5') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin5.png");
+//   }
+//   else if (this.value == 'coin6') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin6.png");
+//   }
+//   else if (this.value == 'coin7') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin7.png");
+//   }
+//   else if (this.value == 'coin10') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin10.png");
+//   }
+//   else if (this.value == 'coin11') {
+//     $(".coin3_style img").attr("src","assets/images/pay/coin11.png");
+//   }
 });

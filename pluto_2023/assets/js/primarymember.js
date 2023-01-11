@@ -2,9 +2,9 @@ var producId =5;
 // var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm"
 
 var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
-const stripe = Stripe(stripeKey);
+// const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
-var count = 1;//当前选择的支付方式，0=stripe，1=paypal
+var count = 0;//当前选择的支付方式，0=stripe，1=paypal
 localStorage.setItem("fileNameTo",(location.href.split("/").slice(-1))[0])
 
 $(".buyNowProduct").click(() => {
@@ -20,7 +20,7 @@ $(".buyNowProduct").click(() => {
 function forPayList() {
     $(".product-pay-stripe-paypal").html("")
     $.each(arrList, function (index, data) {
-        var oip = `<div  style="${index==0?'display:none':''}"  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
+        var oip = `<div  style="${index==1?'display:none':''}"  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })
@@ -107,6 +107,8 @@ $("#confirmPaymentType").click(() => {
 
     } else {
         if (count == 0) {
+            // productAgreementService()
+
             var paytype = "paypal";
             createdOrderTo(productData.ID, paytype);
         }
@@ -123,7 +125,7 @@ function createdOrderTo(goods_id, paytype) {
 
     $.ajax({
         type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=1`,
+        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,
@@ -149,7 +151,7 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) {
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0`, {
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=${payway}`, {
         method: "get",
         headers: {
             "Content-Type": "application/json",
@@ -270,8 +272,8 @@ $(document).on("click", "#pay-stripe", function () {
             "padding": "10px"
         })
          
-        initialize(productData.ID)
-        checkStatus();
+        // initialize(productData.ID)
+        // checkStatus();
         
     }
 }

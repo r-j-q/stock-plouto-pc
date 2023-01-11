@@ -12,6 +12,7 @@ var intermediatemembergoodsCode=4;
 var advancedmembergoodsCode = 4;
 var starvipgoodsCode =4;
 var silvermembersgoodsCode =4;
+var payway=0;//0网站  1app
 var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm";
 
 var memberList ={

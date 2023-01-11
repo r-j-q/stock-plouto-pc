@@ -1,69 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Christmas Fortune Wheel</title>
-  <!-- <link rel="stylesheet" href="assets/css/commom.css?v=1.0.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>New Year Fortune Wheel</title>
+  <link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+
   <link rel="stylesheet" href="assets/css/gmae.css">
   <style>
     html,
     body {
-      width: 100%;
-      display: flow-root;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    .turnImg_top {
-      width: 100%;
-      height: 100%;
-    }
-
-    .turnImg_top img {
-      width: 100%;
-      height: 100%;
-    }
-
-    ::-webkit-scrollbar {
-      display: none
-    }
-
-    .body_ {
-      width: 100%;
-
-      background-image: url('./assets/images/yourLouck/pc.png');
-      background-size: cover;
-
-      background-repeat: no-repeat;
-    }
-
-
-
-    .turnImg {
-      width: 60%;
-      height: 100%;
-      margin: 0 auto;
-      position: relative;
-      z-index: 22;
-      bottom: -2rem;
-    }
-
-    .begin {
-      position: absolute;
-      width: 13%;
-      left: 50%;
-      top: 45%;
-      transform: translate(-50%, -50%);
-      z-index: 44;
-    }
-
-    .begin img {
       width: 100%;
       height: 100%;
     }
@@ -72,15 +22,21 @@
       display: block;
     }
 
-    .turnImg_gif {
-      width: 65%;
-      height: 100px;
-      margin: 0 auto;
+    .content0 {
+      width: 100%;
+      height: 100%;
+
       position: relative;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      cursor: pointer;
+    }
+
+    .content1 {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .content11 {
+      display: block;
     }
 
     .tops {
@@ -88,32 +44,140 @@
       height: 54px;
       background: rgb(236, 185, 48, .6);
       border-radius: 2px;
-      position: relative;
+      position: absolute;
       top: 0px;
       padding: 0px;
       overflow: hidden;
       display: none;
-    }
-
-    .contentNotice_loop li {
-      justify-content: center;
-      color: #fff;
       text-align: center;
     }
 
-    @media screen and (min-width:751px) {
-      .rounds {
-        position: absolute;
-        top: 11rem;
-        left: 54%;
-      }
+    .contentNotice_loop {
+      color: #fff;
+    }
+
+    .contentNotice_loop li {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .copysend {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 20px;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+    }
+
+    .copys {
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #ECB930;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+
+    .okCancel {
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around
+    }
+
+    .ok_cancel {
+      color: #f5f5f5;
+    }
+
+    .ok_use {
+
+
+      text-align: center;
+
+      color: #ECB930
+    }
+
+    .begin {
+      position: absolute;
+      top: 167px;
+      left: 42%;
+      text-align: center;
+      z-index: 88;
+      width: 5rem;
+    }
+
+    .turnImg {
+      position: relative;
+      z-index: 22;
+    }
+
+    .turnImg_gif {
+      width: 65%;
+      height: 100px;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+      bottom: -68px;
+      z-index: 1;
+    }
+
+    .rounds {
+      position: absolute;
+      top: 26%;
+      left: 57%;
+      width: 500px;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .content0 {
+      width: 100%;
+
+      height: 100%;
+    }
+
+    .ok_close {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+      font-size: 20px;
     }
 
     @media screen and (max-width:750px) {
-      .body_ {
-        background-image: url('./assets/images/yourLouck/g1.png');
-        background-size: cover;
-        padding-bottom: 10rem;
+
+      .content1 {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .content0 {
+        width: 100%;
+
+        height: auto;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: auto;
+      }
+
+      .content11 {
+        display: none;
       }
 
       .tops {
@@ -122,7 +186,18 @@
 
       .rounds {
         position: absolute;
-    bottom: 2%;
+        top: 44%;
+        left: -2%;
+        width: 100%;
+      }
+
+      .begin {
+        position: absolute;
+        top: 129px;
+        left: 44%;
+        text-align: center;
+        z-index: 88;
+        width: 47px;
       }
 
       .turnImg {
@@ -138,74 +213,73 @@
         width: 60%;
         height: 100px;
         margin: 0 auto;
-        position: relative;
+        position: absolute;
         z-index: 1;
         left: 0;
         right: 0;
         cursor: pointer;
+        bottom: -94px;
       }
-
     }
 
-    .copysend {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 20px;
+    @media screen and (max-width:414px) {
+      .begin {
+        position: absolute;
+        top: 149px;
+
+      }
     }
 
-    .copys {
-      padding: 10px 20px;
-      text-align: center;
-      color: #fff;
-      background-color: #ECB930;
-      border-radius: 4px;
-      cursor: pointer;
+    @media screen and (max-width:375px) {
+      .begin {
+        position: absolute;
+        top: 133px;
 
-    }
-    .ok_use{ 
-      height: 40px;
-     
-      text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: #ECB930
+      }
     }
   </style>
 </head>
 
-<body class="body_">
+<body>
+  <div class="content0">
+    <img src="./assets/images/yourLouck/pc.png" alt="" class="content11">
+    <img src="./assets/images/yourLouck/g1.png" alt="" class="content1">
+    <div class="tops">
+      <ul>
+        <li>
+          <div class="scrollDiv" id="s1">
+            <ul class="contentNotice_loop" id="getor_yd"></ul>
+          </div>
+        </li>
 
-  <div class="tops">
-    <ul>
-      <li>
-        <div class="scrollDiv" id="s1">
-          <ul class="contentNotice_loop" id="getor_yd"></ul>
-        </div>
-      </li>
+      </ul>
 
-    </ul>
+    </div>
+    <div class="copysend">
+      <div class="copys">Share</div>
+    </div>
 
-  </div>
-  <div class="copysend">
-    <div class="copys">Share</div>
-  </div>
-  <!-- <div  class="body_p">  -->
-  <div class="rounds">
-    <img class="turnImg" src="./assets/images/yourLouck/round.png" alt="" />
-    <img class="turnImg_gif round" src="./assets/images/yourLouck/pay.gif" alt="" />
-    <div class="begin">
-      <img src="./assets/images/yourLouck/zhen.png" alt="" />
+
+    <div class="rounds">
+      <img class="turnImg" src="./assets/images/yourLouck/round.png" alt="" />
+      <img class="turnImg_gif round" src="./assets/images/yourLouck/pay.gif" alt="" />
+      <div class="begin">
+        <img src="./assets/images/yourLouck/zhen.png" alt="" />
+      </div>
     </div>
   </div>
-  <!-- </div> -->
   <div class="codeBox" id="code_box">
+   
     <div id="hide">
+      <div class="ok_close">
+        <div class="ok_cancel">x</div>
+      </div>
       <img id="code_i" src="" />
-      <div class="ok_use">ok</div>
+      <div class="okCancel">
+
+        <div class="ok_use">Ok</div>
+      </div>
+
     </div>
   </div>
 </body>
@@ -299,7 +373,7 @@
               dataType: "json",
               success: function (res) {
                 console.log("===抽奖===>", res)
-                if (res.code ==0) {
+                if (res.code == 0) {
                   res_data = res.data;
                   // 6 STAR VIP  25% off       【15%】            
                   // 7 Silver Member 15% off    【5%】    
@@ -316,22 +390,22 @@
 
 
                   // var sectorId = 4 ; //选中的奖品地址是需要后台传给你  
-                  var part =8  //奖品的总个数
+                  var part = 8  //奖品的总个数
                   var defaultRotate = 1800   //一圈360度，旋转5圈
                   var setRotate = (360 / part) * sectorId - (360 / part) / 2 //计算定位到指定商品在商品的中间
                   var ss = 70  //1-75  2-145  3-245
-                 
-                    if (sectorId == 6) {
+
+                  if (sectorId == 6) {
                     ss = 290
                   } else if (sectorId == 7) {
                     ss = 300
-                  }else if (sectorId == 8) {
+                  } else if (sectorId == 8) {
                     ss = 80
-                  }  else if (sectorId == 9) {
+                  } else if (sectorId == 9) {
                     ss = 60
                   } else if (sectorId == 10) {
                     ss = 300
-                  } 
+                  }
 
 
                   var allRotate = defaultRotate + setRotate + ss//总旋转度数
@@ -343,40 +417,40 @@
                       flog = true
                       let deg = $('.turnImg')[0].style.transform;
                       console.log("旋转度数", deg)
-                      $("#code_i").attr("src", ""); 
-                        if (sectorId == 6) {
-                        $("#code_i").attr("src","./assets/images/yourLouck/k6.gif");
+                      $("#code_i").attr("src", "");
+                      if (sectorId == 6) {
+                        $("#code_i").attr("src", "./assets/images/yourLouck/k6.gif");
                         document.getElementById('code_box').style.display = "block";
-                       
+
                       }
                       if (sectorId == 7) {
-                        $("#code_i").attr("src","./assets/images/yourLouck/k7.gif");
+                        $("#code_i").attr("src", "./assets/images/yourLouck/k7.gif");
 
                         document.getElementById('code_box').style.display = "block";
-                      
 
-                      } 
+
+                      }
                       if (sectorId == 8) {
-                        $("#code_i").attr("src","./assets/images/yourLouck/k8.gif");
+                        $("#code_i").attr("src", "./assets/images/yourLouck/k8.gif");
 
                         document.getElementById('code_box').style.display = "block";
-                      
 
-                      } 
+
+                      }
                       if (sectorId == 9) {
-                        $("#code_i").attr("src","./assets/images/yourLouck/k9.gif");
+                        $("#code_i").attr("src", "./assets/images/yourLouck/k9.gif");
 
                         document.getElementById('code_box').style.display = "block";
-                      
 
-                      } 
+
+                      }
                       if (sectorId == 10) {
-                        $("#code_i").attr("src","./assets/images/yourLouck/k10.gif");
+                        $("#code_i").attr("src", "./assets/images/yourLouck/k10.gif");
 
                         document.getElementById('code_box').style.display = "block";
-                     
 
-                      } 
+
+                      }
                     }
                   })
                 } else if (res.code == 2) {
@@ -396,7 +470,7 @@
     })
 
   })
-  $('.ok_use').click(()=>{
+  $('.ok_use').click(() => {
     window.location.href = "userTime.html"
   })
   $(".copys").click(() => {
@@ -407,11 +481,11 @@
     if (getUrlParams('User_invite_id')) {
       localStorage.setItem("User_invite_id", getUrlParams('User_invite_id'));
     }
-    else{
-      User_invite_id=  tokens.ID
+    else {
+      User_invite_id = tokens.ID
     }
 
-    
+
     if (tokens.token) { } else {
       alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
         loginH()
@@ -419,7 +493,7 @@
       })
       return
     }
-    let copy_url = `https://www.stock-plouto.com/yourLouck.html?User_invite_id=${User_invite_id}`
+    let copy_url = `https://www.stock-plouto.com/yourLuck.html?User_invite_id=${User_invite_id}`
     let input = document.createElement('input')
     input.style.cssText = 'opacity: 0';
     input.type = 'text';
@@ -431,7 +505,9 @@
     toast('Success Copy')
   })
 
-
+  $('.ok_cancel').click(() => {
+    document.getElementById('code_box').style.display = "none";
+  })
 </script>
 
 </html>

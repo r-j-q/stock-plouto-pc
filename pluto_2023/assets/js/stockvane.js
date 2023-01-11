@@ -109,7 +109,7 @@ $("#confirmPaymentType").click(() => {
 
         } else {
             if (count == 0) { 
-                 
+                // productAgreementService()
                 var paytype = "paypal";
                 createdOrderTo(productData.ID, paytype);
             }
@@ -126,7 +126,7 @@ function createdOrderTo(goods_id, paytype) {
      
     $.ajax({
         type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=1`,
+        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,
@@ -152,7 +152,7 @@ function createdOrderTo(goods_id, paytype) {
 let elements;
 
 async function initialize(goods_id) { 
-    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=0`, {
+    const response = await fetch(`${baseUrl}/user/order/create?paytype=stripe&goods_id=${goods_id}&payway=${payway}`, {
         method: "get",
         headers: {
             "Content-Type": "application/json",

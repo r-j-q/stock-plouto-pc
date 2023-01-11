@@ -611,6 +611,16 @@ body {
     border-bottom-right-radius: 8px;
     overflow: hidden;
 } */
+.displaySpaceArounds{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ais{
+    box-shadow: 0 0 3px #8e8e8e;
+    margin: 30px;
+    padding: 20px;
+}
 .hostClick{
     height: 60px;
     line-height: 60px;
@@ -679,4 +689,117 @@ body {
 .coin3_style img{
      width: 100%;
      height: 100%;
+}
+
+.form-control-select-style{
+    padding: 10px 0;
+width: 30%;
+margin: 15px 0;
+}
+.coin3_style_{
+    display: none;
+    
+    border-radius: 5px;
+    overflow: hidden;
+    width: auto;
+}
+.paypay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#copy_{
+    padding: 10px 20px;
+    margin-left: 20px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.fixedTo{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: rgba(6, 6, 6, 0.6);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1111;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.fixedToContent{
+    width: 94%;
+    /* height: 300px; */
+    background-color: #fff;
+    margin: 0 auto;
+    /* margin-top: 50%; */
+}
+.dibu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset {
+    color: #ccc;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.confirm {
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    text-align: center;
+
+    color: #fff;
+    background-color: #ECB930;
+}
+
+.ssss {
+    height: 500px;
+}
+
+#signature {
+    border: 1px dashed #ccc;
+}
+
+.dibu {
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+.dibu div{
+    cursor: pointer;
+}
+
+@media screen and (max-width:750px) {
+    .paypay{
+        display: flex;
+        flex-direction: column;  
+        align-items: end;
+     
+    }
+    .form-control-select-style{
+       
+    width: 50%;
+    }
+    .ais{
+        box-shadow: 0 0 3px #8e8e8e;
+        margin: 2px;
+        padding: 4px;
+    }
+
+}
+.text-info iframe{
+    width: 100%;
 }
