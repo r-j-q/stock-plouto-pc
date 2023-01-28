@@ -86,14 +86,10 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 
 
 
-
-
-
-
-                    
-                    var oip = `<a href="newDetail.html?list=${data.ID}"><div class="new_content_list">
+                    var sk= lookOrigin(data.img)
+                var oip = `<a href="newDetail.html?list=${data.ID}"><div class="new_content_list">
                                 <div class="new_content_img">
-                                <img src="${data.img}" alt="" srcset="">
+                                <img src="${sk}" alt="" srcset="">
                                 </div>
                                 <div class="new_content_r">
                                     <div class="new_content_title ellipsis1">
@@ -115,7 +111,18 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 
 })()
 
-
+function lookOrigin(v){
+    //查看原文
+            var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+            var objExp=new RegExp(Expression);
+                    console.log(objExp.test(v));
+                    if(objExp.test(v))
+                    {
+                        return v;
+                    }else{
+                        return baseUrl + v;
+                    }
+} 
 function getLocalTime(time) {
     var date = new Date(time);
     Y = date.getFullYear() + '-';

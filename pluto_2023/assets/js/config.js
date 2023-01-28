@@ -1,5 +1,6 @@
 var baseUrl = "https://api.stock-plouto.com";
 // var baseUrl =   "http://192.168.0.84:8080"
+var clineUrl ="https://admin.stock-plouto.com/"
 // var arrList = ["PayPal", "Stripe"];
 // TODO 去掉PayPal支付就是隐藏掉js里面的  style="${index==0?'display:none':''}"
 var arrList = ["PayPal", "Stripe"];

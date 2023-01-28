@@ -74,7 +74,7 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="news.html">News</a></li>
+                            <li><a href="newst.html">News</a></li>
 
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="index.html#AboutUs"> About Us</a></li>
@@ -168,7 +168,7 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                     <li><a href="SignalsService.html"> Signals</a></li>
                                 </ul>
                             </li>
-                            <li><a href="news.html">News</a></li>
+                            <li><a href="newst.html">News</a></li>
 
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
                             <li><a href="index.html#AboutUs"> About Us</a></li>
@@ -699,6 +699,7 @@ function get_() {
   });
 }
 get_()
+$(".ais_right img").attr("src",'assets/images/omni/ommi.jpg')
 
 $("#to_pay_selected").change(function () {
   var areaCodes_to_pay_selected = $("#to_pay_selected  option:selected").val();
@@ -709,12 +710,17 @@ $("#to_pay_selected").change(function () {
       listsValue = areaCodes_to_pay_selected;
       if(areaCodes_to_pay_selected=='USDT-Omni'){
         $(".paypay span").text(list_[0])
+        $(".ais_right img").attr("src",'assets/images/omni/ommi.jpg')
       }
       if(areaCodes_to_pay_selected=='USDT-ERC20'){
         $(".paypay span").text(list_[1])
+        $(".ais_right img").attr("src",'assets/images/omni/ect20.jpg')
+
       }
       if(areaCodes_to_pay_selected=='USDT-TRC20'){
         $(".paypay span").text(list_[2])
+        $(".ais_right img").attr("src",'assets/images/omni/TRC20.jpg')
+
       }
     }
   });
@@ -838,13 +844,19 @@ function createdOrderToXyongka(v) {
         $("#pic")[0].innerHTML = '';
       });
       document.getElementById("save").addEventListener('tap', function () {
-         
+        if( $("#signature").jSignature('getData', 'native').length == 0){ 
+          
+          $.sendWarningToTop('Please sign your name', 2000, function() {
+            // console.log('sendWarningToTop closed');
+          });
+          
+          return; }
         var datapair = $("#signature").jSignature("getData", "image");
 
 
         var array = datapair.splice(",");
         console.log("64===>",'data:image/png;base64,'+array[1])
-        var paytype = "paypal";
+        var paytype = "offline";
          
          
         createdOrderToXieYi(paytype,array[1])
@@ -914,3 +926,17 @@ $('input:radio[name=policy-input]').change(function () {
   
     
 });
+
+// 判断是不是http开头
+function lookOrigin(v){
+  
+          var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+          var objExp=new RegExp(Expression);
+                  console.log(objExp.test(v));
+                  if(objExp.test(v))
+                  {
+                      return v;
+                  }else{
+                      return clineUrl  + v;
+                  }
+} 
