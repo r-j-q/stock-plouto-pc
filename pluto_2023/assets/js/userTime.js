@@ -1,5 +1,5 @@
 var producId = 3;
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
 
@@ -8,6 +8,8 @@ var dateNowtime = "",
     enTime2 = "0",
     vip_end = "0",
     enTime3 = "0",
+    vip_end1="0",
+    vip_end2="0",
     prize='',
     newYear='New Year  Fortune Wheel :',
     christmas='Christmas Fortune Wheel :';
@@ -157,7 +159,12 @@ $.ajax({
             enTime1 = res.data.sm_vip_end.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.sm_vip_end);
             enTime2 = res.data.vip_club_end.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_club_end);
             enTime3 = res.data.star_vip_end.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.star_vip_end);
-            vip_end = res.data.vip_end_str.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_end_str);
+            // 中级
+            vip_end = res.data.vip_end.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_end);
+            //  初级
+             vip_end1 = res.data.vip_end1.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_end1);
+            //    高级
+            vip_end2 = res.data.vip_end2.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_end2);
             
             $(".name-data").text("Name: " + res.data.username || "")
             $(".email-data").text("Email: " + res.data.email || "")
@@ -166,38 +173,54 @@ $.ajax({
             if (enTime1 != 0) {
                 console.log("=====>",judgeTime(enTime1.substring(0, 10)))
                 if (!judgeTime(enTime1.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10),""))
+                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.substring(0, 10).replace(/-/g, "/"),"Expired"))
                      
                 }
             }
             if (enTime2 != 0) {
                 if (!judgeTime(enTime2.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10),""))
+                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }
             if (enTime3 != 0) {
                 if (!judgeTime(enTime3.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10),""))
+                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }
 
             if (vip_end != 0) {
                 if (!judgeTime(vip_end.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.substring(0, 10),""))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.substring(0, 10),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }
-            if(enTime1==0 && enTime2==0 && enTime3==0 &&vip_end==0){
+            if (vip_end1 != 0) {
+                if (!judgeTime(vip_end1.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),""))
+                }else{
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),"Expired"))
+
+                }
+            }
+            if (vip_end2 != 0) {
+                if (!judgeTime(vip_end2.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),""))
+                }else{
+                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),"Expired"))
+
+                }
+            }
+            if(enTime1==0 && enTime2==0 && enTime3==0 &&vip_end==0&&vip_end1==0&&vip_end2==0){
               var testContent =  "<a class='color_ weiGouMai' href='index.html'>You have not purchased our paid service, please click purchase.</a>"
               $(".disUserProut").append(testContent)
             }
@@ -205,7 +228,7 @@ $.ajax({
             // $(".disUserProut").append(htmlTime(1, 'stock vane', enTime1 == 0 ? '0' : enTime1.replaceAll('-', '/')))
             // $(".disUserProut").append(htmlTime(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.replaceAll('-', '/')))
             // $(".disUserProut").append(htmlTime(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.replaceAll('-', '/')))
-            // $(".disUserProut").append(htmlTime(4, 'Stock pluto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
+            // $(".disUserProut").append(htmlTime(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.replaceAll('-', '/')))
 
 
             //日期倒计时,现在距离下面的日期

@@ -1,5 +1,5 @@
 
-// localStorage.removeItem("plutoUserInfo");
+// localStorage.removeItem("ploutoUserInfo");
 
 var areaCode = "";
 var codeLists = [];
@@ -103,7 +103,8 @@ $("#registerBtn").click(function () {
         dataType: "json",
         success: function (res) {
             if (res.code == 0) {
-                window.location.href = "login.html?register=register";
+                 localStorage.removeItem("User_invite_id");
+                 window.location.href = "login.html?register=register";
             } else {
                 toast(res.msg)
 

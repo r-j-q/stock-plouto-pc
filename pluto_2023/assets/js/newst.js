@@ -1,5 +1,5 @@
 
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 
 
 (() => {
@@ -42,11 +42,7 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
 
 							 ${data.title}
 
-						</h2>
-
-						<img class="img-responsive" src="${data.image}">
-
-						<p>
+						</h2><img class="img-responsive" src="${data.image}"><p>
 
                         ${data.text}
 
@@ -81,8 +77,7 @@ var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
                 if (index < 18) {
                     // var s=(data.updatedAt.substring(0,19)).replace("T",' ');
 
-                    var s = getLocalTime(data.updatetime)
-                    console.log("=====noauth news=======>", s);
+                    var s = getLocalTime(data.updatetime) 
 
 
 
@@ -124,13 +119,13 @@ function lookOrigin(v){
                     }
 } 
 function getLocalTime(time) {
-    var date = new Date(time);
+    var date = new Date(time*1000);
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
     D = date.getDate() + ' ';
     h = date.getHours() + ':';
     m = date.getMinutes() + ':';
-    s = date.getSeconds();
+    s = (date.getSeconds() + 1 < 10 ? '0' + (date.getSeconds() + 1) : date.getSeconds() + 1);
     return Y + M + D + h + m + s;
 }
 

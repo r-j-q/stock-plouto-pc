@@ -1,7 +1,7 @@
 var producId =5;
 // var stripeKey="pk_live_51L8IpsIzNzEUKhl8uXHCShyfEXTUAcetBsKbaG690FCXWGcBlFWoxbRdqsKjvKjh2k1WSkRKXYhRl3iZVqLjwZSI00fmzBBSTm"
 
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 // const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }];
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
@@ -78,7 +78,7 @@ function goodList(id) {
             productData = res.data;
             if (id == producId) {
                 var op1 = `<span class="fontSize42">$${productData.cur_price / 100}</span>`;
-                $("#pay01").append(op1+'/Month');
+                $("#pay01").append(op1+'/4 weeks');
 
 
             }
@@ -107,10 +107,10 @@ $("#confirmPaymentType").click(() => {
 
     } else {
         if (count == 0) {
-            // productAgreementService()
-
-            var paytype = "paypal";
-            createdOrderTo(productData.ID, paytype);
+            productAgreementService()
+            // paypal
+            // var paytype = "script";
+            // createdOrderTo(productData.ID, paytype);
         }
 
 

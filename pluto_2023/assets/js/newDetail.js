@@ -1,5 +1,5 @@
 
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 
 let symbolData = getUrlParams("list");
 console.log(symbolData);
@@ -40,13 +40,14 @@ console.log(symbolData);
 
 })()
 function getLocalTime(time) {
-    var date = new Date(time);
+    var date = new Date(time*1000);
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
-    D = date.getDate() + ' ';
-    h = date.getHours() + ':';
-    m = date.getMinutes() + ':';
-    s = date.getSeconds();
+    D = date.getDate() + ' '; 
+    h = (date.getHours() + 1 < 10 ? '0' + (date.getHours() + 1) : date.getHours() + 1) + ':';
+    m = (date.getMinutes() + 1 < 10 ? '0' + (date.getMinutes() + 1) : date.getMinutes() + 1) + ':';
+    s = (date.getSeconds() + 1 < 10 ? '0' + (date.getSeconds() + 1) : date.getSeconds() + 1);
+
     return Y + M + D + h + m + s;
 }
 function addhttp(urls) {

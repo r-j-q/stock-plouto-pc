@@ -1,5 +1,5 @@
 var producId = 7;
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 // const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }]; 
 var count = 0;//当前选择的支付方式，0=stripe，1=paypal
@@ -10,7 +10,8 @@ var goodsCode="";
 $(".buyNowProduct").click(() => {
     if (tokens) {
         $(".product-pay").toggle()
-    } else {
+    }
+     else {
         loginH('product')
 
     }
@@ -80,7 +81,7 @@ function goodList(id) {
             productData = res.data;
             if (id == producId) {
                 var op1 = `<span class="fontSize42">$${productData.cur_price / 100}</span>`;
-                $("#pay01").append(op1+'/Year');
+                $("#pay01").append(op1+'/12 weeks');
 
 
             }

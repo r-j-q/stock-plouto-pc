@@ -1,5 +1,5 @@
 
-var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "",
+var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "",
  page = 1,
  totals=0;
  
@@ -58,13 +58,14 @@ setTimeout(()=>{
     }); 
 },1000)
 function getLocalTime(time) {
-    var date = new Date(time);
+    var date = new Date(time*1000);
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
     D = date.getDate() + ' ';
     h = date.getHours() + ':';
     m = date.getMinutes() + ':';
-    s = date.getSeconds();
+    s = (date.getSeconds() + 1 < 10 ? '0' + (date.getSeconds() + 1) : date.getSeconds() + 1);
+
     return Y + M + D + h + m + s;
 }
  

@@ -47,16 +47,16 @@
 }
 .pager a:hover,
 .pager span:hover {
-	border-color: #3897cd;
-	color: #3897cd;
+	border-color: #ECB930;
+	color: #ECB930;
 	position: relative;
 	z-index: 1;
 }
 
 .pager span.current {
-	background-color: #3897cd;
+	background-color: #ECB930;
 	color: #fff;
-	border-color: #3897cd;
+	border-color: #ECB930;
 	position: relative;
 	z-index: 1;
 }

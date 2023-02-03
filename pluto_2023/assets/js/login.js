@@ -1,4 +1,4 @@
-var userInfo =JSON.parse(  localStorage.getItem("plutoUserInfo"));
+var userInfo =JSON.parse(  localStorage.getItem("ploutoUserInfo"));
 $("#ResetPassword").click(function () {
   window.location.href = "changePassword.html";
 }); 
@@ -33,7 +33,7 @@ $("#loginBtn").click(function () {
          localStorage.setItem("User_invite_id", res.data.ID);
       
         var data = JSON.stringify(res.data);
-        localStorage.setItem("plutoUserInfo", data || null);
+        localStorage.setItem("ploutoUserInfo", data || null);
         // location.reload()
         // window.history.back()
         if (getUrlParams("register") == "register") {
@@ -65,7 +65,7 @@ $("#loginBtn").click(function () {
   });
 });
 
-$("#plutoRegister").click(function () {
+$("#ploutoRegister").click(function () {
   
     window.location.href = "register.html";
  
@@ -84,4 +84,4 @@ function getUrlParams(key) {
   }
   return false;
 }
-localStorage.removeItem("plutoUserInfo");
+localStorage.removeItem("ploutoUserInfo");

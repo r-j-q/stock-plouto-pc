@@ -1,4 +1,4 @@
-var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
+var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 // console.log("-------->>>>>",userInfo)
 // (function(win, doc) {
 //   'use strict';
@@ -83,14 +83,14 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                             <a href="javascript:;" class="name-user">Sign In</a>
                             <ul> 
                             <li><a href="userTime.html">Me</a></li>
-                            <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
+                            <li class="login-out-style"><a   href="login.html">SIGN OUT</a></li>
                         </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
+                                    <li class="login-out-style"><a   href="login.html">SIGN OUT</a></li>
                                 </ul>
                             </li>
 
@@ -177,14 +177,14 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                 <a href="javascript:;" class="name-user">Sign In</a>
                                 <ul> 
                                 <li><a href="userTime.html">Me</a></li>
-                                <li class="login-out-style loginOutStock"><a href="login.html">Sign Out</a> </li>
+                                <li class="login-out-style loginOutStock"><a href="login.html">SIGN OUT</a> </li>
                                 </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a  href="login.html">Sign Out</a></li>
+                                    <li class="login-out-style"><a  href="login.html">SIGN OUT</a></li>
                                 </ul>
                             </li>
 
@@ -280,8 +280,8 @@ var htmlEasier = `
       <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
        <div class="ps">
        <div class="fontSize2422 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Pluto Group is one of the world's leading investment</div>
-			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service, advisory and risk management solutions providers.</div>
+       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
+			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service advisory and risk management solutions providers.</div>
       </div>
       </div>
 		 `
@@ -290,7 +290,7 @@ var htmlEasier = `
 // 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
 //   <div class="login-row-style-row h-">
 //   <div class="login-row-style">
-// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
+// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The plouto Group is one of the world's leading investment</div>
 // 	<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
 //   <div class="loginStock"></div>
 //   </div>
@@ -301,7 +301,7 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
 		<div class="displayRow100">
     <div class="bac500l displayRow500l">
 			<div class="fontSize32 fontWeightAll scales nowrapspace textCenter"> Make your personal investing easier</div>
-      <div class='m_t_100 p_10_ color_ fontSizeZHI fontWeight400'>The Pluto Group is one of the world's leading investment service, advisory and risk management solution provider</div>
+      <div class='m_t_100 p_10_ color_ fontSizeZHI fontWeight400'>The Plouto Group is one of the world's leading investment service, advisory and risk management solution provider</div>
 		 
 		<div class="loginStock"></div>
       </div>
@@ -402,11 +402,11 @@ if (userInfo == null) {
 
 var htmlFooter = `
 <div class="footer-content-list">
-<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Pluto</div>
+<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Plouto</div>
 <div class="fontSize16 color_8E paddingBottom8">
-The Pluto Group is one of the world’s leading investment service， advisory and risk management solutions providers. </br>
+The Plouto Group is one of the world’s leading investment service, advisory and risk management solutions providers. </br>
 The Group is headquartered in Lucky Plaza, Tsuen Wan, Hong Kong, China and serves clients through its offices in the United States, Europe and Asia.</br>
-The company has a top independent investment research team. Through the U.S. stock big data, artificial intelligence quantitative analysis, it has more than 3,000 kinds of intelligent algorithms. Facing growing U.S. stock investors, the company has the ability to provide risk management, investment system management and financial advisory services. We truly make investing easier for individuals and serve over 2,000 individual investors in U.S. stocks each year. We are also well received by individual investors worldwide.
+The company has a top independent investment research team. Through the U.S. stock big data, artificial intelligence quantitative analysis, it has more than 3,000 kinds of intelligent algorithms. Facing growing U.S. stock investors, the company has the ability to provide risk management, investment system management and financial advisory services. We truly make investing easier for individuals and serve over 5,000 individual investors in U.S. stocks each year. We are also well received by individual investors worldwide.
 </div>
 </div>
 <div class="footer-content  ">
@@ -422,14 +422,14 @@ The company has a top independent investment research team. Through the U.S. sto
 </div>
 <div class="footer-content-list">
   <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
-  <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
+  <div class="fontSize16 color_8E paddingBottom8">E-mail: Jame.plouto8@gmail.com </div>
   <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5518 5199 </div>
   <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
 </div>
 </div>
 </div>
 <div class="footer-copy color_ fontWeight400">
-  Copyright © 2022.Stock pluto All rights reserved.
+  Copyright © 2022.Stock Plouto all rights reserved.
 </div>`
 
 // $('.htmlBanners').append(htmlBanner);
@@ -450,29 +450,29 @@ $(".agreement").click(function () {
 
 });
 $(".loginOutStock").click(function () {
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   window.location.href = `login.html`;
 
 });
 function loginH(v) {
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   window.location.href = "login.html?params=" + v;
 }
 
 function getUrlParams(key) {
   var url = window.location.search.substr(1);
-  console.log("----->",url)
+  console.log("----->", url)
   if (url === '') {
     return false;
   }
   var paramsArr = url.split('&');
-  
+
 
   for (var i = 0; i < paramsArr.length; i++) {
     var combina = paramsArr[i].split("=");
-     
+
     if (combina[0] == key) {
-      console.log("--paramsArr--->",combina[1]  )
+      console.log("--paramsArr--->", combina[1])
       return combina[1];
     }
   }
@@ -569,10 +569,8 @@ $.ajax({
 
 
 
-
 $(".login-out-style").click(() => {
-  console.log("===99999999999=====>")
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   setTimeout(() => { toast('Sign out success') }, 1000)
   window.location.href = "login.html";
 })
@@ -593,7 +591,7 @@ if (userInfo?.token) {
         $(".periodData").append(period + total);
       }
       if (codes == 2) {
-        localStorage.removeItem("plutoUserInfo");
+        localStorage.removeItem("ploutoUserInfo");
         window.location.href = `login.html`;
         toast('Re login')
 
@@ -613,7 +611,7 @@ function getOrderPrice(goods_code) {
     success: function (res) {
       if (res.code == 0) {
         var productDatas = res.data;
-      var ls=  getUrlParams('idx')==7?'/Year' :'/Month';
+        var ls = getUrlParams('idx') == 7 ? '/Year' : '/Month';
         // nowprice oldprice save_num
         var opAll = `<span class="" ><span style="text-decoration: line-through"> $${productDatas.oldprice / 100}</span><span class="color_"> $${productDatas.nowprice / 100}</span></span>`;
         $(".priceData").append(opAll + ls);
@@ -684,7 +682,7 @@ function functionCreateStripe(goods_id) {
 
 
 
- 
+
 // 统计代码 
 var lists = [{ value: "USDT-Omni" }, { value: "USDT-ERC20" }, { value: "USDT-TRC20" }];
 var listsValue = "USDT-Omni";
@@ -699,7 +697,7 @@ function get_() {
   });
 }
 get_()
-$(".ais_right img").attr("src",'assets/images/omni/ommi.jpg')
+$(".ais_right img").attr("src", 'assets/images/omni/ommi.jpg')
 
 $("#to_pay_selected").change(function () {
   var areaCodes_to_pay_selected = $("#to_pay_selected  option:selected").val();
@@ -708,29 +706,29 @@ $("#to_pay_selected").change(function () {
     console.log("--============----->", areaCodes_to_pay_selected)
     if (data.value == areaCodes_to_pay_selected) {
       listsValue = areaCodes_to_pay_selected;
-      if(areaCodes_to_pay_selected=='USDT-Omni'){
+      if (areaCodes_to_pay_selected == 'USDT-Omni') {
         $(".paypay span").text(list_[0])
-        $(".ais_right img").attr("src",'assets/images/omni/ommi.jpg')
+        $(".ais_right img").attr("src", 'assets/images/omni/ommi.jpg')
       }
-      if(areaCodes_to_pay_selected=='USDT-ERC20'){
+      if (areaCodes_to_pay_selected == 'USDT-ERC20') {
         $(".paypay span").text(list_[1])
-        $(".ais_right img").attr("src",'assets/images/omni/ect20.jpg')
+        $(".ais_right img").attr("src", 'assets/images/omni/ect20.jpg')
 
       }
-      if(areaCodes_to_pay_selected=='USDT-TRC20'){
+      if (areaCodes_to_pay_selected == 'USDT-TRC20') {
         $(".paypay span").text(list_[2])
-        $(".ais_right img").attr("src",'assets/images/omni/TRC20.jpg')
+        $(".ais_right img").attr("src", 'assets/images/omni/TRC20.jpg')
 
       }
     }
   });
   // $("#codeInit").text(areaCode)
 });
-$("#copy_").click(()=>{
+$("#copy_").click(() => {
   copyText(listsValue)
 })
 function copyText(listsValue) {
-  var text=list_[0]
+  var text = list_[0]
   if (listsValue == 'USDT-Omni') {
     text = list_[0]
   }
@@ -788,30 +786,30 @@ function createdOrderToXyongka(v) {
 // 协议模块
 
 
-   
 
- 
+
+
 
 // $('.fixedTo').hide()
-   function productAgreementService() { 
-    var xieYiText  = `<div class="text-info">
+function productAgreementService() {
+  var xieYiText = `<div class="text-info">
     <iframe src="./tl_policy/policy3.html?idx=${getUrlParams('idx')}"   height="500px"/>
  </div>`
-    $.sendConfirm({
-      title: 'Product Agreement Service',
-      desc: xieYiText,
-      button: {
-        confirm: 'I have read everything',
-        cancel: '',
-      },
-      onConfirm: function() {
-        console.log('点击确认！');
-        // 去签名
-        // handleClick()
-         
+  $.sendConfirm({
+    title: 'Product Agreement Service',
+    desc: xieYiText,
+    button: {
+      confirm: 'I have read everything',
+      cancel: '',
+    },
+    onConfirm: function () {
+      console.log('点击确认！');
+      // 去签名
+      // handleClick()
+
       //  $('.fixedTo').show()
 
-        $('body').append(`<div class="fixedTo">
+      $('body').append(`<div class="fixedTo">
         <div class="fixedToContent">
     
           <div id="signature" style="height: 100%;">
@@ -824,7 +822,7 @@ function createdOrderToXyongka(v) {
           </div>
         </div>
       </div>`)
-// 加载画布 start
+      // 加载画布 start
       mui.plusReady(function () {
         plus.screen.lockOrientation('landscape-secondary');
       });
@@ -844,99 +842,157 @@ function createdOrderToXyongka(v) {
         $("#pic")[0].innerHTML = '';
       });
       document.getElementById("save").addEventListener('tap', function () {
-        if( $("#signature").jSignature('getData', 'native').length == 0){ 
-          
-          $.sendWarningToTop('Please sign your name', 2000, function() {
+        if ($("#signature").jSignature('getData', 'native').length == 0) {
+
+          $.sendWarningToTop('Please sign your name', 2000, function () {
             // console.log('sendWarningToTop closed');
           });
-          
-          return; }
+
+          return;
+        }
         var datapair = $("#signature").jSignature("getData", "image");
 
 
         var array = datapair.splice(",");
-        console.log("64===>",'data:image/png;base64,'+array[1])
-        var paytype = "offline";
-         
-         
-        createdOrderToXieYi(paytype,array[1])
+        console.log("64===>", 'data:image/png;base64,' + array[1])
+        var paytype = "paypal";
+
+
+        createdOrderToXieYi(paytype, array[1])
         $(".fixedTo").hide()
         $(".coin3_style").show()
-           
+
       });
 
-// 加载画布 end 
+      // 加载画布 end 
 
-      },
-    
-      onClose: function() {
-        console.log('点击关闭！');
-      }
-    });
-  };
-  
- 
+    },
+
+    onClose: function () {
+      console.log('点击关闭！');
+    }
+  });
+};
+
+
 
 // paypal支付逻辑
-function createdOrderToXieYi( paytype,v) { 
- var  goodsCode = $(".goods_code").val()||"";
- var showStartVip =getUrlParams('idx');
- 
-  
-  $.ajax({
-      type: "get",
-      url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
-      dataType: "json",
-      headers: {
-          Authorization: `Bearer ${userInfo.token}`,
-      },
-      success: function (res) {
-          if (res.code == 0) {
-             
-              if(showStartVip == 10 || showStartVip==11|| showStartVip==7){
-       
-              
-          
+function createdOrderToXieYi(paytype, v) {
+  var goodsCode = $(".goods_code").val() || "";
+  var showStartVip = getUrlParams('idx');
+  $("#confirmPaymentType").hide()
 
-             
-            }else{
-              window.location.href = res.data.pay_url;
-            }
-             
-          } else  if(res.code == 2){
-              loginH("product")
-           }else{
-              toast(res.data)
-          }
-         
-      },
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo.token}`,
+    },
+    success: function (res) {
+      if (res.code == 0) {
+
+        if (showStartVip == 10 || showStartVip == 11 || showStartVip == 7) {
+        } else {
+          console.log("返回参数res", res)
+          $("#confirmPaymentType").show()
+
+          window.location.href = res.data.pay_url;
+        }
+
+      } else if (res.code == 2) {
+        loginH("product")
+      } else {
+        toast(res.data)
+      }
+
+    },
   });
- 
+
 }
 
 
 // coins 
 
 $('input:radio[name=policy-input]').change(function () {
- 
+  console.log("coin是多少", this.value)
   if (this.value == 'coin10' || this.value == 'coin11' || this.value == 'coin7') {
     productAgreementService()
-  // $(".coin3_style").show()
+    // $(".coin3_style").show()
   }
-  
-    
+
+
 });
 
 // 判断是不是http开头
-function lookOrigin(v){
+function lookOrigin(v) {
+
+  var Expression = /http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+  var objExp = new RegExp(Expression);
+  console.log(objExp.test(v));
+  if (objExp.test(v)) {
+    return v;
+  } else {
+    return clineUrl + v;
+  }
+}
+
+
+
+
+function getVideoList() {
+  var urlUser = ""
+  if (userInfo?.token) {
+    urlUser = "/user/video/list";
+  } else {
+    urlUser = "/noauth/video/list";
+  }
+  $.ajax({
+    type: "get",
+    url: `${baseUrl}${urlUser}?goods_id=${getUrlParams('idx') || ''}`,
+    dataType: "json",
+    headers: {
+      Authorization: `Bearer ${userInfo?.token}`,
+    },
+    success: function (res) {
+      if (res.code == 0) {
+        let {list} = res.data;
+        
+        // 视频部分
+        $.each(list, function (index, item) {
+          item.img = clineUrl + item.img;
+         // 视频部分
+        
+        //   $("#videoId").append(`<li class="video${index + 1}">
+        //    <div><video id="v00${index + 1}" onmouseover="mouseOver${index + 1}()" onmouseout="mouseOut${index + 1}()"
+        //     src="${item.url}"
+        //     preload="auto"
+        //     poster="${item.img}"></video>
+        //    </div>
+        //   </li>`
+        //   )
+        // })
+
+        // 图片部分
+
   
-          var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-          var objExp=new RegExp(Expression);
-                  console.log(objExp.test(v));
-                  if(objExp.test(v))
-                  {
-                      return v;
-                  }else{
-                      return clineUrl  + v;
-                  }
-} 
+          $("#videoId").append(`
+          <div class="displayRowlistCol"> 
+             <img  onClick="location.href='${item.url}'"   class="displayRowlistImg" src="./assets/images/bofang.png"/>
+          <div class="color_ fontSize24 margin-bottom-20">${item.title}</div> 
+          <div class="videoList">
+              <img  id="v00${index + 1}"   onClick="location.href='${item.url}'"  src="${ item.img}">
+
+           </div>
+           </div>
+           `
+          )
+        })
+
+
+        console.log("==视频列表======>", list)
+      }
+    }
+  })
+}
+getVideoList()

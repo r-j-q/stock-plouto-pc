@@ -349,7 +349,7 @@
     $(".round").rotate({
       bind: {
         click: function () {
-          var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+          var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
           if (tokens.token) { } else {
             console.log("--1---->", tokens.token)
             alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
@@ -474,7 +474,7 @@
     window.location.href = "userTime.html"
   })
   $(".copys").click(() => {
-    var tokens = JSON.parse(localStorage.getItem("plutoUserInfo")) || "";
+    var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
     let User_invite_id = localStorage.getItem('User_invite_id');
 
 

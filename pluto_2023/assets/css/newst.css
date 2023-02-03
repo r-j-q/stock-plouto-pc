@@ -11,9 +11,12 @@
   /* 固定宽度 */
   .fixedWidth {
     /* flex: 0 0 auto; */
-    width: 60%;
+    width: 54%;
   }
-  
+  .fixedWidthCenter{
+    width: 6%;
+
+  }
   /* 自适应宽度 */
   .autoFullWidth {
     /* flex: 1 1 auto; */

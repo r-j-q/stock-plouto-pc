@@ -1,4 +1,4 @@
-var userInfo = JSON.parse(localStorage.getItem("plutoUserInfo"));
+var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 // console.log("-------->>>>>",userInfo)
 // (function(win, doc) {
 //   'use strict';
@@ -83,14 +83,14 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                             <a href="javascript:;" class="name-user">Sign In</a>
                             <ul> 
                             <li><a href="userTime.html">Me</a></li>
-                            <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
+                            <li class="login-out-style"><a   href="login.html">SIGN OUT</a></li>
                         </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a   href="login.html">Sign Out</a></li>
+                                    <li class="login-out-style"><a   href="login.html">SIGN OUT</a></li>
                                 </ul>
                             </li>
 
@@ -177,14 +177,14 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                 <a href="javascript:;" class="name-user">Sign In</a>
                                 <ul> 
                                 <li><a href="userTime.html">Me</a></li>
-                                <li class="login-out-style loginOutStock"><a href="login.html">Sign Out</a> </li>
+                                <li class="login-out-style loginOutStock"><a href="login.html">SIGN OUT</a> </li>
                                 </ul>
                               </li>
                               
                             <li class="dropdown htmlUser"> 
                                 <ul> 
                                     <li><a href="userTime.html">Me</a></li>
-                                    <li class="login-out-style"><a  href="login.html">Sign Out</a></li>
+                                    <li class="login-out-style"><a  href="login.html">SIGN OUT</a></li>
                                 </ul>
                             </li>
 
@@ -280,7 +280,7 @@ var htmlEasier = `
       <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
        <div class="ps">
        <div class="fontSize2422 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Pluto Group is one of the world's leading investment</div>
+       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
 			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service, advisory and risk management solutions providers.</div>
       </div>
       </div>
@@ -290,7 +290,7 @@ var htmlEasier = `
 // 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
 //   <div class="login-row-style-row h-">
 //   <div class="login-row-style">
-// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The pluto Group is one of the world's leading investment</div>
+// 	<div class=' h-l-f familyNarrow color_ fontSize16 fontWeight400'>The plouto Group is one of the world's leading investment</div>
 // 	<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service,advisory and risk management solutions providers</div>
 //   <div class="loginStock"></div>
 //   </div>
@@ -301,7 +301,7 @@ var htmlEasierRegister = `<img src="assets/images/banner_1.png" alt="" class="co
 		<div class="displayRow100">
     <div class="bac500l displayRow500l">
 			<div class="fontSize32 fontWeightAll scales nowrapspace textCenter"> Make your personal investing easier</div>
-      <div class='m_t_100 p_10_ color_ fontSizeZHI fontWeight400'>The Pluto Group is one of the world's leading investment service, advisory and risk management solution provider</div>
+      <div class='m_t_100 p_10_ color_ fontSizeZHI fontWeight400'>The Plouto Group is one of the world's leading investment service, advisory and risk management solution provider</div>
 		 
 		<div class="loginStock"></div>
       </div>
@@ -402,11 +402,11 @@ if (userInfo == null) {
 
 var htmlFooter = `
 <div class="footer-content-list">
-<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Pluto</div>
+<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Plouto</div>
 <div class="fontSize16 color_8E paddingBottom8">
-The Pluto Group is one of the world’s leading investment service， advisory and risk management solutions providers. </br>
+The Plouto Group is one of the world’s leading investment service， advisory and risk management solutions providers. </br>
 The Group is headquartered in Lucky Plaza, Tsuen Wan, Hong Kong, China and serves clients through its offices in the United States, Europe and Asia.</br>
-The company has a top independent investment research team. Through the U.S. stock big data, artificial intelligence quantitative analysis, it has more than 3,000 kinds of intelligent algorithms. Facing growing U.S. stock investors, the company has the ability to provide risk management, investment system management and financial advisory services. We truly make investing easier for individuals and serve over 2,000 individual investors in U.S. stocks each year. We are also well received by individual investors worldwide.
+The company has a top independent investment research team. Through the U.S. stock big data, artificial intelligence quantitative analysis, it has more than 3,000 kinds of intelligent algorithms. Facing growing U.S. stock investors, the company has the ability to provide risk management, investment system management and financial advisory services. We truly make investing easier for individuals and serve over 5,000 individual investors in U.S. stocks each year. We are also well received by individual investors worldwide.
 </div>
 </div>
 <div class="footer-content  ">
@@ -422,14 +422,14 @@ The company has a top independent investment research team. Through the U.S. sto
 </div>
 <div class="footer-content-list">
   <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
-  <div class="fontSize16 color_8E paddingBottom8">E-mail: stock.pluto@gmail.com </div>
+  <div class="fontSize16 color_8E paddingBottom8">E-mail: Jame.plouto8@gmail.com </div>
   <div class="fontSize16 color_8E paddingBottom8"> Phone: 852 5518 5199 </div>
   <div class="fontSize16 color_8E"> Locations: Flat 1512-15/f lucky cir no165-171 wan chai rd wan chaihongkong</div>
 </div>
 </div>
 </div>
 <div class="footer-copy color_ fontWeight400">
-  Copyright © 2022.Stock pluto All rights reserved.
+  Copyright © 2022.Stock plouto All rights reserved.
 </div>`
 
 // $('.htmlBanners').append(htmlBanner);
@@ -450,12 +450,12 @@ $(".agreement").click(function () {
 
 });
 $(".loginOutStock").click(function () {
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   window.location.href = `login.html`;
 
 });
 function loginH(v) {
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   window.location.href = "login.html?params=" + v;
 }
 
@@ -572,7 +572,7 @@ $.ajax({
 
 $(".login-out-style").click(() => {
   console.log("===99999999999=====>")
-  localStorage.removeItem("plutoUserInfo");
+  localStorage.removeItem("ploutoUserInfo");
   setTimeout(() => { toast('Sign out success') }, 1000)
   window.location.href = "login.html";
 })
@@ -593,7 +593,7 @@ if (userInfo?.token) {
         $(".periodData").append(period + total);
       }
       if (codes == 2) {
-        localStorage.removeItem("plutoUserInfo");
+        localStorage.removeItem("ploutoUserInfo");
         window.location.href = `login.html`;
         toast('Re login')
 
