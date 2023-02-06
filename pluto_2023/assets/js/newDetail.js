@@ -22,7 +22,7 @@ console.log(symbolData);
                     $(".detail_title_img").append("<img/>")
                     $(".detail_title0").text(detail.title);
                     $(".detail_title_").text(detail.intro);
-                 var urls_img=  addhttp(detail.img)==true?detail.img:baseUrl+detail.img;
+                 var urls_img=  addhttp(detail.img)==true?detail.img:clineUrl+detail.img;
                     $(".detail_title_img img").attr('src', urls_img);
                     $(".detail_title_t").text(s);
 
@@ -55,7 +55,7 @@ function addhttp(urls) {
   
     return s.test(urls)
  }
- console.log(addhttp('ht://financialmodelin'))
+//  console.log(addhttp('ht://financialmodelin'))
 
 
 

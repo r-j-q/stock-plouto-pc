@@ -179,44 +179,44 @@ $.ajax({
                      
                 }
             }
-            if (enTime2 != 0) {
-                if (!judgeTime(enTime2.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),""))
-                }else{
-                    $(".disUserProut").append(htmlTimeTest(2, 'Vip club', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),"Expired"))
+            // if (enTime2 != 0) {
+            //     if (!judgeTime(enTime2.substring(0, 10))) {
+            //         $(".disUserProut").append(htmlTimeTest(2, 'Silver members', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),""))
+            //     }else{
+            //         $(".disUserProut").append(htmlTimeTest(2, 'Silver members', enTime2 == 0 ? '0' : enTime2.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
-                }
-            }
-            if (enTime3 != 0) {
-                if (!judgeTime(enTime3.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),""))
-                }else{
-                    $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),"Expired"))
+            //     }
+            // }
+            // if (enTime3 != 0) {
+            //     if (!judgeTime(enTime3.substring(0, 10))) {
+            //         $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),""))
+            //     }else{
+            //         $(".disUserProut").append(htmlTimeTest(3, 'Star vip', enTime3 == 0 ? '0' : enTime3.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
-                }
-            }
+            //     }
+            // }
 
             if (vip_end != 0) {
                 if (!judgeTime(vip_end.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),""))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Intermediate Membership', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Intermediate Membership', vip_end == 0 ? '0' : vip_end.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }
             if (vip_end1 != 0) {
                 if (!judgeTime(vip_end1.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),""))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Primary Membership', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Primary Membership', vip_end1 == 0 ? '0' : vip_end1.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }
             if (vip_end2 != 0) {
                 if (!judgeTime(vip_end2.substring(0, 10))) {
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),""))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Advanced Membership', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),""))
                 }else{
-                    $(".disUserProut").append(htmlTimeTest(4, 'Stock plouto', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),"Expired"))
+                    $(".disUserProut").append(htmlTimeTest(4, 'Advanced Membership', vip_end2 == 0 ? '0' : vip_end2.substring(0, 10).replace(/-/g, "/"),"Expired"))
 
                 }
             }

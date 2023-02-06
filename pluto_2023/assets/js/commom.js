@@ -39,6 +39,13 @@ var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 //   requestAnimationFrame(setScale);
 // }(window, document)); 
 
+ //<li><a href="starvip.html?idx=10">Star vip</a></li>
+//<li><a href="silvermembers.html?idx=11">Silver members</a></li> 
+
+
+ // <li><a href="starvip.html?idx=10">Star vip</a></li>
+//<li><a href="silvermembers.html?idx=11">Silver members</a></li>  
+
 
 // header content
 var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1E1E1E;">
@@ -63,8 +70,7 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                                     <li><a href="primarymember.html?idx=5">Primary member</a></li>
                                     <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
                                     <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
-                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
-                                    <li><a href="silvermembers.html?idx=11">Silver members</a></li> 
+                                    
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -157,8 +163,7 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                     <li><a href="primarymember.html?idx=5">Primary member</a></li>
                                     <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
                                     <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
-                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
-                                    <li><a href="silvermembers.html?idx=11">Silver members</a></li> 
+                                    
                                 </ul>
                             </li>
                             <li class="dropdown">
