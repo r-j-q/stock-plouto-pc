@@ -108,8 +108,10 @@ $("#confirmPaymentType").click(() => {
 
         } else {
             if (count == 0) {
-                var paytype = "paypal";
-                createdOrderTo(productData.ID, paytype);
+            // productAgreementService()
+
+                // var paytype = "offline";
+                // createdOrderTo(productData.ID, paytype);
             }
 
 
@@ -124,8 +126,16 @@ function createdOrderTo(goods_id, paytype) {
     goodsCode= $(".goods_code").val();
 
     $.ajax({
-        type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}&goods_code=`+goodsCode,
+        type: "post",
+        // url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}&goods_code=`+goodsCode,
+       
+        url: `${baseUrl}/user/order/create`,
+        data:{
+          paytype:paytype,
+          goods_id:goods_id,
+          payway:payway, 
+          goods_code:goodsCode
+        },
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,

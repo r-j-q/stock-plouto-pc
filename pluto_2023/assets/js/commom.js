@@ -39,11 +39,11 @@ var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 //   requestAnimationFrame(setScale);
 // }(window, document)); 
 
- //<li><a href="starvip.html?idx=10">Star vip</a></li>
+//<li><a href="starvip.html?idx=10">Star vip</a></li>
 //<li><a href="silvermembers.html?idx=11">Silver members</a></li> 
 
 
- // <li><a href="starvip.html?idx=10">Star vip</a></li>
+// <li><a href="starvip.html?idx=10">Star vip</a></li>
 //<li><a href="silvermembers.html?idx=11">Silver members</a></li>  
 
 
@@ -886,10 +886,20 @@ function createdOrderToXieYi(paytype, v) {
   var goodsCode = $(".goods_code").val() || "";
   var showStartVip = getUrlParams('idx');
   $("#confirmPaymentType").hide()
-
+  if (showStartVip == 10 || showStartVip == 11 || showStartVip == 7){
+    paytype="offline"
+  }
   $.ajax({
-    type: "get",
-    url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
+    type: "post",
+    // url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
+    url: `${baseUrl}/user/order/create`,
+    data:{
+      paytype:paytype,
+      goods_id:getUrlParams('idx') || '',
+      payway:payway,
+      sign:v,
+      goods_code:goodsCode
+    },
     dataType: "json",
     headers: {
       Authorization: `Bearer ${userInfo.token}`,
@@ -899,9 +909,7 @@ function createdOrderToXieYi(paytype, v) {
 
         if (showStartVip == 10 || showStartVip == 11 || showStartVip == 7) {
         } else {
-          console.log("返回参数res", res)
           $("#confirmPaymentType").show()
-
           window.location.href = res.data.pay_url;
         }
 
@@ -961,32 +969,32 @@ function getVideoList() {
     },
     success: function (res) {
       if (res.code == 0) {
-        let {list} = res.data;
-        
+        let { list } = res.data;
+
         // 视频部分
         $.each(list, function (index, item) {
           item.img = clineUrl + item.img;
-         // 视频部分
-        
-        //   $("#videoId").append(`<li class="video${index + 1}">
-        //    <div><video id="v00${index + 1}" onmouseover="mouseOver${index + 1}()" onmouseout="mouseOut${index + 1}()"
-        //     src="${item.url}"
-        //     preload="auto"
-        //     poster="${item.img}"></video>
-        //    </div>
-        //   </li>`
-        //   )
-        // })
+          // 视频部分
 
-        // 图片部分
+          //   $("#videoId").append(`<li class="video${index + 1}">
+          //    <div><video id="v00${index + 1}" onmouseover="mouseOver${index + 1}()" onmouseout="mouseOut${index + 1}()"
+          //     src="${item.url}"
+          //     preload="auto"
+          //     poster="${item.img}"></video>
+          //    </div>
+          //   </li>`
+          //   )
+          // })
 
-  
+          // 图片部分
+
+
           $("#videoId").append(`
           <div class="displayRowlistCol"> 
              <img  onClick="location.href='${item.url}'"   class="displayRowlistImg" src="./assets/images/bofang.png"/>
           <div class="color_ fontSize24 margin-bottom-20">${item.title}</div> 
           <div class="videoList">
-              <img  id="v00${index + 1}"   onClick="location.href='${item.url}'"  src="${ item.img}">
+              <img  id="v00${index + 1}"   onClick="location.href='${item.url}'"  src="${item.img}">
 
            </div>
            </div>

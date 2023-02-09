@@ -125,8 +125,14 @@ $("#confirmPaymentType").click(() => {
 function createdOrderTo(goods_id, paytype) {
      
     $.ajax({
-        type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
+        type: "post",
+        // url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
+        url: `${baseUrl}/user/order/create`,
+        data:{
+          paytype:paytype,
+          goods_id:goods_id,
+          payway:payway 
+        },
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,

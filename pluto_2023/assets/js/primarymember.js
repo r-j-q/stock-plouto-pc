@@ -108,8 +108,8 @@ $("#confirmPaymentType").click(() => {
     } else {
         if (count == 0) {
             productAgreementService()
-            // paypal
-            // var paytype = "script";
+         
+            // var paytype = "paypal";
             // createdOrderTo(productData.ID, paytype);
         }
 
@@ -122,15 +122,24 @@ $("#confirmPaymentType").click(() => {
 })
 // paypal支付逻辑
 function createdOrderTo(goods_id, paytype) {
+ var   goodsCode = $(".goods_code").val();
 
     $.ajax({
-        type: "get",
-        url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
+        type: "post",
+        // url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${goods_id}&payway=${payway}`,
+        url: `${baseUrl}/user/order/create`,
+        data:{
+          paytype:paytype,
+          goods_id:goods_id,
+          payway:payway, 
+          goods_code:goodsCode
+        },
         dataType: "json",
         headers: {
             Authorization: `Bearer ${tokens.token}`,
         },
         success: function (res) {
+            console.log("======",res)
             if (res.code == 0) {
                 window.location.href = res.data.pay_url;
             } else  if(res.code == 2){
