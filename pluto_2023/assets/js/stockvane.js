@@ -2,7 +2,7 @@ var producId = 3;
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }]; 
-var count = 0;//当前选择的支付方式，0=stripe，1=paypal
+var count = 0;//当前选择的支付方式，0=PayPal 1=Airwallex
 
 localStorage.setItem("fileNameTo",(location.href.split("/").slice(-1))[0])
  
@@ -15,12 +15,11 @@ $(".buyNowProduct").click(() => {
     }
 
 })
-
-
+ 
 function forPayList() {
     $(".product-pay-stripe-paypal").html("")
     $.each(arrList, function (index, data) {
-        var oip = `<div  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" style="${index==1?'display:none':''}" onclick="handleClick(${index})" >${data}</div>`;
+        var oip = `<div  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}"  onclick="handleClick(${index})" >${data}</div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })
@@ -28,7 +27,8 @@ function forPayList() {
 
 function handleClick(e) {
     count = e;
-    if (count == 0) {
+    $("input[type='radio']").attr("checked", false);
+    if (count == 0||count == 1) {
         $('#pay-stripe').hide();
         $('#confirmPaymentType').show() 
     } else {
@@ -56,7 +56,7 @@ function goodList(id) {
         $(".product-pay").hide();
     }
 
-    if (count == 0) {
+    if (count == 0 || count == 1) {
        
         $('#confirmPaymentType').show()
         $('#pay-stripe').hide();
@@ -100,22 +100,29 @@ var isPayPal = true;
 $("#confirmPaymentType").click(() => {
     if (isPayPal) {
         isPayPal = false;
-        var val = $('input:radio[name="policy-input"]:checked').val();
+        // var val = $('input:radio[name="policy-input"]:checked').val();
         
-        if (val == null) {
-            // 什么也没选中 
-            toast('Please agree to the service and privacy policy')
-            return false;
+        // if (val == null) {
+        //     // 什么也没选中 
+        //     toast('  Please agree to the Product Service Agreement')
+        //     return false;
 
-        } else {
+        // } else {
+            
             if (count == 0) { 
                 // productAgreementService()
+                createAirwallex()
+            }
+          
+
+            if (count == 1) { 
                 var paytype = "paypal";
-                createdOrderTo(productData.ID, paytype);
+                createdOrderTo(3, paytype);
+                
             }
 
 
-        }
+        // }
     }
     setTimeout(() => {
         isPayPal = true
@@ -262,7 +269,7 @@ $(document).on("click", "#pay-stripe", function () {
         var val = $('input:radio[name="policy-input"]:checked').val();
         if (val == null) {
             // 什么也没选中 
-            toast('Please agree to the service and privacy policy')
+            toast('  Please agree to the Product Service Agreement')
             return false;
 
         } else {

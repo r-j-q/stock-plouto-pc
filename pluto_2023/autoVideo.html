@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+		name="viewport" />
+	<title>Stock plouto</title>
+	<link href="assets/images/logos.png" rel="shortcut icon">
+	<link rel="stylesheet" href="assets/css/commom.css?v=1.0.1">
+	<link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/zhedie.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/menu.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/swiperminstyle.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/hezuo.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/product.css?v=1.0.0">
+	<!-- header -->
+	<link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+	<link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+	<!-- <link rel="stylesheet" crossorigin="anonymous" href="https://unpkg.com/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+    <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script> 
+	<script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
+	<script src="assets/js/swiper.min.js?v=1.0.0"></script>
+	<script src="assets/js/config.js?v=1.0.0"></script>
+	<script src="assets/js/message.js?v=1.0.0"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<style>
+		.margin-top-160 {
+			margin-top: 160px;
+		}
+		.h-c-300{
+			width: 100%;
+			padding: 50px;
+			background-color: black;
+			margin:  0 auto;
+		}
+		 
+		.example-video-dimensions{
+			width: 100%;
+			height: 400px;
+
+		}
+
+		@media screen and (max-width:750px) {
+			.produc-list-datas{
+				flex-direction: column;
+			}
+			.m-top-20 {
+				margin-top: 140px;
+			}
+			.producInter{
+				width: 100%;
+			}
+			.h-531 {
+				height: 500px;
+			}
+		}
+	</style>
+
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=964717900866399&ev=PageView&noscript=1" /></noscript>
+
+</head>
+
+<body>
+	<div class="headerBannersHtml"></div>
+
+	 
+
+	<div class="w-80 m-top-20 margin-top-160">
+		<h2 class="color_ fontSize32  ">hello </h2>
+	</div>
+
+	<div class="w-80 m-t-40 produc-list-datas">
+		<div class="h-c-300">
+			<video class="video-js example-video vjs-default-skin vjs-big-play-centered" controls preload="auto" id="example-video">
+				<source src="https://www.stock-plouto.com/sVideo/m3u8/1/1.m3u8"
+					type="application/x-mpegURL">
+				</source>
+				 
+			</video> 
+		 </div>
+	</div>
+
+	 
+	<!-- 底部 -->
+	<div class="footer-ui"></div>
+	<script src="assets/js/lunbo.js?v=1.0.0"></script>
+
+	<script src="assets/js/SignalsService.js?v=1.0.2"></script>
+	<script src="assets/js/commom.js?v=1.0.1"></script>
+	<script src="assets/js/timePicker.js?v=1.0.0"></script>
+	<script src="assets/js/izeetak.js"></script>
+	<script>
+        (function (window, videojs) {
+            var player = window.player = videojs('example-video');
+
+            // hook up the video switcher
+            var loadUrl = document.getElementById('load-url');
+            var url = document.getElementById('url');
+            loadUrl.addEventListener('submit', function (event) {
+                event.preventDefault();
+                player.src({
+                    src: url.value,
+                    type: 'application/x-mpegURL'
+                });
+                return false;
+            });
+        }(window, window.videojs));
+    </script> 
+</body>
+
+</html>

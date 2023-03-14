@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="facebook-domain-verification" content="nx32eq4xiusfy0vnwewyv7x8tibwuw" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
+        name="viewport" />
+    <title>Stock plouto</title>
+    <link href="assets/images/logos.png" rel="shortcut icon">
+    <link rel="stylesheet" href="assets/css/commom.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/index.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/footer.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/zhedie.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/menu.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/userTime.css?v=1.0.1">
+    <!-- header -->
+    <link rel="stylesheet" href="assets/css/all.min.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/timePicker.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/izeetak.css?v=1.0.0">
+    <link rel="stylesheet" href="assets/css/izeetak-responsive.css?v=1.0.0">
+
+    <script src="assets/js/jquery-3.3.1.min.js?v=1.0.0"></script>
+    <script src="assets/js/swiper.min.js?v=1.0.0"></script>
+    <script src="assets/js/config.js?v=1.0.0"></script>
+    <script src="assets/js/message.js?v=1.0.0"></script>
+    <script src="assets/js/leftTime.min.js?v=1.0.0"></script>
+    <script src="assets/js/airwallex.js"></script>
+    <script>
+        Airwallex.init({
+            env: 'demo', // Setup which Airwallex env('demo' | 'prod') to integrate with
+            origin: window.location.origin, // Set up your event target to receive the browser events message
+        });
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <button id="inOrder">下单</button> 
+    </div>
+    <script>
+        var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
+
+        $('#inOrder').click(() => {
+            createAirwallex()
+        })
+        function createAirwallex() {
+            $.ajax({
+                type: "post",
+                url: `${baseUrl}/user/order/create`,
+                data: {
+                    paytype: 'airwallex',
+                    goods_id: 3,
+                    payway: payway,
+                    goods_code: "7777"
+                },
+                dataType: "json",
+                headers: {
+                    Authorization: `Bearer ${tokens.token}`,
+                },
+                success: function (res) {
+                    console.log('++++++++++>>>>>>', res)
+                    handleAirwallex(res.data.airwallex_intent_id, res.data.airwallex_client_secret, res.data.airwallex_currency)
+
+                },
+            });
+        }
+        function handleAirwallex(intent_id, client_secret, currency) {
+
+
+            Airwallex.redirectToCheckout({
+                env: 'demo',// prod
+                intent_id,
+                client_secret,
+                currency,
+            });
+
+        }
+    </script>
+</body>
+
+</html>

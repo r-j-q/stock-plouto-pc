@@ -1,10 +1,19 @@
 var baseUrl = "https://api.stock-plouto.com";
-// var baseUrl =   "http://192.168.0.84:8080"
+
+
+// var baseUrl =   "https://apitest.stock-plouto.com" //测试环境
+
+
 var clineUrl ="https://admin.stock-plouto.com/"
+
+
 // var arrList = ["PayPal", "Stripe"];
 // TODO 去掉PayPal支付就是隐藏掉js里面的  style="${index==0?'display:none':''}"
-var arrList = ["PayPal", "Stripe"];
-// var count = 1;//当前选择的支付方式，0=stripe，1=paypal
+var arrList = ["Bank Card", "PayPal"];
+var arrListMax=['Bank Card','USDT','Bank']
+var AirwallexEVN ='prod';//demo prod
+var countMax = 0; 
+var zhekou ='save 5%' 
 var productData = null;//当前商品信息
 var renewals ="Renewals";//续费
 var period= 'Remaining quota of this period ';

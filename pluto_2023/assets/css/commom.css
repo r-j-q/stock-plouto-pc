@@ -185,6 +185,9 @@ body {
 .border-redius- {
     border-radius: 5px;
 }
+.color_red{
+    color:red
+}
 
 .color_8E {
     color: #8E8E8E;
@@ -697,7 +700,9 @@ body {
     color: #8E8E8E !important;
     font-size: 1rem;
 }
-
+.cus{
+    cursor: pointer;
+}
 .pleft {
     padding-left: 30px;
 }
@@ -711,7 +716,7 @@ body {
 }
 
 .coin3_style {
-    display: none;
+    /* display: none; */
     width: 300px;
     /* height: 500px; */
     border-radius: 5px;
@@ -931,4 +936,18 @@ body {
 
     }
 
+}
+.ellipsis2{
+
+    word-break: break-all;
+
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 2; /* 这里是超出几行省略 */
+
+    overflow: hidden;
 }

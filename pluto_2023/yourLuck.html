@@ -353,6 +353,7 @@
           if (tokens.token) { } else {
             console.log("--1---->", tokens.token)
             alert({ title: ' ', content: 'Sign IN', doneText: 'ok' }).then(() => {
+              localStorage.setItem("User_invite_id", getUrlParams('User_invite_id'));
               loginH()
 
             })
@@ -508,6 +509,12 @@
   $('.ok_cancel').click(() => {
     document.getElementById('code_box').style.display = "none";
   })
+
+
+
+  setTimeout(()=>{
+    localStorage.removeItem("User_invite_id");
+  },86400000)
 </script>
 
 </html>

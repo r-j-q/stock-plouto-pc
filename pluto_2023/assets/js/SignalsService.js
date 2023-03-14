@@ -102,7 +102,7 @@ $("#confirmPaymentType").click(() => {
         var val = $('input:radio[name="policy-input"]:checked').val();
         if (val == null) {
             // 什么也没选中 
-            toast('Please agree to the service and privacy policy')
+            toast('  Please agree to the Product Service Agreement')
             return false;
 
         } else {
@@ -249,7 +249,7 @@ $(document).on("click", "#pay-stripe", function () {
 
         var val = $('input:radio[name="policy-input"]:checked').val();
         if (val == null) {
-            toast('Please agree to the service and privacy policy')
+            toast('  Please agree to the Product Service Agreement')
             return false;
 
         } else {

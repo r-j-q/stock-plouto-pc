@@ -2,7 +2,7 @@ var producId = 7;
 var tokens = JSON.parse(localStorage.getItem("ploutoUserInfo")) || "";
 // const stripe = Stripe(stripeKey);
 const items = [{ id: "prod_LxQP3nkuvcykMZ" }]; 
-var count = 0;//当前选择的支付方式，0=stripe，1=paypal
+ 
 
 localStorage.setItem("fileNameTo",(location.href.split("/").slice(-1))[0])
 var goodsCode="";
@@ -21,21 +21,26 @@ $(".buyNowProduct").click(() => {
 
 function forPayList() {
     $(".product-pay-stripe-paypal").html("")
-    $.each(arrList, function (index, data) {
-        var oip = `<div  style="${index==1?'display:none':''}"  class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
+    $.each(arrListMax, function (index, data) {
+        var oip = `<div class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${countMax == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}<span class='zhekoujine fontSize12 color_red'> ${index>0?zhekou:''}</span></div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })
 }
 
 function handleClick(e) {
-    count = e;
-    if (count == 0) {
-        $('#pay-stripe').hide();
+    countMax = e;
+    $("input[type='radio']").attr("checked", false);
+    console.log("handleClickhandleClick",e)
+    if (countMax == 0) {
+        $('#pay-stripe1').hide();
+        $('#pay-stripe2').hide();
         $('#confirmPaymentType').show()
+        
     } else {
         
-        $('#pay-stripe').show();
+        $('#pay-stripe1').hide();
+        $('#pay-stripe2').hide();
         $('#confirmPaymentType').hide()
     }
 
@@ -58,17 +63,13 @@ function goodList(id) {
         $(".product-pay").hide();
     }
 
-    if (count == 0) {
+    if (countMax == 0 ) {
         $('#confirmPaymentType').show()
-        $('#pay-stripe').hide();
+        $('#pay-stripe1').hide();
+        $('#pay-stripe2').hide();
 
 
-    } else {
-       
-        $('#pay-stripe').show();
-        $('#confirmPaymentType').hide()
-
-    }
+    } 
 
     $.ajax({
         type: "get",
@@ -98,16 +99,20 @@ $("#confirmPaymentType").click(() => {
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
         // 什么也没选中 
-        toast('Please agree to the service and privacy policy')
+        toast(' Please agree to the Product Service Agreement')
         return false;
 
     } else {
-        if (count == 0) {
+        if (countMax == 0) {
             // var paytype = "offline";
             // createdOrderTo(productData.ID, paytype);
-            productAgreementService()
+            // productAgreementService()
+            createAirwallex()
         }
-
+        if (countMax == 1) {
+            
+            
+        }
 
     }
 }
@@ -257,39 +262,39 @@ function setLoading(isLoading) {
 let isClick = true;
 $("#payment-form").hide()
 
-$(document).on("click", "#pay-stripe", function () { 
-    if (isClick) { 
-        isClick = false;
+// $(document).on("click", "#pay-stripe", function () { 
+//     if (isClick) { 
+//         isClick = false;
 
-        var val = $('input:radio[name="policy-input"]:checked').val();
-        if (val == null) {
-            toast('Please agree to the service and privacy policy')
-            return false;
+//         var val = $('input:radio[name="policy-input"]:checked').val();
+//         if (val == null) {
+//             toast(' Please agree to the Product Service Agreement')
+//             return false;
 
-        } else {
-            $("#pay-stripe").hide();
-            $("#payment-form").show()
-            $("#submit").addClass("m-top-20-")
-            $("#button-text").addClass("button-style");
-            $(".buy-now-btn").css({
-                "height": "auto",
-                "line-height": "auto"
-            });
-            $("#payment-form").css({
-                "padding": "10px"
-            })
-            // initialize(productData.ID)
-            // checkStatus();
+//         } else {
+//             $("#pay-stripe").hide();
+//             $("#payment-form").show()
+//             $("#submit").addClass("m-top-20-")
+//             $("#button-text").addClass("button-style");
+//             $(".buy-now-btn").css({
+//                 "height": "auto",
+//                 "line-height": "auto"
+//             });
+//             $("#payment-form").css({
+//                 "padding": "10px"
+//             })
+//             // initialize(productData.ID)
+//             // checkStatus();
              
 
-        }
+//         }
          
-    } else {
-        // console.log("=isClick=222==========>", isClick)
+//     } else {
+//         // console.log("=isClick=222==========>", isClick)
 
-    }
+//     }
    
-});
+// });
 
 
 setTimeout(() => {

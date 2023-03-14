@@ -10,6 +10,7 @@ var dateNowtime = "",
     enTime3 = "0",
     vip_end1="0",
     vip_end2="0",
+    xiong_ying_vip_end_str="0",
     prize='',
     newYear='New Year  Fortune Wheel :',
     christmas='Christmas Fortune Wheel :';
@@ -166,6 +167,11 @@ $.ajax({
             //    高级
             vip_end2 = res.data.vip_end2.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.vip_end2);
             
+
+            // 雄鹰会员
+            xiong_ying_vip_end_str = res.data.ying_vip_end_str.substr(0, 3) == "000" ? "0" : transformTimestamp(res.data.ying_vip_end_str);
+
+             
             $(".name-data").text("Name: " + res.data.username || "")
             $(".email-data").text("Email: " + res.data.email || "")
             $(".phone-data").text("Phone: " + res.data.phone || "")
@@ -220,7 +226,16 @@ $.ajax({
 
                 }
             }
-            if(enTime1==0 && enTime2==0 && enTime3==0 &&vip_end==0&&vip_end1==0&&vip_end2==0){
+            if (xiong_ying_vip_end_str != 0) {
+                if (!judgeTime(xiong_ying_vip_end_str.substring(0, 10))) {
+                    $(".disUserProut").append(htmlTimeTest(4, 'Panda Membership', xiong_ying_vip_end_str == 0 ? '0' : xiong_ying_vip_end_str.substring(0, 10).replace(/-/g, "/"),""))
+                }else{
+                    $(".disUserProut").append(htmlTimeTest(4, 'Panda Membership', xiong_ying_vip_end_str == 0 ? '0' : xiong_ying_vip_end_str.substring(0, 10).replace(/-/g, "/"),"Expired"))
+
+                }
+            }
+             
+            if(enTime1==0 && enTime2==0 && enTime3==0 &&vip_end==0&&vip_end1==0&&vip_end2==0&&xiong_ying_vip_end_str==0){
               var testContent =  "<a class='color_ weiGouMai' href='index.html'>You have not purchased our paid service, please click purchase.</a>"
               $(".disUserProut").append(testContent)
             }

@@ -43,8 +43,7 @@ var userInfo = JSON.parse(localStorage.getItem("ploutoUserInfo"));
 //<li><a href="silvermembers.html?idx=11">Silver members</a></li> 
 
 
-// <li><a href="starvip.html?idx=10">Star vip</a></li>
-//<li><a href="silvermembers.html?idx=11">Silver members</a></li>  
+ 
 
 
 // header content
@@ -70,7 +69,9 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                                     <li><a href="primarymember.html?idx=5">Primary member</a></li>
                                     <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
                                     <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
-                                    
+                                    <li><a href="panda.html?idx=12">Panda member</a></li>
+                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
+                                    <li><a href="silvermembers.html?idx=11">Silver members</a></li>  
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -83,7 +84,7 @@ var headerBannersindex = ` <div class="page-wrapper" style="background-color: #1
                             <li><a href="newst.html">News</a></li>
 
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
-                            <li><a href="index.html#AboutUs"> About Us</a></li>
+                            <li class="AboutUs cus"><a   href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
                             <a href="javascript:;" class="name-user">Sign In</a>
@@ -163,7 +164,9 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                                     <li><a href="primarymember.html?idx=5">Primary member</a></li>
                                     <li><a href="intermediatemember.html?idx=6">Intermediate member</a></li>
                                     <li><a href="advancedmember.html?idx=7">Advanced member</a></li>
-                                    
+                                    <li><a href="panda.html?idx=12">Panda member</a></li>
+                                    <li><a href="starvip.html?idx=10">Star vip</a></li>
+                                    <li><a href="silvermembers.html?idx=11">Silver members</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -176,7 +179,7 @@ var headerBanners = ` <div class="page-wrapper" style="background-color: #1E1E1E
                             <li><a href="newst.html">News</a></li>
 
                             <li><a href="index.html#htmlCustomerStories"> Customer Stories</a></li>
-                            <li><a href="index.html#AboutUs"> About Us</a></li>
+                            <li><a target="_blank" href="index.html#AboutUs"> About Us</a></li>
 
                             <li class="dropdown">
                                 <a href="javascript:;" class="name-user">Sign In</a>
@@ -278,18 +281,45 @@ $(".easierMake2").text(easierMake2)
 // <li><a href="starvip.html?idx=10" class="color_">Star vip</a></li>
 // <li><a href="silvermembers.html" class="color_">Vip Club</a></li>
 
+{/* <div class="video-ps">
+<video controls   loop   controlslist="nodownload  noplaybackrate disablePictureInPicture"  disablePictureInPicture="${true}"  width="100%" height="340px">
+  <source src="./assets/videos.mp4" type="video/mp4">
+  
+  <p>Fat Your browser does not support video tags</p>
+</video> 
+</div> */}
 
-
+// var htmlEasier = `
+// <div class="pt" >
+//       <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
+//       <div class="ps"> 
+//       <div class="video-ps-all">
+//        <div class="video-ps-all-50">
+//        <div class="fontSize26 fontWeightAll scales nowrapspace"> MAKE YOUR PERSONAL INVESTING EASIER</div>
+//        <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
+// 			 <div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service advisory and risk management solutions providers.</div>
+//       </div>
+      
+//        </div>
+//        </div>
+//       </div>
+// 		 `
 var htmlEasier = `
 <div class="pt" >
       <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
-       <div class="ps">
-       <div class="fontSize2422 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
-       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400'>The Plouto Group is one of the world's leading investment</div>
-			<div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'>service advisory and risk management solutions providers.</div>
+      <div class="ps"> 
+      <div class="video-ps-all">
+       <div style="margin-top: 80px">
+       <div class="fontSize38 fontWeightAll scales nowrapspace"> MAKE YOUR PERSONAL INVESTING EASIER</div>
+       <div class='mt100 h-l-f familyNarrow color_ fontSize16 fontWeight400' style="text-align: center;">The Plouto Group is one of the world's leading investment</div>
+			 <div class='h-l-f familyNarrow color_ fontSize16 fontWeight400'  style="text-align: center;">service advisory and risk management solutions providers.</div>
       </div>
+      
+       </div>
+       </div>
       </div>
 		 `
+    //  https://blog.csdn.net/qq_45457760/article/details/115264476
 //  <img src="assets/images/banner_1.png" alt="" class="contentImgheight">
 // <div class="content-text color_ fontSize42">
 // 	<div class="fontSize59 fontWeightAll scales nowrapspace"> Make your personal investing easier</div>
@@ -406,8 +436,8 @@ if (userInfo == null) {
 
 
 var htmlFooter = `
-<div class="footer-content-list">
-<div class="footer-ttile color_ fontWeight400 paddingBottom">Stock Plouto</div>
+<div class="footer-content-list"  >
+<div class="footer-ttile color_ fontWeight400 paddingBottom" >Stock Plouto</div>
 <div class="fontSize16 color_8E paddingBottom8">
 The Plouto Group is one of the world’s leading investment service, advisory and risk management solutions providers. </br>
 The Group is headquartered in Lucky Plaza, Tsuen Wan, Hong Kong, China and serves clients through its offices in the United States, Europe and Asia.</br>
@@ -417,13 +447,13 @@ The company has a top independent investment research team. Through the U.S. sto
 <div class="footer-content  ">
   
   <div class="footer-content w-8 displaySpaceAround">
-  <div class="footer-content-list">
+  <div class="footer-content-list"   style="padding-top:20px">
   <div class="footer-ttile color_ fontWeight400 paddingBottom">About Us</div>
   <div class="fontSize16 color_8E paddingBottom8"><a class='color_8E' href="index.html"> Home</a> </div>
   <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#htmlCustomerStories"> Customer Stories</a></div>
-  <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E' href="index.html#AboutUs"> About Us</a></div>
+  <div class="fontSize16 color_8E paddingBottom8"> <a class='color_8E cus' target="_blank" href="privacyPolicy.html#AboutUs"> Privacy Agreement</a></div>
    
-  <div class="fontSize16 color_8E agreement">Refund Agreement</div>
+  <div class="fontSize16 color_8E agreement cus">Refund Agreement</div>
 </div>
 <div class="footer-content-list">
   <div class="footer-ttile color_ fontWeight400 paddingBottom">Contact Us</div>
@@ -451,7 +481,8 @@ $(".indexHtml").click(function () {
   }
 });
 $(".agreement").click(function () {
-  window.location.href = "agreement.html";
+  window.open('agreement.html','_blank')
+  // window.location.href = "agreement.html";
 
 });
 $(".loginOutStock").click(function () {
@@ -535,11 +566,11 @@ $(".starvip10").click(function () {
 });
 
 
-$(".orderingPrivacy").click(function () {
+// $(".AboutUs").click(function () {
 
-  window.location.href = "privacyPolicy.html";
+//   window.location.href = "privacyPolicy.html";
 
-});
+// });
 
 // 轮播
 function AutoScroll(obj) {
@@ -615,6 +646,7 @@ function getOrderPrice(goods_code) {
     },
     success: function (res) {
       if (res.code == 0) {
+        $(".priceData").html("")
         var productDatas = res.data;
         var ls = getUrlParams('idx') == 7 ? '/Year' : '/Month';
         // nowprice oldprice save_num
@@ -622,7 +654,7 @@ function getOrderPrice(goods_code) {
         $(".priceData").append(opAll + ls);
       } else {
         toast(res.data);
-        $(".priceData").text("")
+        $(".priceData").html("")
       }
 
 
@@ -635,7 +667,6 @@ $(".goods_code").on('input', function (e) {
   if (goodsCode.length == advancedmembergoodsCode) {
     getOrderPrice(goodsCode)
   }
-
 });
 
 
@@ -650,7 +681,7 @@ function functionCreateStripe(goods_id) {
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
       // 什么也没选中 
-      toast('Please agree to the service and privacy policy')
+      toast('  Please agree to the Product Service Agreement')
       return false;
 
     } else {
@@ -773,7 +804,7 @@ function createdOrderToXyongka(v) {
   var val = $('input:radio[name="policy-input"]:checked').val();
   if (val == null) {
     // 什么也没选中 
-    toast('Please agree to the service and privacy policy')
+    toast('  Please agree to the Product Service Agreement')
     return;
 
   } else {
@@ -797,77 +828,93 @@ function createdOrderToXyongka(v) {
 
 // $('.fixedTo').hide()
 function productAgreementService() {
+
+  
+
+
   var xieYiText = `<div class="text-info">
     <iframe src="./tl_policy/policy3.html?idx=${getUrlParams('idx')}"   height="500px"/>
  </div>`
   $.sendConfirm({
-    title: 'Product Agreement Service',
+    title: 'Product Service Agreement',
     desc: xieYiText,
     button: {
-      confirm: 'I have read everything',
+      confirm: 'I have read and agree',
       cancel: '',
     },
     onConfirm: function () {
-      console.log('点击确认！');
+      // console.log('点击确认！');
+      //  var paytype = "paypal";
       // 去签名
-      // handleClick()
+      // createdOrderToXieYi(paytype, "")
+      $(".fixedTo").hide();
+      $(".coin3_style").show();
 
-      //  $('.fixedTo').show()
-
-      $('body').append(`<div class="fixedTo">
-        <div class="fixedToContent">
+      
+      //countMax 点击确认的弹窗后，高价格的Airwallex显示支付按钮，不显示静态银行卡信息
+      console.log('=countMax==========>',countMax)
+      if(countMax==1){
+        $("#pay-stripe1").show()
+      }
+      if(countMax==2){
+        $("#pay-stripe2").show()
+      }
+      
+      // $('body').append(`<div class="fixedTo">
+      //   <div class="fixedToContent">
     
-          <div id="signature" style="height: 100%;">
+      //     <div id="signature" style="height: 100%;">
             
-          </div>
-          <div class="dibu">
+      //     </div>
+      //     <div class="dibu">
         
-            <div id="clear" class="reset">reset </div> 
-            <div id="save" class="confirm">confirm </div>
-          </div>
-        </div>
-      </div>`)
+      //       <div id="clear" class="reset">reset </div> 
+      //       <div id="save" class="confirm">confirm </div>
+      //     </div>
+      //   </div>
+      // </div>`)
       // 加载画布 start
-      mui.plusReady(function () {
-        plus.screen.lockOrientation('landscape-secondary');
-      });
-      $(document).ready(function () {
-        $("#signature").jSignature({
-          width: '100%',
-          height: '100%',
-          sizeRatio: 1,
-          color: "#000",
-          "background-color": "#fff",
-          "decor-color": "rgba(0,0,0,0)", //这里将颜色设置为透明
-          lineWidth: 1
-        })
-      });
-      document.getElementById("clear").addEventListener('tap', function () {
-        $("#signature").jSignature("reset");
-        $("#pic")[0].innerHTML = '';
-      });
-      document.getElementById("save").addEventListener('tap', function () {
-        if ($("#signature").jSignature('getData', 'native').length == 0) {
+      // mui.plusReady(function () {
+      //   plus.screen.lockOrientation('landscape-secondary');
+      // });
+      // $(document).ready(function () {
+      //   $("#signature").jSignature({
+      //     width: '100%',
+      //     height: '100%',
+      //     sizeRatio: 1,
+      //     color: "#000",
+      //     "background-color": "#fff",
+      //     "decor-color": "rgba(0,0,0,0)", //这里将颜色设置为透明
+      //     lineWidth: 1
+      //   })
+      // });
+      // document.getElementById("clear").addEventListener('tap', function () {
+      //   $("#signature").jSignature("reset");
+      //   $("#pic")[0].innerHTML = '';
+      // });
+      //    document.getElementById("save").addEventListener('tap', function () {
+      //   if ($("#signature").jSignature('getData', 'native').length == 0) {
 
-          $.sendWarningToTop('Please sign your name', 2000, function () {
-            // console.log('sendWarningToTop closed');
-          });
+      //     $.sendWarningToTop('Please sign your name', 2000, function () {
 
-          return;
-        }
-        var datapair = $("#signature").jSignature("getData", "image");
+      //     });
 
-
-        var array = datapair.splice(",");
-        console.log("64===>", 'data:image/png;base64,' + array[1])
-        var paytype = "paypal";
+      //     return;
+      //   }
+      //   var datapair = $("#signature").jSignature("getData", "image");
+      //   var array = datapair.splice(",");
+      //   console.log("64===>", 'data:image/png;base64,' + array[1])
 
 
-        createdOrderToXieYi(paytype, array[1])
-        $(".fixedTo").hide()
-        $(".coin3_style").show()
+     
 
-      });
+
+      //   createdOrderToXieYi(paytype, array[1])
+      //   $(".fixedTo").hide()
+      //   $(".coin3_style").show()
+
+      // });
+      
 
       // 加载画布 end 
 
@@ -875,6 +922,9 @@ function productAgreementService() {
 
     onClose: function () {
       console.log('点击关闭！');
+      $("input[type='radio']").attr("checked", false);
+    //  $('input:radio[name="policy-input"]:checked') = false;
+
     }
   });
 };
@@ -886,19 +936,19 @@ function createdOrderToXieYi(paytype, v) {
   var goodsCode = $(".goods_code").val() || "";
   var showStartVip = getUrlParams('idx');
   $("#confirmPaymentType").hide()
-  if (showStartVip == 10 || showStartVip == 11 || showStartVip == 7){
-    paytype="offline"
+  if (showStartVip == 10 || showStartVip == 11 || showStartVip == 7) {
+    paytype = "offline"
   }
   $.ajax({
     type: "post",
     // url: `${baseUrl}/user/order/create?paytype=${paytype}&goods_id=${getUrlParams('idx') || ''}&payway=${payway}&sign=${v}&goods_code=${goodsCode}`,
     url: `${baseUrl}/user/order/create`,
-    data:{
-      paytype:paytype,
-      goods_id:getUrlParams('idx') || '',
-      payway:payway,
-      sign:v,
-      goods_code:goodsCode
+    data: {
+      paytype: paytype,
+      goods_id: getUrlParams('idx') || '',
+      payway: payway,
+      sign: v,
+      goods_code: goodsCode
     },
     dataType: "json",
     headers: {
@@ -929,13 +979,22 @@ function createdOrderToXieYi(paytype, v) {
 
 $('input:radio[name=policy-input]').change(function () {
   console.log("coin是多少", this.value)
-  if (this.value == 'coin10' || this.value == 'coin11' || this.value == 'coin7') {
+  if (this.value == 'coin5' ||this.value == 'coin6' || this.value == 'coin10' || this.value == 'coin11' || this.value == 'coin7') {
     productAgreementService()
     // $(".coin3_style").show()
   }
 
 
 });
+$(".orderingPrivacy").click(()=>{ 
+
+  // $("input[type='radio']").attr("checked", true);
+  window.open( `./tl_policy/policy3.html?idx=${getUrlParams('idx')}`, '_blank');
+  // window.location = `./tl_policy/policy3.html?idx=${getUrlParams('idx')}`;
+
+  // productAgreementService();
+ 
+})
 
 // 判断是不是http开头
 function lookOrigin(v) {
@@ -1009,3 +1068,9 @@ function getVideoList() {
   })
 }
 getVideoList()
+
+
+
+// $(".orderingPrivacy").click(function(){
+//   window.location.href="privacyPolicy.html"
+// })

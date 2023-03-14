@@ -19,17 +19,22 @@ $(".buyNowProduct").click(() => {
 
 
 function forPayList() {
+    
     $(".product-pay-stripe-paypal").html("")
     $.each(arrList, function (index, data) {
-        var oip = `<div   style="${index==1?'display:none':''}"    class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
+        var oip = `<div class="product-pay-stripe fontWeightAll fontSize24 color_8E payType_ ${count == index ? 'active' : ''}" onclick="handleClick(${index})" >${data}</div>`;
 
         $(".product-pay-stripe-paypal").append(oip);
     })
 }
 
 function handleClick(e) {
-    count = e;
-    if (count == 0) {
+       count = e; 
+       console.log('我点击了吗',e)
+       document.getElementById("ssss").checked = false;
+    //    $("input[type='radio']").attr("checked", false); 
+    
+    if (count == 0 ||count == 1) {
         $('#pay-stripe').hide();
         $('#confirmPaymentType').show()
     } else {
@@ -56,7 +61,7 @@ function goodList(id) {
         $(".product-pay").hide();
     }
 
-    if (count == 0) {
+    if (count == 0|| count == 1) {
 
         $('#confirmPaymentType').show()
         $('#pay-stripe').hide();
@@ -102,16 +107,19 @@ $("#confirmPaymentType").click(() => {
         var val = $('input:radio[name="policy-input"]:checked').val();
         if (val == null) {
             // 什么也没选中 
-            toast('Please agree to the service and privacy policy')
+            toast('  Please agree to the Product Service Agreement')
             return false;
 
         } else {
             if (count == 0) {
-                // var paytype = "paypal";
-                // createdOrderTo(productData.ID, paytype);
-                productAgreementService()
+                createAirwallex()
+                
+                // productAgreementService()
             }
-
+            if (count == 1) {
+                var paytype = "paypal";
+                createdOrderTo(productData.ID, paytype);
+            }
 
         }
     }
@@ -267,7 +275,7 @@ $(document).on("click", "#pay-stripe", function () {
         var val = $('input:radio[name="policy-input"]:checked').val();
         if (val == null) {
             // 什么也没选中 
-            toast('Please agree to the service and privacy policy')
+            toast('  Please agree to the Product Service Agreement')
             return false;
 
         } else {

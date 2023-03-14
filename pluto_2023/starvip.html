@@ -39,6 +39,10 @@
 	<script src="./qm/jquery.min.js"></script>
 	<script type="text/javascript" src="./qm/jSignature.min.js"></script>
 	<script src="assets/js/jquery.dialog.js"></script>
+
+
+	<script src="assets/js/airwallex.js"></script>
+
 	<style>
 		@media screen and (max-width:750px) {
 
@@ -117,7 +121,7 @@
 	<div class="w-80 product-pay">
 		<div class="pay__">
 			<div class="color_ fontSize24 product-pay-title">Payment Platform</div>
-			<div class="product-pay-stripe-paypal" style="display: none;"></div>
+			<div class="product-pay-stripe-paypal"></div>
 			<!-- 邀请码模块 -->
 			<div class="policy- color_8E fontSize16 displayCenter_  ">
 				<div>USE CODE:</div>
@@ -127,11 +131,11 @@
 			<div class="policy-  displayCenter_  ">
 				<div class="color_ priceData"> </div>
 			</div>
-			<div class="policy- color_8E fontSize16"><input class="policy-input" value="coin10" type="radio"
-					name="policy-input"><span class="orderingPrivacy">By ordering you are agreeing to our terms of
-					service and privacy
-					policy</span></div>
-			<div class="coin3_style coin3_style_ displaySpaceArounds">
+			<div class="policy-xy color_8E fontSize16"><input class="policy-input" value="coin10" type="radio"
+					name="policy-input"><span class="orderingPrivacy">By ordering you are agreeing to our Product
+					Service Agreement</span></div>
+
+			<div id="pay-stripe1" class="coin3_style__ coin3_style_ displaySpaceArounds">
 				<div class="CHECKING_l ais aiscol">
 					<div class="ais_left">
 
@@ -148,23 +152,18 @@
 						<img alt="" srcset="">
 					</div>
 				</div>
+			</div>
+
+			<div id="pay-stripe2" class="coin3_style__ coin3_style_ displaySpaceArounds">
 
 
-				<!-- <div class="CHECKING_r ais m-top-20">
-					Bank:Community Federal Savings Bank</br>
-					Bank address: 810 Seventh Avenue, Suite 1115 New York, NY 10019, USA</br>
-					Routing (ABA): 026073150</br>
-					Account number: 8115587555</br>
-					Account type: CHECKING</br>
-					Beneficiary name: HongKong Pluto Trading Management Co Limited
-				</div> -->
 				<div class="CHECKING_r ais m-top-20">
-					Bank name:Metropolitan Commercial Bank</br>
-					Bank address: 99 Park Avenue 4th Floor  New York, NY 10016</br>
+					Bank name: Metropolitan Commercial Bank</br>
+					Bank address: 99 Park Avenue 4th Floor New York, NY 10016</br>
 					SWIFT code: MCBEUS33</br>
 					Fedwire ABA number: 026013356</br>
 					Account number: 8799042624</br>
-					Beneficiary name: HongKong Pluto Trading Management Co  Limited
+					Beneficiary name: HongKong Pluto Trading Management Co Limited
 				</div>
 			</div>
 			<!-- <div class="coin3_style"><img src="" alt="" srcset=""></div> -->
@@ -175,9 +174,9 @@
 				</div>
 			</div> -->
 
-			<!-- <div class=" m-top-20 commbackground color_f buy-now-btn fontWeightAll" id="confirmPaymentType">BUY NOW
+			<div class=" m-top-20 commbackground color_f buy-now-btn fontWeightAll" id="confirmPaymentType">BUY NOW
 			</div>
-			<div onclick="functionCreateStripe(10)" class="paypel-style-popup m-top-20 commbackground color_f buy-now-btn fontWeightAll"  >
+			<!--<div onclick="functionCreateStripe(10)" class="paypel-style-popup m-top-20 commbackground color_f buy-now-btn fontWeightAll"  >
 				BUY NOW
 			</div> -->
 
@@ -207,6 +206,9 @@
 	<script src="assets/js/commom.js?v=1.0.6"></script>
 	<script src="assets/js/timePicker.js?v=1.0.0"></script>
 	<script src="assets/js/izeetak.js"></script>
+
+	<script src="assets/js/airwallexpay.js"></script>
+
 	<script type="text/javascript">
 
 

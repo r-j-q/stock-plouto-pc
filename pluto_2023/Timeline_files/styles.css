@@ -457,10 +457,12 @@ body {
         border-radius: 50%;
         line-height: 34px;
         font-size: 16px; }
+    
     .timeline .timeline-row .timeline-content {
       margin-left: 40px;
       position: relative;
       background-color: white;
+      
       color: #333333; }
       .timeline .timeline-row .timeline-content:after {
         content: "";
@@ -481,7 +483,9 @@ body {
         margin-top: 0;
         line-height: 1.2; }
       .timeline .timeline-row .timeline-content p {
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+      
+      }
       .timeline .timeline-row .timeline-content img {
         margin-bottom: 15px; }
       .timeline .timeline-row .timeline-content blockquote {

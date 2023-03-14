@@ -482,8 +482,8 @@ canvas {
 .main-menu-wrapper__logo {
     position: relative;
     float: left;
-    padding-top: 33px;
-    padding-bottom: 32px;
+    padding-top: 19px;
+    padding-bottom: 6px;
     margin-right: 165px;
 }
 
@@ -620,8 +620,8 @@ canvas {
 
 .main-menu .main-menu__list>li,
 .stricky-header .main-menu__list>li {
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 19px;
+    padding-bottom: 6px;
     position: relative;
 }
 

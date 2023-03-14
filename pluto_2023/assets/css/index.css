@@ -55,6 +55,15 @@
     padding: 100px 0;
 
 }
+.fontSize26{
+    font-size: 26px;
+}
+.fontSize38{
+    font-size: 38px;
+}
+.video-ps-all-50{
+    width: 50%;
+}
 
 .content-t1 {
     width: 30%;
@@ -81,29 +90,49 @@
     position: relative;
 
 }
+.video-ps-all{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+
+    /* 加视频后改回 */
+    /* justify-content: space-between; */
+}
 
 .ps {
     position: absolute;
-    left: 10px;
-    right: 10px;
+    left: 10%;
+    right: 10%;
     top: 50px;
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.video-ps{
+    width: 50%;
+    height: 300px;
+    background-color: #000;
 }
 
 .fontSize2422 {
     font-size: 42px;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
 @media screen and (max-width:750px) {
     /* .content-top {
         height: 1000px;
     } */
-
+    .video-ps-all-50{
+        width: 100%!important;
+    }
+    .video-ps{
+        width: 100%;
+    }
 
     .content-text {
         top: 100px;
@@ -133,7 +162,10 @@
     }
 
     .fontSize24 {
-        font-size: 18px;
+        font-size: 12px;
+    }
+    .video-ps-all{
+        flex-direction: column;
     }
 }
 
@@ -661,6 +693,7 @@
 
     .contentImgheight {
         height: 300px;
+        display: none;
     }
 
     .w_h_auto {
@@ -674,5 +707,15 @@
 
     .fontSizeZHI {
         font-size: 13px;
+    }
+    .ps{
+        position: relative;
+        left: 0%;
+        right: 0%;
+    }
+    .video-ps-all{
+        align-items: center;
+        margin-bottom: 6rem;
+
     }
 }

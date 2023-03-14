@@ -647,7 +647,7 @@ function functionCreateStripe(goods_id) {
     var val = $('input:radio[name="policy-input"]:checked').val();
     if (val == null) {
       // 什么也没选中 
-      toast('Please agree to the service and privacy policy')
+      toast('Please agree to the Product Service Agreement')
       return false;
 
     } else {
@@ -764,7 +764,7 @@ function createdOrderToXyongka(v) {
   var val = $('input:radio[name="policy-input"]:checked').val();
   if (val == null) {
     // 什么也没选中 
-    toast('Please agree to the service and privacy policy')
+    toast('  Please agree to the Product Service Agreement')
     return;
 
   } else {
@@ -795,7 +795,7 @@ function createdOrderToXyongka(v) {
       title: 'Product Agreement Service',
       desc: xieYiText,
       button: {
-        confirm: 'I have read everything',
+        confirm: 'I have read and agree',
         cancel: '',
       },
       onConfirm: function() {

@@ -21,7 +21,7 @@ console.log(symbolData);
                     var s = getLocalTime(detail.updatetime);
                     $(".detail_title_img").append("<img/>")
                     $(".detail_title0").text(detail.title);
-                    $(".detail_title_").text(detail.intro);
+                    $(".detail_title_").html(detail.intro);
                  var urls_img=  addhttp(detail.img)==true?detail.img:clineUrl+detail.img;
                     $(".detail_title_img img").attr('src', urls_img);
                     $(".detail_title_t").text(s);
